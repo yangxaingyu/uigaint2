@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 {{--    <link rel="shortcut icon" type="image/x-icon"--}}
 {{--          href="{{$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']}}/favicon.png">--}}
@@ -25,6 +26,13 @@
 
 
 </head>
+
+<style>
+
+    .account__form .item-text input:checked::after {
+        opacity: 0 !important;
+    }
+</style>
 <body>
 <div id="preloader-active">
 </div>
@@ -201,9 +209,9 @@
                                                             <span><img src="/storage/images/home/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                         </div>
                                                         <ul>
-                                                            <li><a href="kyc-process.html">KYC Step 01</a> <span class="hot">HOT</span></li>
-                                                            <li><a href="kyc-process-step2.html">KYC Step 02</a></li>
-                                                            <li><a href="kyc-process-step3.html">KYC Step 03</a></li>
+                                                            <li><a href="/kyc-process">KYC Step 01</a> <span class="hot">HOT</span></li>
+                                                            <li><a href="/kyc-process-step2">KYC Step 02</a></li>
+                                                            <li><a href="/kyc-process-step3">KYC Step 03</a></li>
                                                             <li><a href="connect-wallet.html">Connect Wallet</a></li>
                                                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Wallet Module</a>
                                                             </li>
@@ -369,9 +377,9 @@
                     <li class="menu-item-has-children has-sub hash-has-sub">
                         <span class="submenu-button"><em></em></span><a href="/signin"" class="hash">Auth Pages</a>
                         <ul class="sub-menu" style="display: none;">
-                            <li class="hash-has-sub"><a href="kyc-process.html" class="hash">KYC Step 01</a></li>
-                            <li class="hash-has-sub"><a href="kyc-process-step2.html" class="hash">KYC Step 02</a></li>
-                            <li class="hash-has-sub"><a href="kyc-process-step3.html" class="hash">KYC Step 03</a></li>
+                            <li class="hash-has-sub"><a href="/kyc-process" class="hash">KYC Step 01</a></li>
+                            <li class="hash-has-sub"><a href="/kyc-process-step2" class="hash">KYC Step 02</a></li>
+                            <li class="hash-has-sub"><a href="/kyc-process-step3" class="hash">KYC Step 03</a></li>
                             <li class="hash-has-sub"><a href="connect-wallet.html" class="hash">Connect Wallet</a></li>
                             <li class="hash-has-sub">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="hash">Wallet Module</a></li>
@@ -410,7 +418,11 @@
 @yield('signup')
 @yield('forget-password')
 @yield('project-details')
-
+@yield('kyc-process')
+@yield('kyc-process-step2')
+@yield('kyc-process-step3')
+@yield('deposit')
+@yield('transfer ')
 <div class="gamfi-footer-section">
     <div class="container">
         <div class="footer-cta-area text-center active-shape hover-shape-inner">
@@ -528,9 +540,7 @@
         </div>
     </div>
 </div>
-
-
-</body>
+<script src="{{\App\Server\Helper::assets('/js/wow.min.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/detector-exec.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/hook-exec.js')}}"></script>
@@ -548,5 +558,7 @@
 <script src="{{\App\Server\Helper::assets('/js/time-counter.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/waypoints.min.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/web3.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/wow.min.js')}}"></script>
+
+</body>
+
 </html>

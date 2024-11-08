@@ -24,3 +24,14 @@ Route::get('signup','LoginController@register');
 Route::get('forget-password','LoginController@forgetpassword');
 //详情页面
 Route::get('project-details','LoginController@details');
+
+//KYC认证1
+Route::get('kyc-process','KycController@kyc');
+//KYC认证2
+Route::any('kyc-process-step2','KycController@kyc2');
+//KYC认证3
+Route::get('kyc-process-step3','KycController@kyc3');
+//充值頁面
+Route::get('deposit','LoginController@deposit');
+//转换页面
+Route::get('transfer ','LoginController@transfer');

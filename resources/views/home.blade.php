@@ -2,20 +2,6 @@
 @extends('main.main')
 
 @section('home')
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/plugins.css')}}" />
-<!-- Main Style CSS -->
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/animate.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/blueprint.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/blueprint-select.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/bootstrap.min.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/cropper.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/ico-moon-fonts.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/magnific-popup.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/off-canvas.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/owl.carousel.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/responsive.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/sc-spacing.css')}}" />
-<link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/style.css')}}" />
 
 
 <div class="loader_first" style="display: none;">
@@ -1555,24 +1541,5 @@
 
 
 
-
-<script src="{{\App\Server\Helper::assets('/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/detector-exec.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/hook-exec.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/imagesloaded.pkgd.min')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/inspector.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/jquery.counterup.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/jquery.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/main.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/metamask.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/metamaskhandler.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/modernizr-2.8.3.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/owl.carousel.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/plugins.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/time-counter.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/waypoints.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/web3.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/wow.min.js')}}"></script>
 
 @stop
