@@ -540,25 +540,31 @@
         </div>
     </div>
 </div>
-<script src="{{\App\Server\Helper::assets('/js/wow.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/detector-exec.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/hook-exec.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/imagesloaded.pkgd.min')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/inspector.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/jquery.counterup.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/jquery.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/main.js')}}"></script>
+<script src="{{\App\Server\Helper::assets('/js/web3.min.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/metamask.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/metamaskhandler.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/modernizr-2.8.3.min.js')}}"></script>
+
+<!-- modernizr js -->
+<script src="{{\App\Server\Helper::assets('/js/modernizr-2.8.3.min.js')}}"></script>a
+
+<!-- jquery latest version -->
+<script src="{{\App\Server\Helper::assets('/js/jquery.min.js')}}"></script>
+<script src="{{\App\Server\Helper::assets('/js/bootstrap.bundle.min.js')}}"></script>
+
+{{--<script src="{{\App\Server\Helper::assets('/js/detector-exec.js')}}"></script>--}}
+{{--<script src="{{\App\Server\Helper::assets('/js/hook-exec.js')}}"></script>--}}
+{{--<script src="{{\App\Server\Helper::assets('/js/inspector.js')}}"></script>--}}
+
+<script src="{{\App\Server\Helper::assets('/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{\App\Server\Helper::assets('/js/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{\App\Server\Helper::assets('/js/wow.min.js')}}"></script>
+
+<script src="{{\App\Server\Helper::assets('/js/jquery.counterup.min.js')}}"></script>
+<script src="{{\App\Server\Helper::assets('/js/waypoints.min.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/owl.carousel.min.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/plugins.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/time-counter.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/waypoints.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/web3.min.js')}}"></script>
-
+<script src="{{\App\Server\Helper::assets('/js/metamaskhandler.js')}}"></script>
+<script src="{{\App\Server\Helper::assets('/js/main.js')}}"></script>
 </body>
 
 </html>

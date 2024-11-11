@@ -35,3 +35,7 @@ Route::get('kyc-process-step3','KycController@kyc3');
 Route::get('deposit','LoginController@deposit');
 //转换页面
 Route::get('transfer ','LoginController@transfer');
+
+//提现界面
+Route::get('withdrawal','AccountController@withdrawal');
+Route::get('getnetwork','AccountController@getNetWork');

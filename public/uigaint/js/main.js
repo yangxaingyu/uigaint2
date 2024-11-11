@@ -259,7 +259,18 @@
       $(this).removeClass('active')
     });
   });
-  
+
+  /*--------------------------------
+   withdrawal page js
+  --------------------------------*/
+  $(".withdrawal_coin_dropbox").on('click', function(){
+    $(".withdrawal_coin_drop_list").toggle();
+  });
+
+  $(".withdrawal_network_dropbox").on('click', function(){
+    $(".withdrawal_network_drop_list").toggle();
+  });
+
   /*--------------------------------
   connect wallet page js
   --------------------------------*/
