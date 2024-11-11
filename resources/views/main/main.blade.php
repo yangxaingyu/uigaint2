@@ -528,7 +528,7 @@
             </div>
             <div class="copyright-area text-center mb-0">
                 <p class="dsc mb-37">
-                    Copyright © 2022. All Rights Reserved by
+                    Copyright © 2024. All Rights Reserved by
                     <a target="_blank" class="gafi" href="#">GaFi</a>
                 </p>
             </div>
