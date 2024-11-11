@@ -422,7 +422,8 @@
 @yield('kyc-process-step2')
 @yield('kyc-process-step3')
 @yield('deposit')
-@yield('transfer ')
+@yield('transfer')
+@yield('withdrawal')
 <div class="gamfi-footer-section">
     <div class="container">
         <div class="footer-cta-area text-center active-shape hover-shape-inner">
