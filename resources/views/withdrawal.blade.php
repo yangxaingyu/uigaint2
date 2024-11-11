@@ -54,8 +54,13 @@
                         </div>
 
                         <div class="input__group mb-23">
+                            <label for="quantity" style="text-transform: unset;">Withdrawal quantity</label>
+                            <input type="text" name="quantity" id="quantity" placeholder="Withdrawal quantity">
+                        </div>
+
+                        <div class="input__group mb-23">
                             <label for="address" style="text-transform: unset;">Withdrawal address</label>
-                            <input type="text" name="email" id="address" placeholder="Withdrawal address">
+                            <input type="text" name="address" id="address" placeholder="Withdrawal address">
                         </div>
 
                         <div class="item-button">
@@ -218,5 +223,3 @@
         })
     </script>
 @stop
-
-
