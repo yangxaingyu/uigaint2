@@ -1,6 +1,6 @@
 @extends('main.main')
 
-@section('withdrawal')
+@section('withdrawal ')
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/withdrawal.css')}}" />
 
     <div v-if="false" class="loader_first">
@@ -174,7 +174,7 @@
     <script src="{{\App\Server\Helper::assets('/js/vue.min.js')}}"></script>
     <script>
         var coinData = <?php echo json_encode($currencies); ?>;
-        const url = "http://bit.shop.com/getnetwork"
+        const url = "http://www.uigaint.com/getnetwork"
         const path = '/storage/images/currency/'
         const app = new Vue({
             el: '#app',
