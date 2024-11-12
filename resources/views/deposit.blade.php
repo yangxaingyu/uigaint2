@@ -322,61 +322,40 @@
             const currencyDropList = document.querySelector('.kyc_country_drop_list2');
             const currencyDropbox = document.querySelector('.kyc_country_dropbox2');
             const networkDropList = document.querySelector('.kyc_country_drop_list3');
-
-            // 展示或隐藏货币列表
             currencyDropbox.addEventListener('click', function() {
                 const currentDisplay = currencyDropList.style.display;
                 currencyDropList.style.display = currentDisplay === 'none' || currentDisplay === '' ? 'block' : 'none';
             });
-
-            // 点击某个货币后更新网络列表
             currencyDropdown.addEventListener('click', function(e) {
                 if (e.target && e.target.tagName === 'LI') {
-                    // 获取所选货币信息
                     const selectedCurrency = e.target.getAttribute('data-currency');
                     const selectedNetworks = JSON.parse(e.target.getAttribute('data-networks'));
                     const selectedImage = e.target.getAttribute('data-image');
-
-                    // 更新货币图标和名称
                     currencyDropbox.querySelector('h4').textContent = selectedCurrency;
                     currencyDropbox.querySelector('span img').src = selectedImage;
-
-                    // 更新网络列表
-                    networkHeader.textContent = selectedNetworks[0]; // 默认显示所选货币的第一个网络
-                    networkList.innerHTML = ''; // 清空当前网络列表
+                    networkHeader.textContent = selectedNetworks[0];
+                    networkList.innerHTML = '';
                     selectedNetworks.forEach(function(network) {
                         const li = document.createElement('li');
                         li.textContent = network;
                         networkList.appendChild(li);
                     });
-
-                    // 隐藏货币列表
                     currencyDropList.style.display = 'none';
-                    // 显示网络列表
+
                     networkDropList.style.display = 'none';
                 }
             });
-
-            // 展示或隐藏网络下拉框
             networkDropdown.addEventListener('click', function() {
                 const currentDisplay = networkDropList.style.display;
                 networkDropList.style.display = currentDisplay === 'none' || currentDisplay === '' ? 'block' : 'none';
             });
-
-            // 点击某个网络后更新网络标题并关闭下拉框
             networkList.addEventListener('click', function(e) {
                 if (e.target && e.target.tagName === 'LI') {
-                    // 更新网络标题
                     networkHeader.textContent = e.target.textContent;
-
-                    // 隐藏下拉框
                     networkDropList.style.display = 'none';
                 }
             });
-
-            // 确保页面加载时，网络下拉框初始为隐藏状态
             networkDropList.style.display = 'none';
         });
-
     </script>
 @stop

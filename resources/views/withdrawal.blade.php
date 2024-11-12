@@ -1,6 +1,6 @@
 @extends('main.main')
 
-@section('withdrawal ')
+@section('withdrawal')
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/withdrawal.css')}}" />
 
     <div v-if="false" class="loader_first">
