@@ -47,7 +47,7 @@
                 <div class="item-bottom mt-31">
                     <h4>
                         Don’t have an account ?
-                        <a href="/signup">Sign up now !</a>
+                        <a href="/reg">Sign up now !</a>
                     </h4>
                 </div>
             </div>

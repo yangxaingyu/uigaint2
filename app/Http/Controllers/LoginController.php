@@ -14,10 +14,13 @@ class LoginController extends Controller
         return view('signin');
     }
 
-
-
-    public function register(){
+    public function reg(){
         return view('signup');
+    }
+    public function register(Request  $request){
+        $data=$request->all('first_name','last_name','email','password');
+        dd($data);
+
     }
 
 

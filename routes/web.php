@@ -19,6 +19,7 @@ Route::get('/', function () {
 //登入页面
 Route::get('signin','LoginController@login');
 //注册页面
+Route::get('reg','LoginController@reg');
 Route::get('signup','LoginController@register');
 //修改密码页面
 Route::get('forget-password','LoginController@forgetpassword');

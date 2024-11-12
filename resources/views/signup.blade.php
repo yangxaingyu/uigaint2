@@ -16,18 +16,23 @@
                     <h2>Create Account</h2>
                     <h3>Inter your name, valid email address and password to register your account</h3>
                 </div>
-                <form action="/" method="post">
+                <form action="/signup" method="post">
+                    @csrf
                     <div class="input__group mb-23">
                         <label>Full Name</label>
-                        <input type="text" name="f-name" id="f-name" placeholder="Enter your name">
+                        <input type="text" name="first_name" id="first_name" placeholder="first_name">
+                    </div>
+                    <div class="input__group mb-23">
+                        <label>Full Name</label>
+                        <input type="text" name="last_name" id="last_name" placeholder="last_name">
                     </div>
                     <div class="input__group mb-23">
                         <label>Email address</label>
-                        <input type="email" name="f-email" id="email" placeholder="Enter your email address" autocomplete="off">
+                        <input type="email" name="email" id="email" placeholder="Enter your email address" autocomplete="off">
                     </div>
                     <div class="input__group mb-23">
                         <label>Password</label>
-                        <input type="password" name="f-pass" id="pass" placeholder="Enter your password">
+                        <input type="password" name="password" id="pass" placeholder="Enter your password">
                     </div>
                     <div class="item-text mb-28">
                         <input type="checkbox" name="accept" id="accept">
