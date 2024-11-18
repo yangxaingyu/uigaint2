@@ -106,3 +106,15 @@
 {
     color: #FFFFFF;
 }
+
+.input__group label {
+    font-family: unset;
+}
+
+.item-button {
+    cursor: pointer;
+}
+
+.red {
+    color: red;
+}

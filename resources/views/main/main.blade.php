@@ -1,15 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-{{--    <link rel="shortcut icon" type="image/x-icon"--}}
-{{--          href="{{$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']}}/favicon.png">--}}
-{{--    <link href="{{\App\Server\Helper::assets('/css/style.css?v=1.0.0')}}" rel="stylesheet">--}}
-    <script src="https://js.stripe.com/v3/"></script>
-{{--    <title>@yield('title')</title>--}}
-    <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/plugins.css')}}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{--    <link rel="shortcut icon" type="image/x-icon"--}}
+    {{--    href="{{$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']}}/favicon.png">--}}
+    {{--    <link href="{{\App\Server\Helper::assets('/css/style.css?v=1.0.0')}}" rel="stylesheet">--}}
+    {{--    <script src="https://js.stripe.com/v3/"></script>--}}
+    {{--    <title>@yield('title')</title>--}}
+    {{--    <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/plugins.css')}}" />--}}
+
     <!-- Main Style CSS -->
+    {{--    <link rel="stylesheet" href="{{\App\Server\Helper::assets('/module/layui/css/layui.css')}}" />--}}
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/animate.css')}}" />
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/blueprint.css')}}" />
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/blueprint-select.css')}}" />
@@ -19,16 +22,16 @@
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/magnific-popup.css')}}" />
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/off-canvas.css')}}" />
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/owl.carousel.css')}}" />
-    <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/responsive.css')}}" />
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/sc-spacing.css')}}" />
     <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/style.css')}}" />
+    <link rel="stylesheet" href="{{\App\Server\Helper::assets('/css/responsive.css')}}" />
 
-
-
+    <script src="{{\App\Server\Helper::assets('/js/axios.min.js')}}"></script>
+    <script src="{{\App\Server\Helper::assets('/js/vue.min.js')}}"></script>
+    <script src="{{\App\Server\Helper::assets('/js/dayjs.min.js')}}"></script>
 </head>
 
 <style>
-
     .account__form .item-text input:checked::after {
         opacity: 0 !important;
     }
@@ -44,21 +47,21 @@
     }
 </style>
 <body>
-<div id="preloader-active">
-</div>
+<div id="preloader-active"></div>
+
 <header id="gamfi-header" class="gamfi-header-section transparent-header">
     <div class="menu-area menu-sticky">
         <div class="container">
             <div class="heaader-inner-area d-flex justify-content-between align-items-center">
                 <div class="gamfi-logo-area d-flex justify-content-between align-items-center">
                     <div class="logo">
-                        <a href="/"><img src="/storage/images/home/logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="/storage/images/home_v2/logo.png" alt="logo"></a>
                     </div>
                     <div class="header-menu">
                         <ul class="nav-menu">
-                            <li><a href="/">Home</a>
+                            <li><a href="index.html">Home</a>
                                 <ul class="sub-menu">
-                                    <li><a href="/">Home 1</a></li>
+                                    <li><a href="index.html">Home 1</a></li>
                                     <li><a href="index2.html">Home 2</a></li>
                                     <li><a href="index3.html">Home 3</a></li>
                                     <li><a href="index4.html">Home 4</a></li>
@@ -101,24 +104,20 @@
                                                     <div class="home_menu_list">
                                                         <div class="home_menu_list_headings">
                                                             <h2>Home Pages</h2>
-                                                            <span><img src="/storage/images/home/border-buttomShape.png" alt="" class="img-fluid"></span>
+                                                            <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                         </div>
                                                         <ul>
                                                             <li>
-                                                                <a href="/">01
-                                                                    <span><img src="/storage/images/home/index-V1.png" alt="Index V1" class="img-fluid"></span></a>
+                                                                <a href="index.html">01 <span><img src="/storage/images/home_v2/index-V1.png" alt="Index V1" class="img-fluid"></span></a>
                                                             </li>
                                                             <li>
-                                                                <a href="index2.html">02
-                                                                    <span><img src="/storage/images/home/index-V2.png" alt="Index V2" class="img-fluid"></span></a>
+                                                                <a href="index2.html">02 <span><img src="/storage/images/home_v2/index-V2.png" alt="Index V2" class="img-fluid"></span></a>
                                                             </li>
                                                             <li>
-                                                                <a href="index3.html">03
-                                                                    <span><img src="/storage/images/home/index-V3.png" alt="Index V3" class="img-fluid"></span></a>
+                                                                <a href="index3.html">03 <span><img src="/storage/images/home_v2/index-V3.png" alt="Index V3" class="img-fluid"></span></a>
                                                             </li>
                                                             <li>
-                                                                <a href="index4.html">04
-                                                                    <span><img src="/storage/images/home/index-V4.png" alt="Index V3" class="img-fluid"></span></a>
+                                                                <a href="index4.html">04 <span><img src="/storage/images/home_v2/index-V4.png" alt="Index V3" class="img-fluid"></span></a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -131,19 +130,16 @@
                                                     <div class="menu_column project_column">
                                                         <div class="menu_headings">
                                                             <h2>PROJECT PAGES</h2>
-                                                            <span><img src="/storage/images/home/border-buttomShape.png" alt="" class="img-fluid"></span>
+                                                            <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                         </div>
                                                         <ul>
-                                                            <li><a href="project-clasic.html">Projects Clasic 1</a> <span class="hot">HOT</span>
-                                                            </li>
-                                                            <li><a href="project-clasic-2.html">Projects Clasic 2</a> <span class="new">NEW</span>
-                                                            </li>
+                                                            <li><a href="project-clasic.html">Projects Clasic 1</a> <span class="hot">HOT</span></li>
+                                                            <li><a href="project-clasic-2.html">Projects Clasic 2</a> <span class="new">NEW</span></li>
                                                             <li><a href="project.html">Projects List</a></li>
                                                             <li><a href="explore.html">Project Grid</a></li>
                                                             <li><a href="calendar.html">Project Calendar</a></li>
                                                             <li><a href="project-details.html">Project Details 1</a></li>
-                                                            <li><a href="project_details2.html">Project Details 2</a> <span class="hot">HOT</span>
-                                                            </li>
+                                                            <li><a href="project_details2.html">Project Details 2</a> <span class="hot">HOT</span></li>
                                                             <li><a href="igo-ranking.html">Project Ranking</a></li>
                                                         </ul>
                                                     </div>
@@ -152,14 +148,13 @@
                                                         <div class="menu_column project_column">
                                                             <div class="menu_headings">
                                                                 <h2>STAKE &amp; Farm</h2>
-                                                                <span><img src="/storage/images/home/border-buttomShape.png" alt="" class="img-fluid"></span>
+                                                                <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                             </div>
                                                             <ul>
                                                                 <li><a href="staking.html">Staking One</a></li>
                                                                 <li><a href="staking-2.html">Staking Two</a></li>
                                                                 <li><a href="staking-3.html">Staking Three</a> <span class="new">NEW</span></li>
-                                                                <li><a href="staking-4.html">Staking Four</a> <span class="new">NEW</span>
-                                                                    <span class="hot">HOT</span></li>
+                                                                <li><a href="staking-4.html">Staking Four</a> <span class="new">NEW</span> <span class="hot">HOT</span></li>
                                                                 <li><a href="staking-5-lp.html">Staking Five LP</a> <span class="new">NEW</span></li>
                                                                 <li><a href="farm.html">Farming</a></li>
                                                                 <li><a href="leaderboard.html">Leaderboard</a></li>
@@ -169,7 +164,7 @@
                                                         <div class="menu_column project_column">
                                                             <div class="menu_headings">
                                                                 <h2>BLOG PAGES</h2>
-                                                                <span><img src="/storage/images/home/border-buttomShape.png" alt="" class="img-fluid"></span>
+                                                                <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                             </div>
                                                             <ul>
                                                                 <li><a href="blog-grid.html">Blog Grid</a></li>
@@ -183,7 +178,7 @@
                                                         <div class="menu_column project_column">
                                                             <div class="menu_headings">
                                                                 <h2>TOKENOMIC &amp; TIER</h2>
-                                                                <span><img src="/storage/images/home/border-buttomShape.png" alt="" class="img-fluid"></span>
+                                                                <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                             </div>
                                                             <ul>
                                                                 <li><a href="tier.html">Tier System 1</a></li>
@@ -196,13 +191,11 @@
                                                         <div class="menu_column project_column">
                                                             <div class="menu_headings">
                                                                 <h2>other Pages</h2>
-                                                                <span><img src="/storage/images/home/border-buttomShape.png" alt="" class="img-fluid"></span>
+                                                                <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                             </div>
                                                             <ul>
-                                                                <li><a href="governance.html">Governance</a> <span class="new">NEW</span>
-                                                                    <span class="hot">HOT</span></li>
-                                                                <li><a href="governance-details.html">Voting Details</a> <span class="new">NEW</span>
-                                                                </li>
+                                                                <li><a href="governance.html">Governance</a> <span class="new">NEW</span> <span class="hot">HOT</span></li>
+                                                                <li><a href="governance-details.html">Voting Details</a> <span class="new">NEW</span></li>
                                                                 <li><a href="get-in-touch.html">Contact Us</a></li>
                                                                 <li><a href="roadmap.html">Roadmap</a></li>
                                                                 <li><a href="faq.html">FAQs</a></li>
@@ -216,17 +209,16 @@
                                                     <div class="menu_column project_column">
                                                         <div class="menu_headings">
                                                             <h2>AUth Pages</h2>
-                                                            <span><img src="/storage/images/home/border-buttomShape.png" alt="" class="img-fluid"></span>
+                                                            <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                         </div>
                                                         <ul>
-                                                            <li><a href="/kyc-process">KYC Step 01</a> <span class="hot">HOT</span></li>
-                                                            <li><a href="/kyc-process-step2">KYC Step 02</a></li>
-                                                            <li><a href="/kyc-process-step3">KYC Step 03</a></li>
+                                                            <li><a href="kyc-process.html">KYC Step 01</a> <span class="hot">HOT</span></li>
+                                                            <li><a href="kyc-process-step2.html">KYC Step 02</a></li>
+                                                            <li><a href="kyc-process-step3.html">KYC Step 03</a></li>
                                                             <li><a href="connect-wallet.html">Connect Wallet</a></li>
-                                                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Wallet Module</a>
-                                                            </li>
-                                                            <li><a href="/signup">Register</a></li>
-                                                            <li><a href="/signin">Login</a></li>
+                                                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Wallet Module</a></li>
+                                                            <li><a href="signup.html">Register</a></li>
+                                                            <li><a href="signin.html">Login</a></li>
                                                             <li><a href="forget-password.html">Forget Password</a></li>
                                                         </ul>
                                                     </div>
@@ -254,19 +246,20 @@
                         </li>
                         <li class="buy-token">
                             <a class="readon black-shape" href="#">
-                                <span class="btn-text">Top Up </span>
+                                <span class="btn-text">Buy Token </span>
                                 <i class="icon-arrow_down"></i>
                                 <span class="hover-shape1"></span>
                                 <span class="hover-shape2"></span>
                                 <span class="hover-shape3"></span>
                             </a>
                             <ul>
-                                <li><a href="#"><img src="/storage/images/home/pancake.png" alt="pancake"> PancakeSwap</a></li>
-                                <li><a href="#"><img src="/storage/images/home/uniswap.png" alt="uniswap"> UniSwap</a></li>
-                                <li><a href="#"><img src="/storage/images/home/market.png" alt="market"> CoinMarketCap</a></li>
-                                <li><a href="#"><img src="/storage/images/home/gate.png" alt="gate"> Gate.io</a></li>
+                                <li><a href="#"><img src="/storage/images/home_v2/pancake.png" alt="pancake"> PancakeSwap</a></li>
+                                <li><a href="#"><img src="/storage/images/home_v2/uniswap.png" alt="uniswap"> UniSwap</a></li>
+                                <li><a href="#"><img src="/storage/images/home_v2/market.png" alt="market"> CoinMarketCap</a></li>
+                                <li><a href="#"><img src="/storage/images/home_v2/gate.png" alt="gate"> Gate.io</a></li>
                             </ul>
                         </li>
+
                         @if(session('user_id'))
                             <li class="connect-btn-wrapper">
                                 <a href="/user">
@@ -293,6 +286,16 @@
                                 </a>
                             </li>
                         @endif
+=======
+                        <li class="connect-btn-wrapper">
+                            <button type="button" class="connect-btn readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="/storage/images/connect.png" alt="Icon">
+                                <span class="btn-text">Connect </span>
+                                <span class="hover-shape1"></span>
+                                <span class="hover-shape2"></span>
+                                <span class="hover-shape3"></span>
+                            </button>
+                        </li>
+>>>>>>> 9ebacaafe8031bc3f9952afcf288eba04bae9bb5
                     </ul>
                 </div>
             </div>
@@ -309,11 +312,10 @@
             </a>
         </div>
         <div class="sidebar-logo mb-30 hash-has-sub">
-            <a href="index.html" class="hash"><img src="/storage/images/logo-dark.png" alt=""></a>
+            <a href="index.html" class="hash"><img src="/storage/images/home_v2/logo-dark.png" alt=""></a>
         </div>
         <ul class="nav-menu">
-            <li class="current-menu-item has-sub hash-has-sub">
-                <span class="submenu-button"><em></em></span><a href="index.html" class="hash">Home</a>
+            <li class="current-menu-item has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="index.html" class="hash">Home</a>
                 <ul class="sub-menu" style="display: none;">
                     <li class="hash-has-sub"><a href="index.html" class="hash">Home 1</a></li>
                     <li class="hash-has-sub"><a href="index2.html" class="hash">Home 2</a></li>
@@ -321,8 +323,7 @@
                     <li class="hash-has-sub"><a href="index4.html" class="hash">Home 4</a></li>
                 </ul>
             </li>
-            <li class="has-sub hash-has-sub">
-                <span class="submenu-button"><em></em></span><a href="project.html" class="hash">Projects</a>
+            <li class="has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="project.html" class="hash">Projects</a>
                 <ul class="sub-menu" style="display: none;">
                     <li class="hash-has-sub"><a href="project-clasic.html" class="hash">Projects Clasic 1</a></li>
                     <li class="hash-has-sub"><a href="project-clasic-2.html" class="hash">Projects Clasic 2</a></li>
@@ -334,8 +335,7 @@
                     <li class="hash-has-sub"><a href="igo-ranking.html" class="hash">Project Ranking</a></li>
                 </ul>
             </li>
-            <li class="has-sub hash-has-sub">
-                <span class="submenu-button"><em></em></span><a href="staking.html" class="hash">Staking</a>
+            <li class="has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="staking.html" class="hash">Staking</a>
                 <ul class="sub-menu" style="display: none;">
                     <li class="hash-has-sub"><a href="staking.html" class="hash">Staking 1</a></li>
                     <li class="hash-has-sub"><a href="staking-2.html" class="hash">Staking 2</a></li>
@@ -347,8 +347,7 @@
             <li class="menu-item-has-children has-sub hash-has-sub"><span class="submenu-button"><em></em></span>
                 <a href="#" class="hash">Pages</a>
                 <ul class="sub-menu" style="display: none;">
-                    <li class="menu-item-has-children has-sub hash-has-sub">
-                        <span class="submenu-button"><em></em></span><a href="project.html" class="hash">Projects Pages</a>
+                    <li class="menu-item-has-children has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="project.html" class="hash">Projects Pages</a>
                         <ul class="sub-menu" style="display: none;">
                             <li class="hash-has-sub"><a href="project-clasic.html" class="hash">Projects Clasic 1</a></li>
                             <li class="hash-has-sub"><a href="project-clasic-2.html" class="hash">Projects Clasic 2</a></li>
@@ -360,8 +359,7 @@
                             <li class="hash-has-sub"><a href="igo-ranking.html" class="hash">Project Ranking</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children has-sub hash-has-sub">
-                        <span class="submenu-button"><em></em></span><a href="#" class="hash">Stake &amp; Farm</a>
+                    <li class="menu-item-has-children has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="#" class="hash">Stake &amp; Farm</a>
                         <ul class="sub-menu" style="display: none;">
                             <li class="hash-has-sub"><a href="staking.html" class="hash">Staking 1</a></li>
                             <li class="hash-has-sub"><a href="staking-2.html" class="hash">Staking 2</a></li>
@@ -372,8 +370,7 @@
                             <li class="hash-has-sub"><a href="leaderboard.html" class="hash">Leaderboard</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children has-sub hash-has-sub">
-                        <span class="submenu-button"><em></em></span><a href="#" class="hash">Other Pages</a>
+                    <li class="menu-item-has-children has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="#" class="hash">Other Pages</a>
                         <ul class="sub-menu" style="display: none;">
                             <li class="hash-has-sub"><a href="get-in-touch.html" class="hash">Contact Us</a></li>
                             <li class="hash-has-sub"><a href="roadmap.html" class="hash">Roadmap</a></li>
@@ -382,8 +379,7 @@
                             <li class="hash-has-sub"><a href="teamdetails.html" class="hash">Team Details</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children has-sub hash-has-sub">
-                        <span class="submenu-button"><em></em></span><a href="#" class="hash">Tokenomics &amp; Tier</a>
+                    <li class="menu-item-has-children has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="#" class="hash">Tokenomics &amp; Tier</a>
                         <ul class="sub-menu" style="display: none;">
                             <li class="hash-has-sub"><a href="tier.html" class="hash">Tier System 1</a></li>
                             <li class="hash-has-sub"><a href="tier-2.html" class="hash">Tier System 2</a></li>
@@ -391,25 +387,22 @@
                             <li class="hash-has-sub"><a href="tokenomics.html" class="hash">Tokenomics</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children has-sub hash-has-sub">
-                        <span class="submenu-button"><em></em></span><a href="#" class="hash">Blog &amp; Pages</a>
+                    <li class="menu-item-has-children has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="#" class="hash">Blog &amp; Pages</a>
                         <ul class="sub-menu" style="display: none;">
                             <li class="hash-has-sub"><a href="blog-grid.html" class="hash">Blog Grid</a></li>
                             <li class="hash-has-sub"><a href="blog-clasic.html" class="hash">Blog Classic</a></li>
                             <li class="hash-has-sub"><a href="blog-details.html" class="hash">Artcles Details</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children has-sub hash-has-sub">
-                        <span class="submenu-button"><em></em></span><a href="/signin"" class="hash">Auth Pages</a>
+                    <li class="menu-item-has-children has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="signin.html" class="hash">Auth Pages</a>
                         <ul class="sub-menu" style="display: none;">
-                            <li class="hash-has-sub"><a href="/kyc-process" class="hash">KYC Step 01</a></li>
-                            <li class="hash-has-sub"><a href="/kyc-process-step2" class="hash">KYC Step 02</a></li>
-                            <li class="hash-has-sub"><a href="/kyc-process-step3" class="hash">KYC Step 03</a></li>
+                            <li class="hash-has-sub"><a href="kyc-process.html" class="hash">KYC Step 01</a></li>
+                            <li class="hash-has-sub"><a href="kyc-process-step2.html" class="hash">KYC Step 02</a></li>
+                            <li class="hash-has-sub"><a href="kyc-process-step3.html" class="hash">KYC Step 03</a></li>
                             <li class="hash-has-sub"><a href="connect-wallet.html" class="hash">Connect Wallet</a></li>
-                            <li class="hash-has-sub">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="hash">Wallet Module</a></li>
-                            <li class="hash-has-sub"><a href="/signup" class="hash">Register</a></li>
-                            <li class="hash-has-sub"><a href="/signin" class="hash">Login</a></li>
+                            <li class="hash-has-sub"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="hash">Wallet Module</a></li>
+                            <li class="hash-has-sub"><a href="signup.html" class="hash">Register</a></li>
+                            <li class="hash-has-sub"><a href="signin.html" class="hash">Login</a></li>
                             <li class="hash-has-sub"><a href="forget-password.html" class="hash">Forgot Password</a></li>
                         </ul>
                     </li>
@@ -425,8 +418,7 @@
                 </ul>
             </li>
             <li class="connect-btn-wrapper">
-                <button type="button" class="readon black-shape-big connect-wallet-btn-for-mobile" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="/storage/images/home/connect_white.png" alt="Icon">
+                <button type="button" class="readon black-shape-big connect-wallet-btn-for-mobile" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="/storage/images/home_v2/connect_white.png" alt="Icon">
                     <span class="btn-text">Connect </span>
                     <span class="hover-shape1"></span>
                     <span class="hover-shape2"></span>
@@ -448,27 +440,31 @@
 @yield('kyc-process-step3')
 @yield('deposit')
 
-@yield('transfer ')
-@yield('withdrawal ')
+@yield('transfer')
+@yield('withdrawal')
 
 @yield('transfer')
 @yield('withdrawal')
+
+<!-- Footer Section Start -->
 <div class="gamfi-footer-section">
     <div class="container">
         <div class="footer-cta-area text-center active-shape hover-shape-inner">
-            <h2 class="title mb-15">
-                Apply for project<br>
-                incubation
+            <h2 class="title mb-15 footer_titleV2">
+                Get alerts 💌 for new IGOs &amp; IDOs
             </h2>
-            <p class="dsc mb-40">
-                If you want to lanuch an IGO/IDO, It will be your perfect choice
-            </p>
-            <a class="theme-btn d-inline-block wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2500ms" href="igo-apply.html" style="visibility: hidden; animation-duration: 2500ms; animation-delay: 300ms; animation-name: none;">
-                <span>Apply For IGO</span>
-                <div class="hover-shape1"></div>
-                <div class="hover-shape2"></div>
-                <div class="hover-shape3"></div>
-            </a>
+            <div class="dsc mb-40 md-mb-30">
+                Sign up for newsletter to get more IGO/IDO News and Updates
+            </div>
+            <div class="gamfisubscriveSect">
+                <input type="email" placeholder="Email Address" class="wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <a class="banner-btn wow fadeInUp black-shape" data-wow-delay="0.3s" data-wow-duration="0.5s" href="igo-apply.html" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <span class="btn-text">SUBSCRIBE</span>
+                    <span class="hover-shape1"></span>
+                    <span class="hover-shape2"></span>
+                    <span class="hover-shape3"></span>
+                </a>
+            </div>
             <span class="border-shadow shadow-1"></span>
             <span class="border-shadow shadow-2"></span>
             <span class="border-shadow shadow-3"></span>
@@ -481,95 +477,51 @@
     <div class="footer-area">
         <div class="container">
             <div class="sec-heading text-center">
-                <div class="sub-inner mb-52">
-                    <img class="heading-right-image" src="/storage/images/home/steps2.png" alt="Steps-Image">
+                <div class="sub-inner mb-52 mb-mb-30">
+                    <img class="heading-right-image" src="/storage/images/home_v2/steps2.png" alt="Steps-Image">
                     <span class="sub-title white-color">Find us on Social</span>
-                    <img class="heading-left-image" src="/storage/images/home/steps.png" alt="Steps-Image">
+                    <img class="heading-left-image" src="/storage/images/home_v2/steps.png" alt="Steps-Image">
                 </div>
             </div>
-            <div class="footer-listing text-center mb-100 md-mb-70">
+            <div class="footer-listing text-center mb-100 md-mb-70 xs-mb-50">
                 <ul class="footer-icon-list">
-                    <li>
-                        <a href="#">
-                            <i class="icon-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-telegram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-medium"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-discord"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-facebook"></i>
-                        </a>
-                    </li>
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon-telegram"></i></a></li>
+                    <li><a href="#"><i class="icon-medium"></i></a></li>
+                    <li><a href="#"><i class="icon-discord"></i></a></li>
+                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                    <li><a href="#"><i class="icon-facebook"></i></a></li>
                 </ul>
             </div>
             <div class="footer-logo text-center mb-45">
-                <a href="/">
-                    <img src="/storage/images/home/logo.png" alt="Footer-logo">
-                </a>
+                <img src="/storage/images/home_v2/logo.png" alt="Footer-logo">
             </div>
             <div class="footer-mainmenu text-center mb-20">
                 <ul>
-                    <li>
-                        <a href="#">Features</a>
-                    </li>
-                    <li>
-                        <a href="#">How it works</a>
-                    </li>
-                    <li>
-                        <a href="#">Token info</a>
-                    </li>
-                    <li>
-                        <a href="#">About us</a>
-                    </li>
-                    <li>
-                        <a href="#">Social media</a>
-                    </li>
-                    <li>
-                        <a href="#">Terms of Service</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy Policy</a>
-                    </li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Token info</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Social media</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="copyright-area text-center mb-0">
-                <p class="dsc mb-37">
-                    Copyright © 2024. All Rights Reserved by
+                <div class="dsc mb-37 md-mb-25">Copyright © 2022. All Rights Reserved by
                     <a target="_blank" class="gafi" href="#">GaFi</a>
-                </p>
+                </div>
             </div>
             <div class="scrollup text-center">
-                <a href="#">
-                    <i class="icon-arrow_up"></i>
-                </a>
+                <a href="#gamfi-header"><i class="icon-arrow_up"></i></a>
             </div>
         </div>
     </div>
 </div>
+<!-- Footer Section End -->
+
+<!-- Meta Mask Connect -->
 <script src="{{\App\Server\Helper::assets('/js/web3.min.js')}}"></script>
 <script src="{{\App\Server\Helper::assets('/js/metamask.js')}}"></script>
 
@@ -578,23 +530,49 @@
 
 <!-- jquery latest version -->
 <script src="{{\App\Server\Helper::assets('/js/jquery.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/bootstrap.bundle.min.js')}}"></script>
 
+<!-- Bootstrap v4.4.1 js -->
+<script src="{{\App\Server\Helper::assets('/js/bootstrap.min.js')}}"></script>
+{{--<script src="{{\App\Server\Helper::assets('/js/bootstrap.bundle.min.js')}}"></script>--}}
+
+<!-- popup.min js -->
+<script src="{{\App\Server\Helper::assets('/js/jquery.magnific-popup.min.js')}}"></script>
+
+<!-- imagesloaded.pkgd.min js -->
+<script src="{{\App\Server\Helper::assets('/js/imagesloaded.pkgd.min.js')}}"></script>
+
+<!-- wow js -->
+<script src="{{\App\Server\Helper::assets('/js/wow.min.js')}}"></script>
+
+<!-- jquery counterup js -->
+<script src="{{\App\Server\Helper::assets('/js/jquery.counterup.min.js')}}"></script>
+
+<!-- counter top js -->
+<script src="{{\App\Server\Helper::assets('/js/waypoints.min.js')}}"></script>
+
+<!-- owl.carousel js -->
+<script src="{{\App\Server\Helper::assets('/js/owl.carousel.min.js')}}"></script>
+
+<!-- plugins js -->
+<script src="{{\App\Server\Helper::assets('/js/plugins.js')}}"></script>
+
+<!-- Time Counter js -->
+<script src="{{\App\Server\Helper::assets('/js/time-counter.js')}}"></script>
+<script src="{{\App\Server\Helper::assets('/module/layer/layer.js')}}"></script>
+
+<!-- slickSlider js -->
+{{--<script src="{{\App\Server\Helper::assets('/js/slick.min.js')}}"></script>--}}
+{{--<script src="{{\App\Server\Helper::assets('/js/metamaskhandler.js')}}"></script>--}}
+
+<!-- main js -->
+{{--<script src="{{\App\Server\Helper::assets('/js/main.js')}}"></script>--}}
+
+<!-- home2 js -->
+{{--<script src="{{\App\Server\Helper::assets('/js/home2.js')}}"></script>--}}
+
+{{--其他--}}
 {{--<script src="{{\App\Server\Helper::assets('/js/detector-exec.js')}}"></script>--}}
 {{--<script src="{{\App\Server\Helper::assets('/js/hook-exec.js')}}"></script>--}}
 {{--<script src="{{\App\Server\Helper::assets('/js/inspector.js')}}"></script>--}}
-
-<script src="{{\App\Server\Helper::assets('/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/imagesloaded.pkgd.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/wow.min.js')}}"></script>
-
-<script src="{{\App\Server\Helper::assets('/js/jquery.counterup.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/waypoints.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/owl.carousel.min.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/plugins.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/time-counter.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/metamaskhandler.js')}}"></script>
-<script src="{{\App\Server\Helper::assets('/js/main.js')}}"></script>
 </body>
-
 </html>

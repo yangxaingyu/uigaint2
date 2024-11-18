@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+//Route::get('/', function () {
+//    return view('home');
+//});
+Route::get('/','HomeController@index');
+Route::get('/pools','HomeController@getMiningPools');
+Route::post('/create-stack','HomeController@createStake');
+
 //登入页面
 Route::get('signin','LoginController@login');
 Route::post('dosignin','LoginController@dosignin');
@@ -47,3 +51,9 @@ Route::get('getnetwork','AccountController@getNetWork');
 Route::get('user','UserController@user');
 //金额
 Route::get('wall','UserController@wall');
+
+Route::get('withdrawal','WithdrawalController@withdrawal');
+Route::get('getnetwork','WithdrawalController@getNetWork');
+
+Route::Post('create-withdrawal','WithdrawalController@create');
+

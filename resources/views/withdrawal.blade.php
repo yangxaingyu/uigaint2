@@ -18,9 +18,12 @@
                         <h2>withdrawal</h2>
                         <h3>Confirm that the receiving platform accepts the crypto and network you have selected. You may lose your assets if you choose an incompatible network.</h3>
                     </div>
-                    <form action="/" method="post">
+                    <form method="post" action="/create-withdrawal">
                         <div class="withdrawal_coin_dropdown_sect">
-                            <label>Select a coin</label>
+                            <label>
+                                <span class="red">*</span>
+                                Select a coin
+                            </label>
                             <div class="withdrawal_coin_dropbox">
                                 <span>
                                     <img :src="coinIcon" alt="flag" class="img-fluid">
@@ -29,8 +32,8 @@
                             </div>
                             <div class="withdrawal_coin_drop_list">
                                 <ul>
-                                    @foreach ($currencies as $currency)
-                                        <li @click="changeCoin({{ json_encode($currency) }})">{{ $currency['name'] }}</li>
+                                    @foreach ($coins as $coin)
+                                        <li @click="changeCoin({{ json_encode($coin) }})">{{ $coin['name'] }}</li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -38,6 +41,7 @@
 
                         <div class="withdrawal_network_dropdown_sect">
                             <label>
+                                <span class="red">*</span>
                                 Select network
                             </label>
                             <div class="withdrawal_network_dropbox">
@@ -45,31 +49,37 @@
                             </div>
                             <div class="withdrawal_network_drop_list">
                                 <ul>
-                                    <li v-for="item in netWorkData" :key="item.id"
+                                    <li v-for="item in netWorkData" :key="item.networkId"
                                         @click="changeNetWork(item)">
-                                        @{{ item.name }}
+                                        @{{ item.networkName }}
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="input__group mb-23">
-                            <label for="quantity" style="text-transform: unset;">Withdrawal quantity</label>
-                            <input type="text" name="quantity" id="quantity" placeholder="Withdrawal quantity">
+                            <label for="quantity" style="text-transform: unset;">
+                                <span class="red">*</span>
+                                Withdrawal amount
+                            </label>
+                            <input type="text" id="quantity" v-model="amount" placeholder="Withdrawal amount">
                         </div>
 
                         <div class="input__group mb-23">
-                            <label for="address" style="text-transform: unset;">Withdrawal address</label>
-                            <input type="text" name="address" id="address" placeholder="Withdrawal address">
+                            <label for="address" style="text-transform: unset;">
+                                <span class="red">*</span>
+                                Withdrawal address
+                            </label>
+                            <input type="text" id="address" v-model="address" placeholder="Withdrawal address">
                         </div>
 
                         <div class="item-button">
-                            <a href="index.html" class="theme-btn blue">
+                            <div @click="submitFn" class="theme-btn blue">
                                 <span>submit</span>
                                 <div class="hover-shape1"></div>
                                 <div class="hover-shape2"></div>
                                 <div class="hover-shape3"></div>
-                            </a>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -175,48 +185,61 @@
             </div>
         </div>
     </div>
-    <script src="{{\App\Server\Helper::assets('/js/axios.min.js')}}"></script>
-    <script src="{{\App\Server\Helper::assets('/js/vue.min.js')}}"></script>
     <script>
-        var coinData = <?php echo json_encode($currencies); ?>;
-        const url = "http://www.uigaint.com/getnetwork"
-        const path = '/storage/images/currency/'
+        var coinData = <?php echo json_encode($coins); ?>;
+        const url = "/getnetwork/"
+        const path = '/uploads/'
         const app = new Vue({
             el: '#app',
             data: {
-                network: '',
+                coinId: '',
                 coinName: '',
                 coinIcon: '',
                 coinData: '',
                 netWorkId: '',
                 netWorkName: '',
                 netWorkData: [],
+                amount: '',
+                address: '',
             },
             mounted() {
                 this.coinData = coinData
+                this.coinId = this.coinData[0].id
                 this.coinName = this.coinData[0].name
                 this.coinIcon = path + this.coinData[0].icon
-                this.getNetNetWork(this.coinIcon)
+                this.getNetNetWork()
             },
             methods: {
+                submitFn() {
+                    axios.post('/create-withdrawal', {
+                        coin_id: this.coinId,
+                        network_id: this.netWorkId,
+                        amount: this.amount,
+                        address: this.address
+                    }).then(function (response) {
+                        console.log(response);
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+                },
                 changeCoin(data) {
+                    this.coinId = data.id
                     this.coinName = data.name
                     this.coinIcon = path + data.icon
-                    this.netWorkName = data.name
                     $(".withdrawal_coin_drop_list").toggle();
-                    this.getNetNetWork(data.id)
+                    this.getNetNetWork()
                 },
                 changeNetWork(data) {
-                    this.netWorkId = data.id
-                    this.netWorkName = data.name
+                    this.netWorkId = data.networkId
+                    this.netWorkName = data.networkName
                     $(".withdrawal_network_drop_list").toggle();
                 },
-                async getNetNetWork(coinId) {
-                    getNetWorkUrl = url + "?id=" + coinId +"?t=" + (new Date()).getTime()
+                async getNetNetWork() {
+                    getNetWorkUrl = url + "?coinId=" + this.coinId
                     let result = await axios.get(getNetWorkUrl);
                     this.netWorkData = result.data
-                    this.netWorkId = this.netWorkData[0].id
-                    this.netWorkName = this.netWorkData[0].name
+                    this.netWorkId = this.netWorkData[0].networkId
+                    this.netWorkName = this.netWorkData[0].networkName
                     $(".withdrawal_network_drop_list").hide();
                 }
             }
