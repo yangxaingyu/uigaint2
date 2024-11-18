@@ -600,7 +600,7 @@ body .modal-backdrop {
 
 /*--- Gamfi Project Section CSS ---*/
 .gamfi-project-section {
-    background: url("../images/project-bg.jpg");
+    background: url("/storage/images/project-bg.jpg");
     padding-top: 115px;
     padding-bottom: 105px;
     background-size: cover;
@@ -1323,7 +1323,7 @@ body .modal-backdrop {
 
 /*--- Gamfi Team Section CSS ---*/
 .gamfi-team-section {
-    background: url("../images/team-bg.jpg");
+    background: url("/storage/images/team-bg.jpg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-color: #090A1A;
@@ -1494,7 +1494,7 @@ body .modal-backdrop {
 
 .gamfi_header_v2 {
     min-height: 800px;
-    background: url("../images/bgV2.png");
+    background: url("/storage/images/bgV2.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1977,7 +1977,7 @@ body .modal-backdrop {
     width: 241px;
     height: 35px;
     content: "";
-    background-image: url("../images/shapeBgV2.svg");
+    background-image: url("/storage/images/shapeBgV2.svg");
     position: absolute;
     left: -30px;
     top: -7px;
@@ -2042,9 +2042,7 @@ body .modal-backdrop {
 }
 
 .gamfi-project-section.project_pools_sect {
-    /*
-    background: url(../images/project-bg.jpg);
-    */
+    background: url(/storage/images/project-bg.jpg);
     background: #090A1A;
     padding-top: 115px;
     padding-bottom: 105px;
@@ -2057,7 +2055,7 @@ body .modal-backdrop {
 
 .key_points_section .key_points_bg {
     position: absolute;
-    background: url("../images/project-bg.png");
+    background: url("/storage/images/project-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -14344,7 +14342,7 @@ div.latest-item .hover-shape-bg {
 }
 
 .gamfi-footer-section .footer-area {
-    background: url("../images/footer-bg.jpg");
+    background: url("/storage/images/footer-bg.jpg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -14435,7 +14433,7 @@ div.latest-item .hover-shape-bg {
 
 .footer-icon-list i {
     color: #FFFFFF;
-    background: url("../images/icon-image.png");
+    background: url("/storage/images/icon-image.png");
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -14665,7 +14663,7 @@ div.latest-item .hover-shape-bg {
 
 #shareIocns .popup-share-icons li i {
     color: #FFFFFF;
-    background: url("../images/icon-image.png");
+    background: url("/storage/images/icon-image.png");
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -14853,4 +14851,14 @@ div.latest-item .hover-shape-bg {
 .flex-wrap {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+
+.desc-line2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow:hidden;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
 }

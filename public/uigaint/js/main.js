@@ -435,5 +435,4 @@
       $('#download-metamask').modal('show');
     }
   });
-  
 })(jQuery);

@@ -41,7 +41,6 @@ class WalletService
 
     protected function createLog($userId, $coinId, $amount, $balanceAfter, $type, $sourceId = null)
     {
-
         MoneyLog::create([
             'source_id' => $sourceId,
             'type' => $type,
