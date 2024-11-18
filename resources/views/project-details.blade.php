@@ -12,7 +12,7 @@
                     <div class="breadcrumbs-area sec-heading">
                         <div class="sub-inner">
                             <a class="breadcrumbs-link" href="/">Home</a>
-                            <a class="breadcrumbs-link" href="index.html">Project</a>
+                            <a class="breadcrumbs-link" href="/">Project</a>
                             <span class="sub-title">Project Details</span>
                             <img class="heading-left-image" src="/storage/images/steps.png" alt="Steps-Image">
                         </div>

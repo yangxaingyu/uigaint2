@@ -164,5 +164,22 @@
         </div>
     </div>
 </div>
-
+@if (session('message'))
+    <script>
+        window.onload = function() {
+            layer.open({
+                type: 1,
+                skin: 'demo-class',
+                area: ['40%', 'auto'],
+                title: 'Error',
+                shade: 0.6,
+                shadeClose: true,
+                anim: 1,
+                btn: ['Close'],
+                btnAlign: 'c',
+                content: '<div style="text-align: center;padding-top: 15px;">{{ session('message') }}</div>'
+            });
+        };
+    </script>
+@endif
 @stop

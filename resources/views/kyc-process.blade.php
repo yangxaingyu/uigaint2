@@ -112,7 +112,7 @@
                             <li>After completion, you will receive the certification result. </li>
                         </ol>
                         <h2>Q: How long does KYC certification take? </h2>
-                        <p><strong>A:</strong>KYC certification usually takes a few hours to a few days, depending on the processing speed and the completeness and clarity of the materials you submit. </p>
+                        <p><strong>A:</strong><br>KYC certification usually takes a few hours to a few days, depending on the processing speed and the completeness and clarity of the materials you submit. </p>
 {{--                        <h2>Q: If I don't have a passport or ID card, can I still do KYC certification? </h2>--}}
 {{--                        <p>A:KYC certification usually requires submission of valid proof of identity. If you don't have a driver's license or ID card, such as a passport, you can also verify it.</p>--}}
                     </div>
@@ -214,7 +214,7 @@
 <script>
     function toggleDropdown() {
         const dropdown = document.querySelector('.kyc_country_drop_list');
-        dropdown.style.display = (dropdown.style.display === 'block' || dropdown.style.display === '') ? 'none' : 'block';
+        dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'none' : 'block';
     }
     function selectCountry(country) {
         const selectedCountryBox = document.querySelector('.kyc_country_dropbox h4');

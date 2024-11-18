@@ -29,6 +29,14 @@
     <script src="{{\App\Server\Helper::assets('/js/axios.min.js')}}"></script>
     <script src="{{\App\Server\Helper::assets('/js/vue.min.js')}}"></script>
     <script src="{{\App\Server\Helper::assets('/js/dayjs.min.js')}}"></script>
+
+    <style>
+        body .demo-class .layui-layer-title {background:#272642; color:#fff; border: none;}
+        body .demo-class .layui-layer-content {background-color: #443d6c; color: #fff;}
+        body .demo-class .layui-layer-btn {background-color: #443d6c;}
+        body .demo-class .layui-layer-btn a {height: 33px;line-height: 33px; font-family: "Russo One", sans-serif; background:rgba(255, 255, 255, 0.2); color: #fff; border: 0;}
+
+    </style>
 </head>
 
 <style>
@@ -55,13 +63,13 @@
             <div class="heaader-inner-area d-flex justify-content-between align-items-center">
                 <div class="gamfi-logo-area d-flex justify-content-between align-items-center">
                     <div class="logo">
-                        <a href="index.html"><img src="/storage/images/home_v2/logo.png" alt="logo"></a>
+                        <a href="/"><img src="/storage/images/home_v2/logo.png" alt="logo"></a>
                     </div>
                     <div class="header-menu">
                         <ul class="nav-menu">
-                            <li><a href="index.html">Home</a>
+                            <li><a href="/">Home</a>
                                 <ul class="sub-menu">
-                                    <li><a href="index.html">Home 1</a></li>
+                                    <li><a href="/">Home 1</a></li>
                                     <li><a href="index2.html">Home 2</a></li>
                                     <li><a href="index3.html">Home 3</a></li>
                                     <li><a href="index4.html">Home 4</a></li>
@@ -108,7 +116,7 @@
                                                         </div>
                                                         <ul>
                                                             <li>
-                                                                <a href="index.html">01 <span><img src="/storage/images/home_v2/index-V1.png" alt="Index V1" class="img-fluid"></span></a>
+                                                                <a href="/">01 <span><img src="/storage/images/home_v2/index-V1.png" alt="Index V1" class="img-fluid"></span></a>
                                                             </li>
                                                             <li>
                                                                 <a href="index2.html">02 <span><img src="/storage/images/home_v2/index-V2.png" alt="Index V2" class="img-fluid"></span></a>
@@ -212,14 +220,14 @@
                                                             <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                         </div>
                                                         <ul>
-                                                            <li><a href="kyc-process.html">KYC Step 01</a> <span class="hot">HOT</span></li>
-                                                            <li><a href="kyc-process-step2.html">KYC Step 02</a></li>
-                                                            <li><a href="kyc-process-step3.html">KYC Step 03</a></li>
+                                                            <li><a href="kyc-process">KYC Step 01</a> <span class="hot">HOT</span></li>
+                                                            <li><a href="kyc-process-step2">KYC Step 02</a></li>
+                                                            <li><a href="kyc-process-step3">KYC Step 03</a></li>
                                                             <li><a href="connect-wallet.html">Connect Wallet</a></li>
                                                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Wallet Module</a></li>
-                                                            <li><a href="signup.html">Register</a></li>
-                                                            <li><a href="signin.html">Login</a></li>
-                                                            <li><a href="forget-password.html">Forget Password</a></li>
+                                                            <li><a href="signup">Register</a></li>
+                                                            <li><a href="signin">Login</a></li>
+                                                            <li><a href="forget-password">Forget Password</a></li>
                                                         </ul>
                                                     </div>
 
@@ -244,21 +252,21 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="buy-token">
-                            <a class="readon black-shape" href="#">
-                                <span class="btn-text">Buy Token </span>
-                                <i class="icon-arrow_down"></i>
-                                <span class="hover-shape1"></span>
-                                <span class="hover-shape2"></span>
-                                <span class="hover-shape3"></span>
-                            </a>
-                            <ul>
-                                <li><a href="#"><img src="/storage/images/home_v2/pancake.png" alt="pancake"> PancakeSwap</a></li>
-                                <li><a href="#"><img src="/storage/images/home_v2/uniswap.png" alt="uniswap"> UniSwap</a></li>
-                                <li><a href="#"><img src="/storage/images/home_v2/market.png" alt="market"> CoinMarketCap</a></li>
-                                <li><a href="#"><img src="/storage/images/home_v2/gate.png" alt="gate"> Gate.io</a></li>
-                            </ul>
-                        </li>
+{{--                        <li class="buy-token">--}}
+{{--                            <a class="readon black-shape" href="#">--}}
+{{--                                <span class="btn-text">Buy Token </span>--}}
+{{--                                <i class="icon-arrow_down"></i>--}}
+{{--                                <span class="hover-shape1"></span>--}}
+{{--                                <span class="hover-shape2"></span>--}}
+{{--                                <span class="hover-shape3"></span>--}}
+{{--                            </a>--}}
+{{--                            <ul>--}}
+{{--                                <li><a href="#"><img src="/storage/images/home_v2/pancake.png" alt="pancake"> PancakeSwap</a></li>--}}
+{{--                                <li><a href="#"><img src="/storage/images/home_v2/uniswap.png" alt="uniswap"> UniSwap</a></li>--}}
+{{--                                <li><a href="#"><img src="/storage/images/home_v2/market.png" alt="market"> CoinMarketCap</a></li>--}}
+{{--                                <li><a href="#"><img src="/storage/images/home_v2/gate.png" alt="gate"> Gate.io</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
 
                         @if(session('user_id'))
                             <li class="connect-btn-wrapper">
@@ -286,7 +294,7 @@
                                 </a>
                             </li>
                         @endif
-=======
+
                         <li class="connect-btn-wrapper">
                             <button type="button" class="connect-btn readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="/storage/images/connect.png" alt="Icon">
                                 <span class="btn-text">Connect </span>
@@ -295,7 +303,6 @@
                                 <span class="hover-shape3"></span>
                             </button>
                         </li>
->>>>>>> 9ebacaafe8031bc3f9952afcf288eba04bae9bb5
                     </ul>
                 </div>
             </div>
@@ -312,12 +319,12 @@
             </a>
         </div>
         <div class="sidebar-logo mb-30 hash-has-sub">
-            <a href="index.html" class="hash"><img src="/storage/images/home_v2/logo-dark.png" alt=""></a>
+            <a href="/" class="hash"><img src="/storage/images/home_v2/logo-dark.png" alt=""></a>
         </div>
         <ul class="nav-menu">
-            <li class="current-menu-item has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="index.html" class="hash">Home</a>
+            <li class="current-menu-item has-sub hash-has-sub"><span class="submenu-button"><em></em></span><a href="/" class="hash">Home</a>
                 <ul class="sub-menu" style="display: none;">
-                    <li class="hash-has-sub"><a href="index.html" class="hash">Home 1</a></li>
+                    <li class="hash-has-sub"><a href="/" class="hash">Home 1</a></li>
                     <li class="hash-has-sub"><a href="index2.html" class="hash">Home 2</a></li>
                     <li class="hash-has-sub"><a href="index3.html" class="hash">Home 3</a></li>
                     <li class="hash-has-sub"><a href="index4.html" class="hash">Home 4</a></li>
@@ -445,6 +452,7 @@
 
 @yield('transfer')
 @yield('withdrawal')
+@yield('user')
 
 <!-- Footer Section Start -->
 <div class="gamfi-footer-section">
@@ -574,5 +582,6 @@
 {{--<script src="{{\App\Server\Helper::assets('/js/detector-exec.js')}}"></script>--}}
 {{--<script src="{{\App\Server\Helper::assets('/js/hook-exec.js')}}"></script>--}}
 {{--<script src="{{\App\Server\Helper::assets('/js/inspector.js')}}"></script>--}}
+
 </body>
 </html>

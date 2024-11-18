@@ -1,8 +1,41 @@
 @extends('main.main')
 
 @section('kyc-process-step2')
-    @if (session('error'))
-        <script>  alert('{{ session('error.message') }}')</script>
+    @if (session('message'))
+        <script>
+            window.onload = function() {
+                layer.open({
+                    type: 1,
+                    skin: 'demo-class',
+                    area: ['40%', 'auto'],
+                    title: 'Error',
+                    shade: 0.6,
+                    shadeClose: true,
+                    anim: 1,
+                    btn: ['Close'],
+                    btnAlign: 'c',
+                    content: '<div style="text-align: center;padding-top: 15px;">{{ session('message') }}</div>'
+                });
+            };
+        </script>
+    @endif
+    @if (session('success'))
+        <script>
+            window.onload = function() {
+                layer.open({
+                    type: 1,
+                    skin: 'demo-class',
+                    area: ['40%', 'auto'],
+                    title: 'Error',
+                    shade: 0.6,
+                    shadeClose: true,
+                    anim: 1,
+                    btn: ['Close'],
+                    btnAlign: 'c',
+                    content: '<div style="text-align: center;padding-top: 15px;">{{ session('success') }}</div>'
+                });
+            };
+        </script>
     @endif
     <style>
         button.theme-btn.assbutton {
@@ -21,7 +54,7 @@
             <div class="col-lg-5">
                 <div class="breadcrumbs-area sec-heading">
                     <div class="sub-inner mb-15">
-                        <a class="breadcrumbs-link" href="index.html">Home</a>
+                        <a class="breadcrumbs-link" href="/">Home</a>
                         <span class="sub-title">KYC FORM</span>
                         <img class="heading-left-image" src="/storage/images/steps.png" alt="Steps-Image">
                     </div>
@@ -67,7 +100,7 @@
                                     <div class="upload_btn_bg">
                                         <div class="upload-btn-wrapper">
                                             <span><img src="/storage/images/uploadFileicon.svg" alt="icon" class="img-fluid"></span>
-                                            <input type="file" name="back">
+                                            <input type="file" name="back" required>
                                         </div>
                                     </div>
                                     <h4>National ID Back</h4>
@@ -119,7 +152,7 @@
                         </div>
                         <div class="input__group mb-40">
                             <label>National ID Number</label>
-                            <input type="text" name="nim" id="nid" placeholder="e.g. 58933699">
+                            <input type="text" name="nim" id="nid" placeholder="e.g. 58933699" required>
                         </div>
                         <div class="item-button">
                             <button class="theme-btn blue assbutton">

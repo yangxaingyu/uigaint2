@@ -328,7 +328,7 @@
 
     <div class="flexsunmer">
         <div class="sunmmer">2</div>
-        <div class="texesum">Select a networks</div>
+        <div class="texesum">Select a network</div>
     </div>
     <div class="kyc_country_dropdown_sect3">
         <!-- 网络选择下拉框 -->
@@ -344,21 +344,22 @@
         </div>
     </div>
 
-    <div class="flexsunmer">
-        <div class="sunmmer">3</div>
-        <div class="texesum">Purchase quantity</div>
-    </div>
-    <div class="address">
-        <input type="text" id="addressField" placeholder="Address will appear here" readonly>
-    </div>
+{{--    <div class="flexsunmer">--}}
+{{--        <div class="sunmmer">3</div>--}}
+{{--        <div class="texesum">Purchase quantity</div>--}}
+{{--    </div>--}}
+{{--    <div class="address">--}}
+{{--        <input type="text" id="addressField" placeholder="Select a coin and network">--}}
+{{--    </div>--}}
+
 
     <div class="flexsunmer"><div class="sunmmer">
-            4
+            3
         </div> <div class="texesum">
             Purchase quantity
         </div></div>
     <div class="num">
-        <input type="number" name="amount" placeholder="number">
+        <input type="number" name="amount" placeholder="quantity">
     </div>
 
     <div class="project-btn-area text-center black-shape-big-custom">
@@ -368,6 +369,60 @@
 </form>
 
     </div>
+
+
+{{--    <script>--}}
+{{--        // 货币和网络数据--}}
+{{--        var coinData = @json($data);--}}
+
+{{--        // 切换下拉框显示/隐藏--}}
+{{--        function toggleDropdown(dropdownId) {--}}
+{{--            var dropdown = document.getElementById(dropdownId);--}}
+{{--            dropdown.style.display = (dropdown.style.display === 'block' || dropdown.style.display === '') ? 'block' : 'none';--}}
+{{--        }--}}
+
+{{--        // 选择货币--}}
+{{--        function selectCurrency(coinName, coinIcon, addresses) {--}}
+{{--            // 更新货币名称和图标--}}
+{{--            document.getElementById('currencyHeader').innerText = coinName;--}}
+{{--            document.getElementById('currencyDropdown').style.display = 'none';--}}
+
+{{--            // 获取并更新网络选择--}}
+{{--            var networks = Object.keys(addresses);--}}
+{{--            var networkList = document.getElementById('networkList');--}}
+{{--            networkList.innerHTML = '';  // 清空现有的网络列表--}}
+
+{{--            networks.forEach(function(network) {--}}
+{{--                var listItem = document.createElement('li');--}}
+{{--                listItem.textContent = network;--}}
+{{--                listItem.setAttribute('onclick', `selectNetwork('${network}', '${addresses[network]}')`);--}}
+{{--                networkList.appendChild(listItem);--}}
+{{--            });--}}
+
+{{--            // 默认选择第一个网络--}}
+{{--            selectNetwork(networks[0], addresses[networks[0]]);--}}
+{{--        }--}}
+
+{{--        // 选择网络--}}
+{{--        function selectNetwork(network, address) {--}}
+{{--            // 更新网络选择的显示--}}
+{{--            document.getElementById('networkHeader').innerText = network;--}}
+{{--            document.getElementById('networkDropList').style.display = 'none';--}}
+
+{{--            // 更新地址输入框--}}
+{{--            var addressField = document.getElementById('addressField');--}}
+
+{{--            if (address) {--}}
+{{--                // 如果地址存在，填充输入框--}}
+{{--                addressField.value = address;--}}
+{{--            } else {--}}
+{{--                // 如果地址为空，显示 placeholder 提示--}}
+{{--                addressField.placeholder = `No address available for ${network} network`;--}}
+{{--                addressField.value = '';  // 清空之前的输入框值--}}
+{{--            }--}}
+{{--        }--}}
+{{--    </script>--}}
+
  <script>
         document.addEventListener("DOMContentLoaded", function() {
             const currencyDropdown = document.getElementById('currencyDropdown');
@@ -418,4 +473,42 @@
             });
         });
     </script>
+
+    @if (session('message'))
+        <script>
+            window.onload = function() {
+                layer.open({
+                    type: 1,
+                    skin: 'demo-class',
+                    area: ['40%', 'auto'],
+                    title: 'Error',
+                    shade: 0.6,
+                    shadeClose: true,
+                    anim: 1,
+                    btn: ['Close'],
+                    btnAlign: 'c',
+                    content: '<div style="text-align: center;padding-top: 15px;">{{ session('message') }}</div>'
+                });
+            };
+        </script>
+    @endif
+    @if (session('success'))
+        <script>
+            window.onload = function() {
+                layer.open({
+                    type: 1,
+                    skin: 'demo-class',
+                    area: ['40%', 'auto'],
+                    title: 'Error',
+                    shade: 0.6,
+                    shadeClose: true,
+                    anim: 1,
+                    btn: ['Close'],
+                    btnAlign: 'c',
+                    content: '<div style="text-align: center;padding-top: 15px;">{{ session('success') }}</div>'
+                });
+            };
+        </script>
+    @endif
+
 @stop

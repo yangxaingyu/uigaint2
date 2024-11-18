@@ -419,14 +419,20 @@
                             <div class="profile-card-head-wrapper tablab">
                                 <div class="profile-card-head-title blabla">Assets</div>
                                 {{--                        <span>Assets:</span>--}}
-                                <select id="currency-select" onchange="updateCurrencyInfo()">
+                                @if(isset($val['coin_id']))
 
-                                    @foreach($balance as $val)
-                                        <option value="{{$val['coin_id']}}"
-                                                data-balance="{{$val['balance']}}"
-                                                data-staked="{{$val['staked_balance']}}">{{$val['coin_id']}}</option>
-                                    @endforeach
-                                </select>
+                                    <select id="currency-select" onchange="updateCurrencyInfo()">
+                                        @foreach($balance as $val)
+                                            <option value="{{$val['coin_id']}}"
+                                                    data-balance="{{$val['balance']}}"
+                                                    data-staked="{{$val['staked_balance']}}">{{$val['coin_id']}}</option>
+                                        @endforeach
+
+                                    </select>
+
+                                @else
+                                @endif
+
                             </div>
                             <div class="history-card-content">
 
@@ -442,7 +448,14 @@
                                             </div>
                                             <div class="valuation-detail">
                                                 <div id="valuation-total-funds">
-                                                    <span class="hidden-funds-num" id="total-balance" data-value="0.00" style="white-space: nowrap; font-size: 32px;">{{$balance[0]['balance']}}</span>
+                                                    @if(isset($balance[0]['balance']))
+
+                                                        <span class="hidden-funds-num" id="total-balance" data-value="0.00" style="white-space: nowrap; font-size: 32px;">{{$balance[0]['balance']}}</span>
+
+                                                    @else
+                                                        <span class="hidden-funds-num" id="total-balance" data-value="0.00" style="white-space: nowrap; font-size: 32px;">0.0000</span>
+                                                    @endif
+{{--                                                    <span class="hidden-funds-num" id="total-balance" data-value="0.00" style="white-space: nowrap; font-size: 32px;">{{$balance[0]['balance']}}</span>--}}
                                                 </div>
                                                 {{--                                        <select id="currency-select" onchange="updateCurrencyInfo()">--}}
                                                 {{--                                            @foreach($balance as $val)--}}
@@ -463,9 +476,19 @@
                                             <div class="valuation-text">质押货币</div>
                                             <div id="valuation-detail-funds" class="valuation-detail">
                                                 <div class="valuation-detail-value red">
-                                            <span class="hidden-funds-num rate-funds-num" id="staked-balance"
-                                                  data-value="0.00"
-                                                  style="white-space: nowrap; font-size: 32px;">{{$balance[0]['staked_balance']}} </span>
+                      @if(isset($balance[0]['staked_balance']))
+
+                                                        <span class="hidden-funds-num rate-funds-num" id="staked-balance"
+                                                              data-value="0.00"
+                                                              style="white-space: nowrap; font-size: 32px;">{{$balance[0]['staked_balance']}} </span>
+
+                                                    @else
+                                                        <span class="hidden-funds-num rate-funds-num" id="staked-balance"
+                                                              data-value="0.00"
+                                                              style="white-space: nowrap; font-size: 32px;">0.0000 </span>
+
+
+                      @endif
                                                     {{--                                            <select id="currency-select" onchange="updateCurrencyInfo()">--}}
                                                     {{--                                                @foreach($balance as $val)--}}
                                                     {{--                                                    <option value="{{$val['coin_id']}}"--}}
@@ -504,20 +527,29 @@
 
                             </a></div>
                     </div>
-                    @foreach($stake as $value)
+                  @if(isset($value['mining_pool_id']))
 
+                        @foreach($stake as $value)
+
+                            <div class="history-card-content"><a class="history-list-item">
+                                    <div class="list-item-left">
+                                        <div class="type">{{$value['mining_pool_id']}}</div>
+                                        <div class="location">{{$value['coin_id']}}</div>
+                                    </div>
+                                    <div class="list-item-right">
+                                        <div class="ip-address">{{$value['amount']}}</div>
+                                        <div class="time ellipsis">{{$value['end_date']}}</div>
+
+                                    </div>
+                                </a></div>
+                        @endforeach
+                    @else
                         <div class="history-card-content"><a class="history-list-item">
                                 <div class="list-item-left">
-                                    <div class="type">{{$value['mining_pool_id']}}</div>
-                                    <div class="location">{{$value['coin_id']}}</div>
-                                </div>
-                                <div class="list-item-right">
-                                    <div class="ip-address">{{$value['amount']}}</div>
-                                    <div class="time ellipsis">{{$value['end_date']}}</div>
-
+                                <span>No records yet</span>
                                 </div>
                             </a></div>
-                    @endforeach
+                  @endif
                 </div>
             </div>
             <div class="info-module info-module-half d-flex flex-content-between flex-col h496">

@@ -48,7 +48,7 @@ class KycController
             'nim'=>'required'
         ]);
         if ($val->fails()) {
-            return response()->json(['errors' => $val->errors()]);
+            return redirect()->back()->with('error', ['message' => $val->errors()]);
         }
         $directoryPath = 'kyc';
         $frontUrl = $this->storeFile($front, $directoryPath);

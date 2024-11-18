@@ -1,10 +1,6 @@
 @extends('main.main')
 
 @section('kyc-process-step3')
-
-    @if (session('error'))
-        <script>  alert('{{ session('error.message') }}')</script>
-    @endif
     <style>
         button.theme-btn.assbutton {
             width: 570px;
@@ -16,7 +12,7 @@
             <div class="col-lg-5">
                 <div class="breadcrumbs-area sec-heading">
                     <div class="sub-inner mb-15">
-                        <a class="breadcrumbs-link" href="index.html">Home</a>
+                        <a class="breadcrumbs-link" href="/">Home</a>
                         <span class="sub-title">KYC FORM</span>
                         <img class="heading-left-image" src="/storage/images/steps.png" alt="Steps-Image">
                     </div>
@@ -146,5 +142,40 @@
         </div>
     </div>
 </div>
-
+    @if (session('message'))
+        <script>
+            window.onload = function() {
+                layer.open({
+                    type: 1,
+                    skin: 'demo-class',
+                    area: ['40%', 'auto'],
+                    title: 'Error',
+                    shade: 0.6,
+                    shadeClose: true,
+                    anim: 1,
+                    btn: ['Close'],
+                    btnAlign: 'c',
+                    content: '<div style="text-align: center;padding-top: 15px;">{{ session('message') }}</div>'
+                });
+            };
+        </script>
+    @endif
+    @if (session('success'))
+        <script>
+            window.onload = function() {
+                layer.open({
+                    type: 1,
+                    skin: 'demo-class',
+                    area: ['40%', 'auto'],
+                    title: 'Error',
+                    shade: 0.6,
+                    shadeClose: true,
+                    anim: 1,
+                    btn: ['Close'],
+                    btnAlign: 'c',
+                    content: '<div style="text-align: center;padding-top: 15px;">{{ session('success') }}</div>'
+                });
+            };
+        </script>
+    @endif
 @stop

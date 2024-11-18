@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Services\WalletService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -11,6 +12,12 @@ class LoginController extends Controller
 {
     //
     //登入页面
+    protected $walletService;
+
+    public function __construct()
+    {
+        $this->walletService = new WalletService();
+    }
     public function login(){
         return view('signin');
     }
@@ -19,9 +26,10 @@ class LoginController extends Controller
         $password = $request->post('password');
         $userinfo=User::where('email',$email)->first();
         if (empty($userinfo)){
-            return redirect()->back()->with('error', ['message' => 'user does not exist']);
+            return redirect()->back()->with('message', 'User not found!');
         }elseif ($userinfo['password'] !== md5($password)){
-            return redirect()->back()->with('error', ['message' => 'Password error']);
+
+            return redirect()->back()->with(['message' => 'Password error']);
         }else{
             session(['user_id'=>$userinfo['id'],'email'=>$userinfo['email'],'images'=>$userinfo['images']]);
             return redirect('/');
@@ -42,7 +50,6 @@ class LoginController extends Controller
         if ($validator->fails()) {
            return redirect()->back()->with('error', ['message' => 'required error']);
         }
-
         $password=md5($password);
         $images='/storage/images/KLpE7R5835.png';
         $data=[
@@ -51,8 +58,9 @@ class LoginController extends Controller
             'kyc_status'=>0,
             'images'=>$images,
         ];
+        dd($data);
         $res=User::create($data);
-        session(['user_id' => $res->id]);
+        session(['user_id' => $res->id,'images'=>$images]);
         return redirect('/');
     }
     public function forgetpassword(){

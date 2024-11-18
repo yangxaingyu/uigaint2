@@ -6,6 +6,10 @@
         body .demo-class .layui-layer-content {background-color: #443d6c; color: #fff;}
         body .demo-class .layui-layer-btn {background-color: #443d6c;}
         body .demo-class .layui-layer-btn a {height: 33px;line-height: 33px; font-family: "Russo One", sans-serif; background:rgba(255, 255, 255, 0.2); color: #fff; border: 0;}
+
+        .view-project-btn .btn-text{
+            color: #fff;
+        }
     </style>
 
     <!--Preloader area start here-->
@@ -100,944 +104,1881 @@
         </div>
 
         <!-- Project Section Start -->
-        <div class="gamfi-project-section project_pools_sect main-project-area pb-0">
-            <div class="container">
-                <div class="sec-inner align-items-center d-flex justify-content-between flex-wrap mb-30">
-                    <div class="sec-heading">
-                        <div class="sub-inner mb-15">
-                            <span class="sub-title">EXPLORE</span>
-                            <img class="heading-left-image" src="/storage/images/home_v2/steps.png" alt="Steps-Image">
-                        </div>
-                        <h2 class="title">Project POOLS</h2>
-                    </div>
-                    <div class="gamfi-btn-area project_v2_tab_btns">
-                        <ul>
-                            <li class="project_v2_tab_links m-0 active" onclick="openProject(event, 'ProectV2_OnGoing')" id="OpenProject">
-                                <button class="readon white-btn black-shape m-0">
-                                    <span class="btn-text">On going</span>
-                                    <span class="hover-shape1"></span>
-                                    <span class="hover-shape2"></span>
-                                    <span class="hover-shape3"></span>
-                                </button>
-                            </li>
+{{--        <div class="gamfi-project-section project_pools_sect main-project-area pb-0">--}}
+{{--            <div class="container">--}}
+{{--                <div class="sec-inner align-items-center d-flex justify-content-between flex-wrap mb-30">--}}
+{{--                    <div class="sec-heading">--}}
+{{--                        <div class="sub-inner mb-15">--}}
+{{--                            <span class="sub-title">EXPLORE</span>--}}
+{{--                            <img class="heading-left-image" src="/storage/images/home_v2/steps.png" alt="Steps-Image">--}}
+{{--                        </div>--}}
+{{--                        <h2 class="title">Project POOLS</h2>--}}
+{{--                    </div>--}}
+{{--                    <div class="gamfi-btn-area project_v2_tab_btns">--}}
+{{--                        <ul>--}}
+{{--                            <li class="project_v2_tab_links m-0 active" onclick="openProject(event, 'ProectV2_OnGoing')" id="OpenProject">--}}
+{{--                                <button class="readon white-btn black-shape m-0">--}}
+{{--                                    <span class="btn-text">On going</span>--}}
+{{--                                    <span class="hover-shape1"></span>--}}
+{{--                                    <span class="hover-shape2"></span>--}}
+{{--                                    <span class="hover-shape3"></span>--}}
+{{--                                </button>--}}
+{{--                            </li>--}}
 
-                            <li class="project_v2_tab_links" onclick="openProject(event, 'ProectV2_UPCOMING')">
-                                <button class="readon white-btn black-shape m-0">
-                                    <span class="btn-text">UPCOMING</span>
-                                    <span class="hover-shape1"></span>
-                                    <span class="hover-shape2"></span>
-                                    <span class="hover-shape3"></span>
-                                </button>
-                            </li>
+{{--                            <li class="project_v2_tab_links" onclick="openProject(event, 'ProectV2_UPCOMING')">--}}
+{{--                                <button class="readon white-btn black-shape m-0">--}}
+{{--                                    <span class="btn-text">UPCOMING</span>--}}
+{{--                                    <span class="hover-shape1"></span>--}}
+{{--                                    <span class="hover-shape2"></span>--}}
+{{--                                    <span class="hover-shape3"></span>--}}
+{{--                                </button>--}}
+{{--                            </li>--}}
 
-                            <li class="project_v2_tab_links" onclick="openProject(event, 'ProectV2_ENDED')">
-                                <button class="readon white-btn black-shape m-0">
-                                    <span class="btn-text">ENDED</span>
-                                    <span class="hover-shape1"></span>
-                                    <span class="hover-shape2"></span>
-                                    <span class="hover-shape3"></span>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project_v2_tab_content_sect">
-                    <div id="ProectV2_OnGoing" class="project_v2_tab_content animate_opacity" style="display: block;">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.4s" style="visibility: visible; animation-duration: 0.4s; animation-delay: 0.2s; animation-name: fadeInRight;">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>
-                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="price-counter">
-                                                    <div class="timer timer_1">
-                                                        <ul>
-                                                            <li class="days">-580<span>D</span></li>
-                                                            <li class="hours">11<span>H</span></li>
-                                                            <li class="minutes">20<span>M</span></li>
-                                                            <li class="seconds">25<span>S</span></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.33 BUSD</span></li>
-                                                <li>Max allocation <span>900.00 BUSD</span></li>
-                                                <li>Targeted raise <span>200,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInRight;">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image2.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Super Sidero</a></h4>
-                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="price-counter">
-                                                    <div class="timer timer_2">
-                                                        <ul>
-                                                            <li class="days">-577<span>D</span></li>
-                                                            <li class="hours">15<span>H</span></li>
-                                                            <li class="minutes">15<span>M</span></li>
-                                                            <li class="seconds">40<span>S</span></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                            <li class="project_v2_tab_links" onclick="openProject(event, 'ProectV2_ENDED')">--}}
+{{--                                <button class="readon white-btn black-shape m-0">--}}
+{{--                                    <span class="btn-text">ENDED</span>--}}
+{{--                                    <span class="hover-shape1"></span>--}}
+{{--                                    <span class="hover-shape2"></span>--}}
+{{--                                    <span class="hover-shape3"></span>--}}
+{{--                                </button>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="project_v2_tab_content_sect">--}}
+{{--                    <div id="ProectV2_OnGoing" class="project_v2_tab_content animate_opacity" style="display: block;">--}}
+{{--                        <div class="row align-items-center">--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.4s" style="visibility: visible; animation-duration: 0.4s; animation-delay: 0.2s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_1">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-580<span>D</span></li>--}}
+{{--                                                            <li class="hours">11<span>H</span></li>--}}
+{{--                                                            <li class="minutes">20<span>M</span></li>--}}
+{{--                                                            <li class="seconds">25<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.33 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>900.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>200,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image2.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Super Sidero</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_2">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-577<span>D</span></li>--}}
+{{--                                                            <li class="hours">15<span>H</span></li>--}}
+{{--                                                            <li class="minutes">15<span>M</span></li>--}}
+{{--                                                            <li class="seconds">40<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.89 BUSD</span></li>
-                                                <li>Max allocation <span>300.00 BUSD</span></li>
-                                                <li>Targeted raise <span>899,900 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.4s; animation-name: fadeInRight;">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Meta World</a></h4>
-                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="price-counter">
-                                                    <div class="timer timer_3">
-                                                        <ul>
-                                                            <li class="days">-574<span>D</span></li>
-                                                            <li class="hours">18<span>H</span></li>
-                                                            <li class="minutes">23<span>M</span></li>
-                                                            <li class="seconds">35<span>S</span></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.89 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>300.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>899,900 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.4s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Meta World</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_3">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-574<span>D</span></li>--}}
+{{--                                                            <li class="hours">18<span>H</span></li>--}}
+{{--                                                            <li class="minutes">23<span>M</span></li>--}}
+{{--                                                            <li class="seconds">35<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>2.25 BUSD</span></li>
-                                                <li>Max allocation <span>1000.00 BUSD</span></li>
-                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.5s" data-wow-duration="0.7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.5s; animation-name: fadeInRight;">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image4.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Fisrt Survivor</a></h4>
-                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content hover-shape-border">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="price-counter">
-                                                    <div class="timer timer_4">
-                                                        <ul>
-                                                            <li class="days">-573<span>D</span></li>
-                                                            <li class="hours">16<span>H</span></li>
-                                                            <li class="minutes">18<span>M</span></li>
-                                                            <li class="seconds">30<span>S</span></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.59 BUSD</span></li>
-                                                <li>Max allocation <span>399.00 BUSD</span></li>
-                                                <li>Targeted raise <span>500,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInRight;">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image5.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Cryowar Two</a></h4>
-                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content hover-shape-border">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="price-counter">
-                                                    <div class="timer timer_5">
-                                                        <ul>
-                                                            <li class="days">-575<span>D</span></li>
-                                                            <li class="hours">20<span>H</span></li>
-                                                            <li class="minutes">40<span>M</span></li>
-                                                            <li class="seconds">59<span>S</span></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.66 BUSD</span></li>
-                                                <li>Max allocation <span>800.00 BUSD</span></li>
-                                                <li>Targeted raise <span>999,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.7s" data-wow-duration="0.9s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.7s; animation-name: fadeInRight;">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image6.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>
-                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="price-counter">
-                                                    <div class="timer timer_6">
-                                                        <ul>
-                                                            <li class="days">-575<span>D</span></li>
-                                                            <li class="hours">20<span>H</span></li>
-                                                            <li class="minutes">40<span>M</span></li>
-                                                            <li class="seconds">59<span>S</span></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>2.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>1000.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.5s" data-wow-duration="0.7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.5s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image4.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Fisrt Survivor</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_4">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-573<span>D</span></li>--}}
+{{--                                                            <li class="hours">16<span>H</span></li>--}}
+{{--                                                            <li class="minutes">18<span>M</span></li>--}}
+{{--                                                            <li class="seconds">30<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.59 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>399.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>500,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image5.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Cryowar Two</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_5">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-575<span>D</span></li>--}}
+{{--                                                            <li class="hours">20<span>H</span></li>--}}
+{{--                                                            <li class="minutes">40<span>M</span></li>--}}
+{{--                                                            <li class="seconds">59<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.66 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>800.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>999,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.7s" data-wow-duration="0.9s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.7s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image6.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_6">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-575<span>D</span></li>--}}
+{{--                                                            <li class="hours">20<span>H</span></li>--}}
+{{--                                                            <li class="minutes">40<span>M</span></li>--}}
+{{--                                                            <li class="seconds">59<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.25 BUSD</span></li>
-                                                <li>Max allocation <span>500.00 BUSD</span></li>
-                                                <li>Targeted raise <span>888,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>500.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>888,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
-                    <div id="ProectV2_UPCOMING" class="project_v2_tab_content animate_opacity" style="display: none;">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/privius-image2.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">KyberDyne</a></h4>
-                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>08 Days Left</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.33 BUSD</span></li>
-                                                <li>Max allocation <span>900.00 BUSD</span></li>
-                                                <li>Targeted raise <span>200,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/privius-image7.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Thetan Arena</a></h4>
-                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>12 Days Left</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                    <div id="ProectV2_UPCOMING" class="project_v2_tab_content animate_opacity" style="display: none;">--}}
+{{--                        <div class="row align-items-center">--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image2.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">KyberDyne</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>08 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.33 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>900.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>200,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image7.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Thetan Arena</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>12 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.89 BUSD</span></li>
-                                                <li>Max allocation <span>300.00 BUSD</span></li>
-                                                <li>Targeted raise <span>899,900 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>
-                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>15 Days Left</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.89 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>300.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>899,900 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>15 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>2.25 BUSD</span></li>
-                                                <li>Max allocation <span>1000.00 BUSD</span></li>
-                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/privius-image.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">KingdomX</a></h4>
-                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content hover-shape-border">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>20 Days Left</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.59 BUSD</span></li>
-                                                <li>Max allocation <span>399.00 BUSD</span></li>
-                                                <li>Targeted raise <span>500,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/privius-image5.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Cyber City</a></h4>
-                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content hover-shape-border">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>25 Days Left</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.66 BUSD</span></li>
-                                                <li>Max allocation <span>800.00 BUSD</span></li>
-                                                <li>Targeted raise <span>999,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>
-                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>30 Days Left</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>2.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>1000.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">KingdomX</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>20 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.59 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>399.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>500,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image5.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Cyber City</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>25 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.66 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>800.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>999,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>30 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.25 BUSD</span></li>
-                                                <li>Max allocation <span>500.00 BUSD</span></li>
-                                                <li>Targeted raise <span>888,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>500.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>888,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
-                    <div id="ProectV2_ENDED" class="project_v2_tab_content animate_opacity" style="display: none;">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/privius-image10.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">KyberDyne</a></h4>
-                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>07 Days Ago</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.33 BUSD</span></li>
-                                                <li>Max allocation <span>900.00 BUSD</span></li>
-                                                <li>Targeted raise <span>200,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/privius-image5.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Thetan Arena</a></h4>
-                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>08 Days Ago</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                    <div id="ProectV2_ENDED" class="project_v2_tab_content animate_opacity" style="display: none;">--}}
+{{--                        <div class="row align-items-center">--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image10.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">KyberDyne</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>07 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.33 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>900.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>200,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image5.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Thetan Arena</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>08 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.89 BUSD</span></li>
-                                                <li>Max allocation <span>300.00 BUSD</span></li>
-                                                <li>Targeted raise <span>899,900 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image4.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>
-                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>10 Days Ago</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.89 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>300.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>899,900 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image4.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>10 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>2.25 BUSD</span></li>
-                                                <li>Max allocation <span>1000.00 BUSD</span></li>
-                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/privius-image2.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">KingdomX</a></h4>
-                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content hover-shape-border">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>14 Days Ago</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.59 BUSD</span></li>
-                                                <li>Max allocation <span>399.00 BUSD</span></li>
-                                                <li>Targeted raise <span>500,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/privius-image.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Cyber City</a></h4>
-                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content hover-shape-border">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>17 Days Ago</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">
-                                            </div>
-                                        </div>
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.66 BUSD</span></li>
-                                                <li>Max allocation <span>800.00 BUSD</span></li>
-                                                <li>Targeted raise <span>999,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="project-item project_item_v2 hover-shape-border">
-                                    <div class="project-info d-flex">
-                                        <a href="project-details.html">
-                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">
-                                        </a>
-                                        <div class="project-auother">
-                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>
-                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>
-                                        </div>
-                                    </div>
-                                    <div class="project-content">
-                                        <div class="project-header d-flex justify-content-between">
-                                            <div class="heading-title heading-title-v2">
-                                                <div class="heading-title">
-                                                    <h4>30 Days Ago</h4>
-                                                </div>
-                                            </div>
-                                            <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">
-                                            </div>
-                                        </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>2.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>1000.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image2.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">KingdomX</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>14 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.59 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>399.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>500,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Cyber City</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>17 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.66 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>800.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>999,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>30 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                        <div class="project-media">
-                                            <ul class="project-listing">
-                                                <li>Min allocation <span>0.25 BUSD</span></li>
-                                                <li>Max allocation <span>500.00 BUSD</span></li>
-                                                <li>Targeted raise <span>888,000 BUSD</span></li>
-                                                <li>Access type <span>Public</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="social_icons_sect">
-                                        <ul class="social_icon_list">
-                                            <li><a href="#"><i class="icon-telegram"></i></a></li>
-                                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icon-discord"></i></a></li>
-                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>
-                                            <li><a href="#"><i class="icon-world"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <span class="border-shadow shadow-1"></span>
-                                    <span class="border-shadow shadow-2"></span>
-                                    <span class="border-shadow shadow-3"></span>
-                                    <span class="border-shadow shadow-4"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>500.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>888,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div> <div class="gamfi-project-section project_pools_sect main-project-area pb-0">--}}
+{{--            <div class="container">--}}
+{{--                <div class="sec-inner align-items-center d-flex justify-content-between flex-wrap mb-30">--}}
+{{--                    <div class="sec-heading">--}}
+{{--                        <div class="sub-inner mb-15">--}}
+{{--                            <span class="sub-title">EXPLORE</span>--}}
+{{--                            <img class="heading-left-image" src="/storage/images/home_v2/steps.png" alt="Steps-Image">--}}
+{{--                        </div>--}}
+{{--                        <h2 class="title">Project POOLS</h2>--}}
+{{--                    </div>--}}
+{{--                    <div class="gamfi-btn-area project_v2_tab_btns">--}}
+{{--                        <ul>--}}
+{{--                            <li class="project_v2_tab_links m-0 active" onclick="openProject(event, 'ProectV2_OnGoing')" id="OpenProject">--}}
+{{--                                <button class="readon white-btn black-shape m-0">--}}
+{{--                                    <span class="btn-text">On going</span>--}}
+{{--                                    <span class="hover-shape1"></span>--}}
+{{--                                    <span class="hover-shape2"></span>--}}
+{{--                                    <span class="hover-shape3"></span>--}}
+{{--                                </button>--}}
+{{--                            </li>--}}
+
+{{--                            <li class="project_v2_tab_links" onclick="openProject(event, 'ProectV2_UPCOMING')">--}}
+{{--                                <button class="readon white-btn black-shape m-0">--}}
+{{--                                    <span class="btn-text">UPCOMING</span>--}}
+{{--                                    <span class="hover-shape1"></span>--}}
+{{--                                    <span class="hover-shape2"></span>--}}
+{{--                                    <span class="hover-shape3"></span>--}}
+{{--                                </button>--}}
+{{--                            </li>--}}
+
+{{--                            <li class="project_v2_tab_links" onclick="openProject(event, 'ProectV2_ENDED')">--}}
+{{--                                <button class="readon white-btn black-shape m-0">--}}
+{{--                                    <span class="btn-text">ENDED</span>--}}
+{{--                                    <span class="hover-shape1"></span>--}}
+{{--                                    <span class="hover-shape2"></span>--}}
+{{--                                    <span class="hover-shape3"></span>--}}
+{{--                                </button>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="project_v2_tab_content_sect">--}}
+{{--                    <div id="ProectV2_OnGoing" class="project_v2_tab_content animate_opacity" style="display: block;">--}}
+{{--                        <div class="row align-items-center">--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.4s" style="visibility: visible; animation-duration: 0.4s; animation-delay: 0.2s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_1">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-580<span>D</span></li>--}}
+{{--                                                            <li class="hours">11<span>H</span></li>--}}
+{{--                                                            <li class="minutes">20<span>M</span></li>--}}
+{{--                                                            <li class="seconds">25<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.33 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>900.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>200,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image2.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Super Sidero</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_2">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-577<span>D</span></li>--}}
+{{--                                                            <li class="hours">15<span>H</span></li>--}}
+{{--                                                            <li class="minutes">15<span>M</span></li>--}}
+{{--                                                            <li class="seconds">40<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.89 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>300.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>899,900 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.4s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Meta World</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_3">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-574<span>D</span></li>--}}
+{{--                                                            <li class="hours">18<span>H</span></li>--}}
+{{--                                                            <li class="minutes">23<span>M</span></li>--}}
+{{--                                                            <li class="seconds">35<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>2.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>1000.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.5s" data-wow-duration="0.7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.5s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image4.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Fisrt Survivor</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_4">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-573<span>D</span></li>--}}
+{{--                                                            <li class="hours">16<span>H</span></li>--}}
+{{--                                                            <li class="minutes">18<span>M</span></li>--}}
+{{--                                                            <li class="seconds">30<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.59 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>399.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>500,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image5.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Cryowar Two</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_5">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-575<span>D</span></li>--}}
+{{--                                                            <li class="hours">20<span>H</span></li>--}}
+{{--                                                            <li class="minutes">40<span>M</span></li>--}}
+{{--                                                            <li class="seconds">59<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.66 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>800.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>999,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border wow fadeInRight" data-wow-delay="0.7s" data-wow-duration="0.9s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.7s; animation-name: fadeInRight;">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image6.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="price-counter">--}}
+{{--                                                    <div class="timer timer_6">--}}
+{{--                                                        <ul>--}}
+{{--                                                            <li class="days">-575<span>D</span></li>--}}
+{{--                                                            <li class="hours">20<span>H</span></li>--}}
+{{--                                                            <li class="minutes">40<span>M</span></li>--}}
+{{--                                                            <li class="seconds">59<span>S</span></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>500.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>888,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+
+{{--                    <div id="ProectV2_UPCOMING" class="project_v2_tab_content animate_opacity" style="display: none;">--}}
+{{--                        <div class="row align-items-center">--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image2.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">KyberDyne</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>08 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.33 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>900.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>200,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image7.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Thetan Arena</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>12 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.89 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>300.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>899,900 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>15 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>2.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>1000.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">KingdomX</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>20 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.59 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>399.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>500,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image5.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Cyber City</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>25 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.66 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>800.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>999,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>30 Days Left</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>500.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>888,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+
+{{--                    <div id="ProectV2_ENDED" class="project_v2_tab_content animate_opacity" style="display: none;">--}}
+{{--                        <div class="row align-items-center">--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image10.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">KyberDyne</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.59 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>07 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.33 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>900.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>200,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image5.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Thetan Arena</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (SSC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>08 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.89 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>300.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>899,900 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image4.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Galaxy War</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (MTS) = 0.33 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>10 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image3.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>2.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>1000.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>50,00,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image2.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">KingdomX</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (FSC) = 0.89 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>14 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image4.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.59 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>399.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>500,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/privius-image.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Cyber City</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (CTC) = 0.45 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content hover-shape-border">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>17 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image5.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.66 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>800.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>999,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-4 col-md-6">--}}
+{{--                                <div class="project-item project_item_v2 hover-shape-border">--}}
+{{--                                    <div class="project-info d-flex">--}}
+{{--                                        <a href="project-details.html">--}}
+{{--                                            <img src="/storage/images/home_v2/project-image3.png" alt="Project-Image">--}}
+{{--                                        </a>--}}
+{{--                                        <div class="project-auother">--}}
+{{--                                            <h4 class="mb-10"><a href="project-details.html">Gaia Everworld</a></h4>--}}
+{{--                                            <div class="dsc">PRICE (GAC) = 0.13 BUSD</div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="project-content">--}}
+{{--                                        <div class="project-header d-flex justify-content-between">--}}
+{{--                                            <div class="heading-title heading-title-v2">--}}
+{{--                                                <div class="heading-title">--}}
+{{--                                                    <h4>30 Days Ago</h4>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="project-icon">--}}
+{{--                                                <img src="/storage/images/home_v2/project-single-image6.png" alt="Project-Image">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="project-media">--}}
+{{--                                            <ul class="project-listing">--}}
+{{--                                                <li>Min allocation <span>0.25 BUSD</span></li>--}}
+{{--                                                <li>Max allocation <span>500.00 BUSD</span></li>--}}
+{{--                                                <li>Targeted raise <span>888,000 BUSD</span></li>--}}
+{{--                                                <li>Access type <span>Public</span></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social_icons_sect">--}}
+{{--                                        <ul class="social_icon_list">--}}
+{{--                                            <li><a href="#"><i class="icon-telegram"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-twitter"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-discord"></i></a></li>--}}
+{{--                                            <li class="medium"><a href="#"><i class="icon-medium"></i></a></li>--}}
+{{--                                            <li><a href="#"><i class="icon-world"></i></a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <span class="border-shadow shadow-1"></span>--}}
+{{--                                    <span class="border-shadow shadow-2"></span>--}}
+{{--                                    <span class="border-shadow shadow-3"></span>--}}
+{{--                                    <span class="border-shadow shadow-4"></span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
         <!-- New Start -->
         <div id="app" class="gamfi-project-section project_pools_sect main-project-area pb-0">

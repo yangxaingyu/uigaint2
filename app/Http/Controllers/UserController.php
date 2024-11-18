@@ -16,6 +16,7 @@ class UserController extends Controller
 
     public function user() {
         $user_id = session('user_id');
+//        dd($user_id);
         $user=User::where('id',$user_id)->first();
         $data = User::where('id', $user_id)->first();
         $balance=Wallet::with('coin')->where('user_id',$user_id)->get()->toArray();

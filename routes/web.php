@@ -36,7 +36,8 @@ Route::get('kyc-process','KycController@kyc');
 //KYC认证2
 Route::post('kyc-process-step2','KycController@kyc2');
 //KYC认证3
-Route::get('kyc-process-step3','KycController@kyc3');
+Route::post('kyc-process-step3','KycController@kyc3');
+Route::post('kyccert','KycController@kyccert');
 //充值頁面
 Route::get('deposit','DepositController@deposit');
 Route::post('depsub','DepositController@depsub');
