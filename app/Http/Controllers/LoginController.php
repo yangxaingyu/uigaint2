@@ -58,7 +58,7 @@ class LoginController extends Controller
             'kyc_status'=>0,
             'images'=>$images,
         ];
-        dd($data);
+//        dd($data);
         $res=User::create($data);
         session(['user_id' => $res->id,'images'=>$images]);
         return redirect('/');
@@ -82,6 +82,7 @@ class LoginController extends Controller
             'password'=>$newpassword
         ];
         $res=User::where('id',$user)->update($password);
+
         return redirect('/');
     }
 //

@@ -16,6 +16,9 @@ class UserController extends Controller
 
     public function user() {
         $user_id = session('user_id');
+        if (empty($user_id)){
+            return redirect()->back()->with('error', ['message' => 'User none ']);
+        }
 //        dd($user_id);
         $user=User::where('id',$user_id)->first();
         $data = User::where('id', $user_id)->first();
