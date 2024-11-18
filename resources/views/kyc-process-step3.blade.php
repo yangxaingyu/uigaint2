@@ -1,6 +1,15 @@
 @extends('main.main')
 
 @section('kyc-process-step3')
+
+    @if (session('error'))
+        <script>  alert('{{ session('error.message') }}')</script>
+    @endif
+    <style>
+        button.theme-btn.assbutton {
+            width: 570px;
+        }
+    </style>
 <div class="gamfi-breadcrumbs-section">
     <div class="container">
         <div class="row">
@@ -33,39 +42,40 @@
             <div class="col-md-6 p-0">
                 <div class="kyc_form kyc_persoanl_info_form">
                     <h3>Personal Information</h3>
-                    <form action="/" method="post">
+                    <form action="/kyccert" method="post">
+                        @csrf
                         <div class="input__group__between">
                             <div class="input__group mb-23">
                                 <label>First Name</label>
-                                <input type="text" name="f-name" id="f-name" placeholder="e.g. Smith">
+                                <input type="text" name="first_name" id="f-name" placeholder="e.g. Smith" required>
                             </div>
                             <div class="input__group mb-23">
                                 <label>Last Name</label>
-                                <input type="text" name="l-name" id="l-name" placeholder="e.g. Smith">
+                                <input type="text" name="last_name" id="l-name" placeholder="e.g. Smith" required>
                             </div>
                         </div>
                         <div class="input__group mb-23">
                             <label>State/Provience</label>
-                            <input type="text" name="provience" id="provience" placeholder="e.g. California">
+                            <input type="text" name="state" id="provience" placeholder="e.g. California" required>
                         </div>
                         <div class="input__group__between">
                             <div class="input__group mb-23">
                                 <label>Address line 1</label>
-                                <input type="text" name="address-1" id="address-1" placeholder="e.g. 645 E Shaw Ave">
+                                <input type="text" name="address_1" id="address-1" placeholder="e.g. 645 E Shaw Ave" required>
                             </div>
                             <div class="input__group mb-23">
                                 <label>Address line 2</label>
-                                <input type="text" name="address-2" id="address-2" placeholder="e.g. Fresno, CA 93710">
+                                <input type="text" name="address_2" id="address-2" placeholder="e.g. Fresno, CA 93710" required>
                             </div>
                         </div>
                         <div class="input__group__between">
                             <div class="input__group mb-23">
                                 <label>City</label>
-                                <input type="text" name="city" id="city" placeholder="e.g. New York">
+                                <input type="text" name="city" id="city" placeholder="e.g. New York" required>
                             </div>
                             <div class="input__group mb-23">
                                 <label>Post Code</label>
-                                <input type="text" name="post-code" id="post-code" placeholder="e.g. 4455">
+                                <input type="text" name="post_code" id="post-code" placeholder="e.g. 4455" required>
                             </div>
                         </div>
                         <div class="kyc_term_and_condtion_sect">
@@ -78,14 +88,17 @@
                                 <span class="checkmark"></span>
                             </label>
                         </div>
+
                         <div class="item-button">
-                            <a href="index.html" class="theme-btn blue">
-                                <span>Submit KYC</span>
+                            <button class="theme-btn blue assbutton">
+                                <span>SUBMIT KYC</span>
                                 <div class="hover-shape1"></div>
                                 <div class="hover-shape2"></div>
                                 <div class="hover-shape3"></div>
-                            </a>
+
+                            </button>
                         </div>
+
                     </form>
                 </div>
             </div>

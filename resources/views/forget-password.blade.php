@@ -1,7 +1,14 @@
 @extends('main.main')
 
 @section('forget-password')
-
+    @if (session('error'))
+        <script>  alert('{{ session('error.message') }}')</script>
+    @endif
+    <style>
+        button.theme-btn.assbutton {
+            width: 570px;
+        }
+    </style>
 <div class="loader_first" style="display: none;">
     <div class="circular-spinner"></div>
 </div>
@@ -14,18 +21,23 @@
                     <h2>reset Password</h2>
                     <h3>We’ll send you an email with a link to reset the Password to your account</h3>
                 </div>
-                <form action="/" method="post">
+                <form action="/uppwd" method="post">
+                    @csrf
                     <div class="input__group mb-40">
                         <label>Email address</label>
                         <input type="email" name="email" id="email" placeholder="Enter your email address">
                     </div>
-                    <div class="item-button">
-                        <a href="index.html" class="theme-btn blue">
-                            <span>Get Reset Link</span>
-                            <div class="hover-shape1"></div>
-                            <div class="hover-shape2"></div>
-                            <div class="hover-shape3"></div>
-                        </a>
+                    <div class="input__group mb-40">
+                        <label>Email address</label>
+                        <input type="text" name="password" id="password" placeholder="Enter your re_password">
+                    </div>
+                    <div class="input__group mb-40">
+                        <label>Email address</label>
+                        <input type="text" name="re_password" id="re_password" placeholder="Enter your re_password">
+                    </div>
+                    <div class="project-btn-area text-center black-shape-big-custom">
+                        <div class="btn_custom"><button type="submit" style=" background-color: transparent;">Next step</button></div>
+
                     </div>
                 </form>
                 <div class="item-bottom mt-40">

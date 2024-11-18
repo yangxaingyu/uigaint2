@@ -18,4 +18,5 @@ class Network extends Model
     {
         return $this->belongsToMany(Coin::class);
     }
+
 }

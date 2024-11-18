@@ -2,6 +2,9 @@
 
 @section('deposit')
     <style>
+        button.theme-btn.assbutton {
+            width: 1176px;
+        }
         img.img-fluid {
             width: 27px;
         }
@@ -49,7 +52,9 @@
                 display: flex;
                 margin-top: 10px;
             }
+
         }
+
         .texesum{
             margin-left: 10px;
         }
@@ -230,7 +235,50 @@
         }
 
 
+        .btn_custom {
+            margin-top: 40px;
+            font-family: Russo One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            max-width: 570px;
+            width: 100%;
+            background: #6D4AFE;
+            height: 60px;
+            border: none;
+            outline: none;
+        }
+        @media screen and (min-width: 750px) {
+            .btn_custom{
+                max-width: 1200px !important;
+                width: 1200px !important;
 
+            }
+
+        }
+        input[type="text"] {
+            border: 2px solid #383945;
+            background-color: #151625;
+            /* background: #151625; */
+            height: 50px;
+            margin-top: 10px;
+            width: 100%;
+            color: #b9babe;
+            padding: 18px;
+        }
 
 
 
@@ -253,68 +301,74 @@
         </div>
     </div>
     <div class="container depo">
-
-        <div class="flexsunmer"><div class="sunmmer">
-                1
-            </div> <div class="texesum">
-                Select a coin
-            </div></div>
-        <div class="kyc_country_dropdown_sect2">
-            <!-- 货币选择下拉框 -->
-            <div class="kyc_country_dropbox2">
-                <span><img src="{{$data[0]['images']}}" alt="flag" class="img-fluid"></span>
-                <h4 id="currencyHeader">{{$data[0]['currency']}}</h4>
-            </div>
-            <div class="kyc_country_drop_list2" style="display: none;">
-                <ul id="currencyDropdown">
-                    @foreach($data as $v)
-                        <li data-currency="{{ $v['currency'] }}" data-image="{{ $v['images'] }}" data-networks="{{ json_encode($v['networks']) }}">
-                            <img src="{{$v['images']}}" alt="">{{ $v['currency'] }}
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
+<form action="/depsub" method="post">
+    <input type="hidden" name="coid_id" id="selectedCurrency">
+    <input type="hidden" name="network_id" id="selectedNetwork">
+    @csrf
+    <div class="flexsunmer">
+        <div class="sunmmer">1</div>
+        <div class="texesum">Select a coin</div>
+    </div>
+    <div class="kyc_country_dropdown_sect2">
+        <!-- 货币选择下拉框 -->
+        <div class="kyc_country_dropbox2" onclick="toggleDropdown('currencyDropdown')">
+            <span><img src="{{$data[0]['icon']}}" alt="coin icon" class="img-fluid"></span>
+            <h4 id="currencyHeader">{{$data[0]['name']}}</h4>
         </div>
-        <div class="flexsunmer"><div class="sunmmer">
-                2
-            </div> <div class="texesum">
-                Select a networks
-            </div></div>
-        <div class="kyc_country_dropdown_sect3">
-            <!-- 网络选择下拉框 -->
-            <div class="kyc_country_dropbox3" id="networkDropdown">
-                <h4 id="networkHeader">{{$data[0]['networks'][0]}}</h4> <!-- 默认显示第一个货币的第一个网络 -->
-            </div>
-            <div class="kyc_country_drop_list3" id="networkDropList" style="display: none;">
-                <ul id="networkList">
-                    @foreach ($data[0]['networks'] as $network)
-                        <li>{{ $network }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-        <div class="flexsunmer"><div class="sunmmer">
-                3
-            </div> <div class="texesum">
-                Purchase quantity
-            </div></div>
-        <div class="num">
-            <input type="number" name="num" placeholder="number">
-        </div>
-        <div class="item-button">
-            <a href="#" class="theme-btn blue">
-                <span>Register Account</span>
-                <div class="hover-shape1"></div>
-                <div class="hover-shape2"></div>
-                <div class="hover-shape3"></div>
-            </a>
+        <div class="kyc_country_drop_list2" style="display: none;" id="currencyDropdown">
+            <ul>
+                @foreach($data as $v)
+                    <li data-currency="{{ $v['name'] }}" data-image="{{ $v['icon'] }}" data-networks="{{ json_encode($v['networks']) }}" onclick="selectCurrency('{{ $v['name'] }}', '{{ $v['icon'] }}', {{ json_encode($v['addresses']) }})">
+                        <img src="{{$v['icon']}}" alt="">{{ $v['name'] }}
+                    </li>
+                @endforeach
+            </ul>
         </div>
     </div>
 
+    <div class="flexsunmer">
+        <div class="sunmmer">2</div>
+        <div class="texesum">Select a networks</div>
+    </div>
+    <div class="kyc_country_dropdown_sect3">
+        <!-- 网络选择下拉框 -->
+        <div class="kyc_country_dropbox3" id="networkDropdown" onclick="toggleDropdown('networkList')">
+            <h4 id="networkHeader">{{$data[0]['networks'][0]}}</h4>
+        </div>
+        <div class="kyc_country_drop_list3" id="networkDropList" style="display: none;">
+            <ul id="networkList">
+                @foreach ($data[0]['networks'] as $network)
+                    <li onclick="selectNetwork('{{ $network }}')">{{ $network }}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
 
+    <div class="flexsunmer">
+        <div class="sunmmer">3</div>
+        <div class="texesum">Purchase quantity</div>
+    </div>
+    <div class="address">
+        <input type="text" id="addressField" placeholder="Address will appear here" readonly>
+    </div>
 
-    <script>
+    <div class="flexsunmer"><div class="sunmmer">
+            4
+        </div> <div class="texesum">
+            Purchase quantity
+        </div></div>
+    <div class="num">
+        <input type="number" name="amount" placeholder="number">
+    </div>
 
+    <div class="project-btn-area text-center black-shape-big-custom">
+        <div class="btn_custom"><button type="submit" style=" background-color: transparent;">top up</button></div>
+
+    </div>
+</form>
+
+    </div>
+ <script>
         document.addEventListener("DOMContentLoaded", function() {
             const currencyDropdown = document.getElementById('currencyDropdown');
             const networkList = document.getElementById('networkList');
@@ -322,6 +376,7 @@
             const currencyDropList = document.querySelector('.kyc_country_drop_list2');
             const currencyDropbox = document.querySelector('.kyc_country_dropbox2');
             const networkDropList = document.querySelector('.kyc_country_drop_list3');
+
             currencyDropbox.addEventListener('click', function() {
                 const currentDisplay = currencyDropList.style.display;
                 currencyDropList.style.display = currentDisplay === 'none' || currentDisplay === '' ? 'block' : 'none';
@@ -333,6 +388,7 @@
                     const selectedImage = e.target.getAttribute('data-image');
                     currencyDropbox.querySelector('h4').textContent = selectedCurrency;
                     currencyDropbox.querySelector('span img').src = selectedImage;
+                    document.getElementById('selectedCurrency').value = selectedCurrency;
                     networkHeader.textContent = selectedNetworks[0];
                     networkList.innerHTML = '';
                     selectedNetworks.forEach(function(network) {
@@ -341,21 +397,25 @@
                         networkList.appendChild(li);
                     });
                     currencyDropList.style.display = 'none';
-
                     networkDropList.style.display = 'none';
                 }
             });
             networkDropdown.addEventListener('click', function() {
                 const currentDisplay = networkDropList.style.display;
                 networkDropList.style.display = currentDisplay === 'none' || currentDisplay === '' ? 'block' : 'none';
-            });
+            })
             networkList.addEventListener('click', function(e) {
                 if (e.target && e.target.tagName === 'LI') {
                     networkHeader.textContent = e.target.textContent;
+                    document.getElementById('selectedNetwork').value = e.target.textContent;
                     networkDropList.style.display = 'none';
                 }
             });
             networkDropList.style.display = 'none';
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                console.log("Selected Currency: ", document.getElementById('selectedCurrency').value);
+                console.log("Selected Network: ", document.getElementById('selectedNetwork').value);
+            });
         });
     </script>
 @stop

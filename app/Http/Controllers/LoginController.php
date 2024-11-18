@@ -2,71 +2,88 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
     //
-
-
-
+    //登入页面
     public function login(){
         return view('signin');
     }
+    public function dosignin(Request  $request){
+        $email = $request->post('email');
+        $password = $request->post('password');
+        $userinfo=User::where('email',$email)->first();
+        if (empty($userinfo)){
+            return redirect()->back()->with('error', ['message' => 'user does not exist']);
+        }elseif ($userinfo['password'] !== md5($password)){
+            return redirect()->back()->with('error', ['message' => 'Password error']);
+        }else{
+            session(['user_id'=>$userinfo['id'],'email'=>$userinfo['email'],'images'=>$userinfo['images']]);
+            return redirect('/');
+        }
+    }
 
-    public function reg(){
+    public function register(){
         return view('signup');
     }
-    public function register(Request  $request){
-        $data=$request->all('first_name','last_name','email','password');
-        dd($data);
 
+    public function reg(Request  $request){
+        $email=$request->post('email');
+        $password=$request->post('password');
+        $validator = Validator::make($request->all(), [
+            'email'=>'required',
+            'password'=>'required'
+        ]);
+        if ($validator->fails()) {
+           return redirect()->back()->with('error', ['message' => 'required error']);
+        }
+
+        $password=md5($password);
+        $images='/storage/images/KLpE7R5835.png';
+        $data=[
+            'email'=>$email,
+            'password'=>$password,
+            'kyc_status'=>0,
+            'images'=>$images,
+        ];
+        $res=User::create($data);
+        session(['user_id' => $res->id]);
+        return redirect('/');
     }
-
-
     public function forgetpassword(){
         return view('forget-password');
     }
+    public function uppwd(Request  $request){
+        $data=$request->post();
+        $user=session('user_id');
+        if (empty($user)) {
+            return redirect()->back()->with('error', ['message' => 'user does not exist']);
+        }
+        $userinfo=User::where('id',$user)->first();
 
-    public function details(){
-        return view('project-details');
+        if (md5($data['password'])!== $userinfo['password']){
+            return redirect()->back()->with('error', ['message' => 'password does not exist']);
+        }
+        $newpassword=md5($data['re_password']);
+        $password=[
+            'password'=>$newpassword
+        ];
+        $res=User::where('id',$user)->update($password);
+        return redirect('/');
     }
-    public function kyc(){
-        return view('kyc-process');
-    }
-    public function kyc2(){
-        return view('kyc-process-step2');
-    }
-    public function kyc3(){
-        return view('kyc-process-step3');
-    }
-    public function deposit(){
-        $data = [[
-                'currency' => 'USD',
-                'images' => '/storage/images/coinbase.png',
-                'networks' => [
-                    'Ethereum',
-                    'Bitcoin',
-                    'Litecoin',
-                ],], [
-                'currency' => 'EUR',
-                'images' => '/storage/images/fcfda5844dcb17d3416221e202dd1266.png',
-                'networks' => [
-                    'Ethereum',
-                    'Ripple',
-                ],], [
-                'currency' => 'GBP',
-                'images' => '/storage/images/explore-image.png',
-                'networks' => [
-                    'Bitcoin',
-                    'Bitcoin Cash',
-                    'Ethereum',
-                ],],];
-        return view('deposit', ['data' => $data]);
-
-    }
+//
+//    public function details(){
+//        return view('project-details');
+//    }
     public function transfer(){
 
         return view('transfer');
     }
+
+
 }

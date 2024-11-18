@@ -1,11 +1,18 @@
 @extends('main.main')
 
 @section('signup')
+<style>
+    button.theme-btn.assbutton {
+        width: 570px;
+    }
+</style>
 
 <div class="loader_first" style="display: none;">
     <div class="circular-spinner"></div>
 </div>
-
+@if (session('error'))
+    <script>  alert('{{ session('error.message') }}')</script>
+@endif
 <!-- account section start -->
 <div class="account__area">
     <div class="account-bg"></div>
@@ -16,16 +23,16 @@
                     <h2>Create Account</h2>
                     <h3>Inter your name, valid email address and password to register your account</h3>
                 </div>
-                <form action="/signup" method="post">
+                <form action="/reg" method="post">
                     @csrf
-                    <div class="input__group mb-23">
-                        <label>Full Name</label>
-                        <input type="text" name="first_name" id="first_name" placeholder="first_name">
-                    </div>
-                    <div class="input__group mb-23">
-                        <label>Full Name</label>
-                        <input type="text" name="last_name" id="last_name" placeholder="last_name">
-                    </div>
+{{--                    <div class="input__group mb-23">--}}
+{{--                        <label>Full Name</label>--}}
+{{--                        <input type="text" name="first_name" id="first_name" placeholder="first_name">--}}
+{{--                    </div>--}}
+{{--                    <div class="input__group mb-23">--}}
+{{--                        <label>Full Name</label>--}}
+{{--                        <input type="text" name="last_name" id="last_name" placeholder="last_name">--}}
+{{--                    </div>--}}
                     <div class="input__group mb-23">
                         <label>Email address</label>
                         <input type="email" name="email" id="email" placeholder="Enter your email address" autocomplete="off">
@@ -43,13 +50,9 @@
                             <a href="#">Privacy Policy </a>
                         </label>
                     </div>
-                    <div class="item-button">
-                        <a href="index.html" class="theme-btn blue">
-                            <span>Register Account</span>
-                            <div class="hover-shape1"></div>
-                            <div class="hover-shape2"></div>
-                            <div class="hover-shape3"></div>
-                        </a>
+                    <div class="project-btn-area text-center black-shape-big-custom">
+                        <div class="btn_custom"><button type="submit" style=" background-color: transparent;">REGISTER ACCOUNT</button></div>
+
                     </div>
                 </form>
                 <div class="item-bottom mt-31">
@@ -161,4 +164,5 @@
         </div>
     </div>
 </div>
+
 @stop

@@ -1,7 +1,20 @@
 @extends('main.main')
 
 @section('kyc-process-step2')
-
+    @if (session('error'))
+        <script>  alert('{{ session('error.message') }}')</script>
+    @endif
+    <style>
+        button.theme-btn.assbutton {
+            width: 570px;
+        }
+    </style>
+    <style>
+        .kyc_qrcode_content {
+            max-width: 450px;
+            width: 100%;
+        }
+    </style>
 <div class="gamfi-breadcrumbs-section">
     <div class="container">
         <div class="row">
@@ -34,7 +47,10 @@
         <div class="row m-0">
             <div class="col-md-6 p-0">
                 <div class="kyc_form">
-                    <form action="/" method="post">
+                    <form action="/kyc-process-step3" method="post" enctype="multipart/form-data">
+                        @csrf
+
+
                         <div class="upload_docs_sect">
                             <h3>Upload Documents</h3>
                             <ul>
@@ -42,7 +58,7 @@
                                     <div class="upload_btn_bg">
                                         <div class="upload-btn-wrapper">
                                             <span><img src="/storage/images/uploadFileicon.svg" alt="icon" class="img-fluid"></span>
-                                            <input type="file" name="nid-front">
+                                            <input type="file" name="front" value="" required>
                                         </div>
                                     </div>
                                     <h4>National ID Front</h4>
@@ -51,20 +67,20 @@
                                     <div class="upload_btn_bg">
                                         <div class="upload-btn-wrapper">
                                             <span><img src="/storage/images/uploadFileicon.svg" alt="icon" class="img-fluid"></span>
-                                            <input type="file" name="nid-back">
+                                            <input type="file" name="back">
                                         </div>
                                     </div>
                                     <h4>National ID Back</h4>
                                 </li>
-                                <li>
-                                    <div class="upload_btn_bg">
-                                        <div class="upload-btn-wrapper">
-                                            <span><img src="/storage/images/uploadFileicon.svg" alt="icon" class="img-fluid"></span>
-                                            <input type="file" name="nid-selfie">
-                                        </div>
-                                    </div>
-                                    <h4>Selfie with National ID</h4>
-                                </li>
+{{--                                <li>--}}
+{{--                                    <div class="upload_btn_bg">--}}
+{{--                                        <div class="upload-btn-wrapper">--}}
+{{--                                            <span><img src="/storage/images/uploadFileicon.svg" alt="icon" class="img-fluid"></span>--}}
+{{--                                            <input type="file" name="nid-selfie">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <h4>Selfie with National ID</h4>--}}
+{{--                                </li>--}}
                             </ul>
                         </div>
                         <div class="upload_doc_check_list">
@@ -103,15 +119,16 @@
                         </div>
                         <div class="input__group mb-40">
                             <label>National ID Number</label>
-                            <input type="text" name="nid" id="nid" placeholder="e.g. 58933699">
+                            <input type="text" name="nim" id="nid" placeholder="e.g. 58933699">
                         </div>
                         <div class="item-button">
-                            <a href="kyc-process-step3.html" class="theme-btn blue">
-                                <span>Next step</span>
+                            <button class="theme-btn blue assbutton">
+                                <span>NEXT STEP</span>
                                 <div class="hover-shape1"></div>
                                 <div class="hover-shape2"></div>
                                 <div class="hover-shape3"></div>
-                            </a>
+
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -119,10 +136,19 @@
             <div class="col-md-6 p-0">
                 <div class="kyc_qrcode_sect">
                     <div class="kyc_qrcode_content">
-                        <h2>Want to continue with SmArt Phone ?</h2>
-                        <div class="kyc_qrcode_img">
-                            <img src="/storage/images/QRcode.png" alt="img" class="img-fluid">
-                        </div>
+                        <h4>Q: What is the KYC certification process like? </h4>
+                        <p><strong>A:</strong>The KYC certification process generally includes the following steps:</p>
+                        <ol>
+                            <li>Select Issuing Country. </li>
+                            <li>Submit proof of identity or passport or driver's license. </li>
+                            <li>Fill in personal information and upload a picture. </li>
+                            <li>After submitting complete personal information</li>
+                            <li>After completion, you will receive the certification result. </li>
+                        </ol>
+                        <h2>Q: How long does KYC certification take? </h2>
+                        <p><strong>A:</strong>KYC certification usually takes a few hours to a few days, depending on the processing speed and the completeness and clarity of the materials you submit. </p>
+                        {{--                        <h2>Q: If I don't have a passport or ID card, can I still do KYC certification? </h2>--}}
+                        {{--                        <p>A:KYC certification usually requires submission of valid proof of identity. If you don't have a driver's license or ID card, such as a passport, you can also verify it.</p>--}}
                     </div>
                 </div>
             </div>

@@ -222,6 +222,8 @@ class SqliteSchemaManager extends AbstractSchemaManager
 
     /**
      * {@inheritDoc}
+     *
+     * @link http://ezcomponents.org/docs/api/trunk/DatabaseSchema/ezcDbSchemaPgsqlReader.html
      */
     protected function _getPortableTableIndexesList($tableIndexes, $tableName = null)
     {

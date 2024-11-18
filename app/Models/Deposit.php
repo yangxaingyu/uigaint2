@@ -10,7 +10,6 @@ class Deposit extends Model
     use HasFactory;
 
     protected $fillable = ['user_id', 'coin_id', 'address_id', 'amount'];
-
     public function user()
     {
         return $this->belongsTo(User::class);

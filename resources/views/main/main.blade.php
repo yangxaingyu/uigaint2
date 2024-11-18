@@ -32,6 +32,16 @@
     .account__form .item-text input:checked::after {
         opacity: 0 !important;
     }
+    button {
+        color: #ffff;
+    }
+    .white-btn {
+        background: #151625;
+        margin-left: 25px;
+        color: #fff;
+        padding: 11px 20px 9px;
+        border: 2px solid #393941;
+    }
 </style>
 <body>
 <div id="preloader-active">
@@ -257,17 +267,32 @@
                                 <li><a href="#"><img src="/storage/images/home/gate.png" alt="gate"> Gate.io</a></li>
                             </ul>
                         </li>
-                        <li class="connect-btn-wrapper">
-                            <a href="/signin">
-                                <button type="button" class="connect-btn readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <img src="/storage/images/login.png" alt="Icon"  style="width: 20px;">
-                                    <span class="btn-text">Login </span>
-                                    <span class="hover-shape1"></span>
-                                    <span class="hover-shape2"></span>
-                                    <span class="hover-shape3"></span>
-                                </button>
-                            </a>
-                        </li>
+                        @if(session('user_id'))
+                            <li class="connect-btn-wrapper">
+                                <a href="/user">
+                                    <button type="button" class="connect-btn readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <img src="{{session('images')}}" alt="Icon"  style="width: 20px;">
+                                        <span class="btn-text">{{substr(session('email'), 0, 1) . '...' . substr(session('email'), -4) }}</span>
+                                        <span class="hover-shape1"></span>
+                                        <span class="hover-shape2"></span>
+                                        <span class="hover-shape3"></span>
+                                    </button>
+                                </a>
+                            </li>
+                        @else
+
+                            <li class="connect-btn-wrapper">
+                                <a href="/signin">
+                                    <button type="button" class="connect-btn readon white-btn hover-shape" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <img src="/storage/images/login.png" alt="Icon"  style="width: 20px;">
+                                        <span class="btn-text">Login </span>
+                                        <span class="hover-shape1"></span>
+                                        <span class="hover-shape2"></span>
+                                        <span class="hover-shape3"></span>
+                                    </button>
+                                </a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>

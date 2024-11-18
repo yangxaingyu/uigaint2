@@ -1,6 +1,12 @@
 @extends('main.main')
 
 @section('kyc-process')
+    <style>
+        .kyc_qrcode_content {
+            max-width: 450px;
+            width: 100%;
+        }
+    </style>
 <div class="gamfi-breadcrumbs-section">
     <div class="container">
         <div class="row">
@@ -34,30 +40,31 @@
             <div class="col-md-6 p-0">
                 <div class="kyc_form">
                     <form method="POST" action="/kyc-process-step2">
+                        <input type="hidden" id="selected_country" name="country" value="United States">
                             @csrf
                     <h3>Issuing Country/Region</h3>
-                    <div class="kyc_country_dropdown_sect">
-                        <div class="kyc_country_dropbox">
-                            <span><img src="/storage/images/flag.png" alt="flag" class="img-fluid"></span>
-                            <h4>United States</h4>
+                        <div class="kyc_country_dropdown_sect">
+                            <div class="kyc_country_dropbox" onclick="toggleDropdown()">
+                                <span><img src="/storage/images/flag.png" alt="flag" class="img-fluid"></span>
+                                <h4>United States</h4>
+                            </div>
+                            <div class="kyc_country_drop_list" style="display: none;">
+                                <ul>
+                                    <li onclick="selectCountry('United States')">United States</li>
+                                    <li onclick="selectCountry('United Kingdom')">United Kingdom</li>
+                                    <li onclick="selectCountry('Japan')">Japan</li>
+                                    <li onclick="selectCountry('China')">China</li>
+                                    <li onclick="selectCountry('Germany')">Germany</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="kyc_country_drop_list" style="display: none;">
-                            <ul>
-                                <li>United States</li>
-                                <li>United Kingdom</li>
-                                <li>Japan</li>
-                                <li>China</li>
-                                <li>Germany</li>
-                            </ul>
-                        </div>
-                    </div>
                     <h3>Select Identity Type</h3>
                     <p>Should be your government issued photo identity</p>
 
                         <div class="kyc_radio_sect">
                             <div class="kyc_radio_btn nid_btn">
                                 <label class="container">National ID
-                                    <input type="radio" name="kyc_option" value="national_id">
+                                    <input type="radio" name="kyc_type" value="national_id">
                                     <span class="checkmark"></span>
                                 </label>
                                 <div class="kyc_icon">
@@ -66,7 +73,7 @@
                             </div>
                             <div class="kyc_radio_btn passport_btn active">
                                 <label class="container">Passport
-                                    <input type="radio" name="kyc_option" value="passport" checked="checked">
+                                    <input type="radio" name="kyc_type" value="passport" checked="checked">
                                     <span class="checkmark"></span>
                                 </label>
                                 <div class="kyc_icon">
@@ -75,7 +82,7 @@
                             </div>
                             <div class="kyc_radio_btn driving_licnse_btn">
                                 <label class="container">Driver’s License
-                                    <input type="radio" name="kyc_option" value="driver_license">
+                                    <input type="radio" name="kyc_type" value="driver_license">
                                     <span class="checkmark"></span>
                                 </label>
                                 <div class="kyc_icon">
@@ -95,10 +102,19 @@
             <div class="col-md-6 p-0">
                 <div class="kyc_qrcode_sect">
                     <div class="kyc_qrcode_content">
-                        <h2>Want to continue with SmArt Phone ?</h2>
-                        <div class="kyc_qrcode_img">
-                            <img src="/storage/images/QRcode.png" alt="img" class="img-fluid">
-                        </div>
+                        <h4>Q: What is the KYC certification process like? </h4>
+                        <p><strong>A:</strong>The KYC certification process generally includes the following steps:</p>
+                        <ol>
+                            <li>Select Issuing Country. </li>
+                            <li>Submit proof of identity or passport or driver's license. </li>
+                            <li>Fill in personal information and upload a picture. </li>
+                            <li>After submitting complete personal information</li>
+                            <li>After completion, you will receive the certification result. </li>
+                        </ol>
+                        <h2>Q: How long does KYC certification take? </h2>
+                        <p><strong>A:</strong>KYC certification usually takes a few hours to a few days, depending on the processing speed and the completeness and clarity of the materials you submit. </p>
+{{--                        <h2>Q: If I don't have a passport or ID card, can I still do KYC certification? </h2>--}}
+{{--                        <p>A:KYC certification usually requires submission of valid proof of identity. If you don't have a driver's license or ID card, such as a passport, you can also verify it.</p>--}}
                     </div>
                 </div>
             </div>
@@ -195,7 +211,18 @@
         </div>
     </div>
 </div>
-
-
-{{--<script src="{{\App\Server\Helper::assets('/js/wow.min.js')}}"></script>--}}
+<script>
+    function toggleDropdown() {
+        const dropdown = document.querySelector('.kyc_country_drop_list');
+        dropdown.style.display = (dropdown.style.display === 'block' || dropdown.style.display === '') ? 'none' : 'block';
+    }
+    function selectCountry(country) {
+        const selectedCountryBox = document.querySelector('.kyc_country_dropbox h4');
+        selectedCountryBox.textContent = country;
+        const selectedCountryInput = document.getElementById('selected_country');
+        selectedCountryInput.value = country;
+        toggleDropdown();
+    }
+    document.querySelector('.kyc_country_dropbox').addEventListener('click', toggleDropdown);
+</script>
 @stop
