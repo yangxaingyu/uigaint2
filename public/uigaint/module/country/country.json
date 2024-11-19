@@ -10,7 +10,7 @@
     "englishName": "Aruba",
     "shortEnglishName": "Aruba",
     "sort": 0,
-    "iconPath": "/flags/aw.png",
+    "iconPath": "/uigaint/module/country/flags/aw.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -25,7 +25,7 @@
     "englishName": "Republic of Angola",
     "shortEnglishName": "Angola",
     "sort": 5,
-    "iconPath": "/flags/ao.png",
+    "iconPath": "/uigaint/module/country/flags/ao.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -40,7 +40,7 @@
     "englishName": "Anguilla",
     "shortEnglishName": "Anguilla",
     "sort": 6,
-    "iconPath": "/flags/ai.png",
+    "iconPath": "/uigaint/module/country/flags/ai.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -55,7 +55,7 @@
     "englishName": "Republic of Albania",
     "shortEnglishName": "Albania",
     "sort": 2,
-    "iconPath": "/flags/al.png",
+    "iconPath": "/uigaint/module/country/flags/al.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -70,7 +70,7 @@
     "englishName": "Principality of Andorra",
     "shortEnglishName": "Andorra",
     "sort": 4,
-    "iconPath": "/flags/ad.png",
+    "iconPath": "/uigaint/module/country/flags/ad.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -85,7 +85,7 @@
     "englishName": "United Arab Emirates",
     "shortEnglishName": "United Arab Emirates",
     "sort": 211,
-    "iconPath": "/flags/ae.png",
+    "iconPath": "/uigaint/module/country/flags/ae.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -100,7 +100,7 @@
     "englishName": "Argentine Republic",
     "shortEnglishName": "Argentina",
     "sort": 8,
-    "iconPath": "/flags/ar.png",
+    "iconPath": "/uigaint/module/country/flags/ar.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -115,7 +115,7 @@
     "englishName": "Republic of Armenia",
     "shortEnglishName": "Armenia",
     "sort": 9,
-    "iconPath": "/flags/am.png",
+    "iconPath": "/uigaint/module/country/flags/am.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -130,7 +130,7 @@
     "englishName": "Antigua and Barbuda",
     "shortEnglishName": "Antigua and Barbuda",
     "sort": 7,
-    "iconPath": "/flags/ag.png",
+    "iconPath": "/uigaint/module/country/flags/ag.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -145,7 +145,7 @@
     "englishName": "Commonwealth of Australia",
     "shortEnglishName": "Australia",
     "sort": 10,
-    "iconPath": "/flags/au.png",
+    "iconPath": "/uigaint/module/country/flags/au.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -160,7 +160,7 @@
     "englishName": "Republic of Austria",
     "shortEnglishName": "Austria",
     "sort": 11,
-    "iconPath": "/flags/at.png",
+    "iconPath": "/uigaint/module/country/flags/at.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -175,7 +175,7 @@
     "englishName": "Republic of Azerbaijan",
     "shortEnglishName": "Azerbaijan",
     "sort": 12,
-    "iconPath": "/flags/az.png",
+    "iconPath": "/uigaint/module/country/flags/az.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -190,7 +190,7 @@
     "englishName": "Republic of Burundi",
     "shortEnglishName": "Burundi",
     "sort": 30,
-    "iconPath": "/flags/bi.png",
+    "iconPath": "/uigaint/module/country/flags/bi.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -205,7 +205,7 @@
     "englishName": "Kingdom of Belgium",
     "shortEnglishName": "Belgium",
     "sort": 17,
-    "iconPath": "/flags/be.png",
+    "iconPath": "/uigaint/module/country/flags/be.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -220,7 +220,7 @@
     "englishName": "Republic of Benin",
     "shortEnglishName": "Benin",
     "sort": 19,
-    "iconPath": "/flags/bj.png",
+    "iconPath": "/uigaint/module/country/flags/bj.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -235,7 +235,7 @@
     "englishName": "Burkina Faso",
     "shortEnglishName": "Burkina Faso",
     "sort": 29,
-    "iconPath": "/flags/bf.png",
+    "iconPath": "/uigaint/module/country/flags/bf.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -250,7 +250,7 @@
     "englishName": "People's Republic of Bangladesh",
     "shortEnglishName": "Bangladesh",
     "sort": 14,
-    "iconPath": "/flags/bd.png",
+    "iconPath": "/uigaint/module/country/flags/bd.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -265,7 +265,7 @@
     "englishName": "Republic of Bulgaria",
     "shortEnglishName": "Bulgaria",
     "sort": 28,
-    "iconPath": "/flags/bg.png",
+    "iconPath": "/uigaint/module/country/flags/bg.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -280,7 +280,7 @@
     "englishName": "Kingdom of Bahrain",
     "shortEnglishName": "Bahrain",
     "sort": 13,
-    "iconPath": "/flags/bh.png",
+    "iconPath": "/uigaint/module/country/flags/bh.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -295,7 +295,7 @@
     "englishName": "Commonwealth of the Bahamas",
     "shortEnglishName": "Bahamas",
     "sort": 42,
-    "iconPath": "/flags/bs.png",
+    "iconPath": "/uigaint/module/country/flags/bs.png",
     "showEnterpriseEnName": 0,
     "support": 1
   },
@@ -310,7 +310,7 @@
     "englishName": "Bosnia and Herzegovina",
     "shortEnglishName": "Bosnia and Herzegovi",
     "sort": 23,
-    "iconPath": "/flags/ba.png",
+    "iconPath": "/uigaint/module/country/flags/ba.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -325,7 +325,7 @@
     "englishName": "Republic of Belarus",
     "shortEnglishName": "Belarus",
     "sort": 16,
-    "iconPath": "/flags/by.png",
+    "iconPath": "/uigaint/module/country/flags/by.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -340,7 +340,7 @@
     "englishName": "Belize",
     "shortEnglishName": "Belize",
     "sort": 18,
-    "iconPath": "/flags/bz.png",
+    "iconPath": "/uigaint/module/country/flags/bz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -355,7 +355,7 @@
     "englishName": "Bermuda",
     "shortEnglishName": "Bermuda",
     "sort": 20,
-    "iconPath": "/flags/bm.png",
+    "iconPath": "/uigaint/module/country/flags/bm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -370,7 +370,7 @@
     "englishName": "Plurinational State of Bolivia",
     "shortEnglishName": "Bolivia",
     "sort": 22,
-    "iconPath": "/flags/bo.png",
+    "iconPath": "/uigaint/module/country/flags/bo.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -385,7 +385,7 @@
     "englishName": "Brazil",
     "shortEnglishName": "Brazil",
     "sort": 25,
-    "iconPath": "/flags/br.png",
+    "iconPath": "/uigaint/module/country/flags/br.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -400,7 +400,7 @@
     "englishName": "Barbados",
     "shortEnglishName": "Barbados",
     "sort": 15,
-    "iconPath": "/flags/bb.png",
+    "iconPath": "/uigaint/module/country/flags/bb.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -415,7 +415,7 @@
     "englishName": "Nation of Brunei, Abode of Peace",
     "shortEnglishName": "Brunei",
     "sort": 27,
-    "iconPath": "/flags/bn.png",
+    "iconPath": "/uigaint/module/country/flags/bn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -430,7 +430,7 @@
     "englishName": "Kingdom of Bhutan",
     "shortEnglishName": "Bhutan",
     "sort": 21,
-    "iconPath": "/flags/bt.png",
+    "iconPath": "/uigaint/module/country/flags/bt.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -445,7 +445,7 @@
     "englishName": "Republic of Botswana",
     "shortEnglishName": "Botswana",
     "sort": 24,
-    "iconPath": "/flags/bw.png",
+    "iconPath": "/uigaint/module/country/flags/bw.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -460,7 +460,7 @@
     "englishName": "Canada",
     "shortEnglishName": "Canada",
     "sort": 33,
-    "iconPath": "/flags/ca.png",
+    "iconPath": "/uigaint/module/country/flags/ca.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -475,7 +475,7 @@
     "englishName": "Swiss Confederation",
     "shortEnglishName": "Switzerland",
     "sort": 192,
-    "iconPath": "/flags/ch.png",
+    "iconPath": "/uigaint/module/country/flags/ch.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -490,7 +490,7 @@
     "englishName": "Republic of Chile",
     "shortEnglishName": "Chile",
     "sort": 39,
-    "iconPath": "/flags/cl.png",
+    "iconPath": "/uigaint/module/country/flags/cl.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -505,7 +505,7 @@
     "englishName": "People's Republic of China",
     "shortEnglishName": "China",
     "sort": 40,
-    "iconPath": "/flags/cn.png",
+    "iconPath": "/uigaint/module/country/flags/cn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -520,7 +520,7 @@
     "englishName": "Republic of Côte d'Ivoire",
     "shortEnglishName": "Côte Ivoire",
     "sort": 52,
-    "iconPath": "/flags/ci.png",
+    "iconPath": "/uigaint/module/country/flags/ci.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -535,7 +535,7 @@
     "englishName": "Republic of Cameroon",
     "shortEnglishName": "Cameroon",
     "sort": 32,
-    "iconPath": "/flags/cm.png",
+    "iconPath": "/uigaint/module/country/flags/cm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -550,7 +550,7 @@
     "englishName": "Republic of the Congo",
     "shortEnglishName": "Congo (Brazzaville)",
     "sort": 44,
-    "iconPath": "/flags/cg.png",
+    "iconPath": "/uigaint/module/country/flags/cg.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -565,7 +565,7 @@
     "englishName": "Cook Islands",
     "shortEnglishName": "Cook Islands",
     "sort": 46,
-    "iconPath": "/flags/ck.png",
+    "iconPath": "/uigaint/module/country/flags/ck.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -580,7 +580,7 @@
     "englishName": "Republic of Colombia",
     "shortEnglishName": "Colombia",
     "sort": 41,
-    "iconPath": "/flags/co.png",
+    "iconPath": "/uigaint/module/country/flags/co.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -595,7 +595,7 @@
     "englishName": "Union of the Comoros",
     "shortEnglishName": "Comoros",
     "sort": 43,
-    "iconPath": "/flags/km.png",
+    "iconPath": "/uigaint/module/country/flags/km.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -610,7 +610,7 @@
     "englishName": "Republic of Cabo Verde",
     "shortEnglishName": "Cape Verde",
     "sort": 34,
-    "iconPath": "/flags/cv.png",
+    "iconPath": "/uigaint/module/country/flags/cv.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -625,7 +625,7 @@
     "englishName": "Republic of Costa Rica",
     "shortEnglishName": "Costa Rica",
     "sort": 47,
-    "iconPath": "/flags/cr.png",
+    "iconPath": "/uigaint/module/country/flags/cr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -640,7 +640,7 @@
     "englishName": "Cayman Islands",
     "shortEnglishName": "Cayman Islands",
     "sort": 36,
-    "iconPath": "/flags/ky.png",
+    "iconPath": "/uigaint/module/country/flags/ky.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -655,7 +655,7 @@
     "englishName": "Republic of Cyprus",
     "shortEnglishName": "Cyprus",
     "sort": 50,
-    "iconPath": "/flags/cy.png",
+    "iconPath": "/uigaint/module/country/flags/cy.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -670,7 +670,7 @@
     "englishName": "Czech Republic",
     "shortEnglishName": "Czech Republic",
     "sort": 51,
-    "iconPath": "/flags/cz.png",
+    "iconPath": "/uigaint/module/country/flags/cz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -685,7 +685,7 @@
     "englishName": "Germany",
     "shortEnglishName": "Germany",
     "sort": 72,
-    "iconPath": "/flags/de.png",
+    "iconPath": "/uigaint/module/country/flags/de.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -700,7 +700,7 @@
     "englishName": "Republic of Djibouti",
     "shortEnglishName": "Djibouti",
     "sort": 54,
-    "iconPath": "/flags/dj.png",
+    "iconPath": "/uigaint/module/country/flags/dj.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -715,7 +715,7 @@
     "englishName": "Commonwealth of Dominica",
     "shortEnglishName": "Dominica",
     "sort": 55,
-    "iconPath": "/flags/dm.png",
+    "iconPath": "/uigaint/module/country/flags/dm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -730,7 +730,7 @@
     "englishName": "Kingdom of Denmark",
     "shortEnglishName": "Denmark",
     "sort": 53,
-    "iconPath": "/flags/dk.png",
+    "iconPath": "/uigaint/module/country/flags/dk.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -745,7 +745,7 @@
     "englishName": "Dominican Republic",
     "shortEnglishName": "Dominican Republic",
     "sort": 57,
-    "iconPath": "/flags/do.png",
+    "iconPath": "/uigaint/module/country/flags/do.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -760,7 +760,7 @@
     "englishName": "People's Democratic Republic of Algeria",
     "shortEnglishName": "Algeria",
     "sort": 3,
-    "iconPath": "/flags/dz.png",
+    "iconPath": "/uigaint/module/country/flags/dz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -775,7 +775,7 @@
     "englishName": "Republic of Ecuador",
     "shortEnglishName": "Ecuador",
     "sort": 59,
-    "iconPath": "/flags/ec.png",
+    "iconPath": "/uigaint/module/country/flags/ec.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -790,7 +790,7 @@
     "englishName": "Arab Republic of Egypt",
     "shortEnglishName": "Egypt",
     "sort": 60,
-    "iconPath": "/flags/eg.png",
+    "iconPath": "/uigaint/module/country/flags/eg.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -805,7 +805,7 @@
     "englishName": "Eritrea",
     "shortEnglishName": "Eritrea",
     "sort": 63,
-    "iconPath": "/flags/er.png",
+    "iconPath": "/uigaint/module/country/flags/er.png",
     "showEnterpriseEnName": 0,
     "support": 1
   },
@@ -820,7 +820,7 @@
     "englishName": "Sahrawi Arab Democratic Republic",
     "shortEnglishName": "Western Sahara",
     "sort": 220,
-    "iconPath": "/flags/eh.png",
+    "iconPath": "/uigaint/module/country/flags/eh.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -835,7 +835,7 @@
     "englishName": "Spain",
     "shortEnglishName": "Spain",
     "sort": 186,
-    "iconPath": "/flags/es.png",
+    "iconPath": "/uigaint/module/country/flags/es.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -850,7 +850,7 @@
     "englishName": "Republic of Estonia",
     "shortEnglishName": "Estonia",
     "sort": 64,
-    "iconPath": "/flags/ee.png",
+    "iconPath": "/uigaint/module/country/flags/ee.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -865,7 +865,7 @@
     "englishName": "Federal Democratic Republic of Ethiopia",
     "shortEnglishName": "Ethiopia",
     "sort": 65,
-    "iconPath": "/flags/et.png",
+    "iconPath": "/uigaint/module/country/flags/et.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -880,7 +880,7 @@
     "englishName": "Republic of Finland",
     "shortEnglishName": "Finland",
     "sort": 67,
-    "iconPath": "/flags/fi.png",
+    "iconPath": "/uigaint/module/country/flags/fi.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -895,7 +895,7 @@
     "englishName": "Republic of Fiji",
     "shortEnglishName": "Fiji",
     "sort": 66,
-    "iconPath": "/flags/fj.png",
+    "iconPath": "/uigaint/module/country/flags/fj.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -910,7 +910,7 @@
     "englishName": "French Republic",
     "shortEnglishName": "France",
     "sort": 68,
-    "iconPath": "/flags/fr.png",
+    "iconPath": "/uigaint/module/country/flags/fr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -925,7 +925,7 @@
     "englishName": "Federated States of Micronesia",
     "shortEnglishName": "Micronesia",
     "sort": 130,
-    "iconPath": "/flags/fm.png",
+    "iconPath": "/uigaint/module/country/flags/fm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -940,7 +940,7 @@
     "englishName": "Gabonese Republic",
     "shortEnglishName": "Gabon",
     "sort": 69,
-    "iconPath": "/flags/ga.png",
+    "iconPath": "/uigaint/module/country/flags/ga.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -955,7 +955,7 @@
     "englishName": "Georgia",
     "shortEnglishName": "Georgia",
     "sort": 71,
-    "iconPath": "/flags/ge.png",
+    "iconPath": "/uigaint/module/country/flags/ge.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -970,7 +970,7 @@
     "englishName": "Republic of Ghana",
     "shortEnglishName": "Ghana",
     "sort": 73,
-    "iconPath": "/flags/gh.png",
+    "iconPath": "/uigaint/module/country/flags/gh.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -985,7 +985,7 @@
     "englishName": "Gibraltar",
     "shortEnglishName": "Gibraltar",
     "sort": 74,
-    "iconPath": "/flags/gi.png",
+    "iconPath": "/uigaint/module/country/flags/gi.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1000,7 +1000,7 @@
     "englishName": "Republic of Guinea",
     "shortEnglishName": "Guinea",
     "sort": 80,
-    "iconPath": "/flags/gn.png",
+    "iconPath": "/uigaint/module/country/flags/gn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1015,7 +1015,7 @@
     "englishName": "Republic of The Gambia",
     "shortEnglishName": "Gambia",
     "sort": 70,
-    "iconPath": "/flags/gm.png",
+    "iconPath": "/uigaint/module/country/flags/gm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1030,7 +1030,7 @@
     "englishName": "Equatorial Guinea",
     "shortEnglishName": "Equatorial Guinea",
     "sort": 62,
-    "iconPath": "/flags/gn.png",
+    "iconPath": "/uigaint/module/country/flags/gn.png",
     "showEnterpriseEnName": 0,
     "support": 1
   },
@@ -1045,7 +1045,7 @@
     "englishName": "Hellenic Republic",
     "shortEnglishName": "Greece",
     "sort": 75,
-    "iconPath": "/flags/gr.png",
+    "iconPath": "/uigaint/module/country/flags/gr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1060,7 +1060,7 @@
     "englishName": "Grenada",
     "shortEnglishName": "Grenada",
     "sort": 77,
-    "iconPath": "/flags/gd.png",
+    "iconPath": "/uigaint/module/country/flags/gd.png",
     "showEnterpriseEnName": 0,
     "support": 1
   },
@@ -1075,7 +1075,7 @@
     "englishName": "Republic of Guatemala",
     "shortEnglishName": "Guatemala",
     "sort": 79,
-    "iconPath": "/flags/gt.png",
+    "iconPath": "/uigaint/module/country/flags/gt.png",
     "showEnterpriseEnName": 0,
     "support": 1
   },
@@ -1090,7 +1090,7 @@
     "englishName": "Co-operative Republic of Guyana",
     "shortEnglishName": "Guyana",
     "sort": 82,
-    "iconPath": "/flags/gy.png",
+    "iconPath": "/uigaint/module/country/flags/gy.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1105,7 +1105,7 @@
     "englishName": "Republic of Honduras",
     "shortEnglishName": "Honduras",
     "sort": 84,
-    "iconPath": "/flags/hn.png",
+    "iconPath": "/uigaint/module/country/flags/hn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1120,7 +1120,7 @@
     "englishName": "Republic of Croatia",
     "shortEnglishName": "Croatia",
     "sort": 48,
-    "iconPath": "/flags/hr.png",
+    "iconPath": "/uigaint/module/country/flags/hr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1135,7 +1135,7 @@
     "englishName": "Hungary",
     "shortEnglishName": "Hungary",
     "sort": 86,
-    "iconPath": "/flags/hu.png",
+    "iconPath": "/uigaint/module/country/flags/hu.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1150,7 +1150,7 @@
     "englishName": "Republic of Indonesia",
     "shortEnglishName": "Indonesia",
     "sort": 89,
-    "iconPath": "/flags/id.png",
+    "iconPath": "/uigaint/module/country/flags/id.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1165,7 +1165,7 @@
     "englishName": "Isle of Man",
     "shortEnglishName": "Isle of Man",
     "sort": 93,
-    "iconPath": "/flags/im.png",
+    "iconPath": "/uigaint/module/country/flags/im.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1180,7 +1180,7 @@
     "englishName": "Republic of India",
     "shortEnglishName": "India",
     "sort": 88,
-    "iconPath": "/flags/in.png",
+    "iconPath": "/uigaint/module/country/flags/in.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1195,7 +1195,7 @@
     "englishName": "Ireland",
     "shortEnglishName": "Ireland",
     "sort": 92,
-    "iconPath": "/flags/ie.png",
+    "iconPath": "/uigaint/module/country/flags/ie.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1210,7 +1210,7 @@
     "englishName": "Republic of Iceland",
     "shortEnglishName": "Iceland",
     "sort": 87,
-    "iconPath": "/flags/is.png",
+    "iconPath": "/uigaint/module/country/flags/is.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1225,7 +1225,7 @@
     "englishName": "Israel",
     "shortEnglishName": "Israel",
     "sort": 94,
-    "iconPath": "/flags/il.png",
+    "iconPath": "/uigaint/module/country/flags/il.png",
     "showEnterpriseEnName": 0,
     "support": 1
   },
@@ -1240,7 +1240,7 @@
     "englishName": "Italian Republic",
     "shortEnglishName": "Italy",
     "sort": 95,
-    "iconPath": "/flags/it.png",
+    "iconPath": "/uigaint/module/country/flags/it.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1255,7 +1255,7 @@
     "englishName": "Jamaica",
     "shortEnglishName": "Jamaica",
     "sort": 96,
-    "iconPath": "/flags/jm.png",
+    "iconPath": "/uigaint/module/country/flags/jm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1270,7 +1270,7 @@
     "englishName": "Bailiwick of Jersey",
     "shortEnglishName": "Jersey",
     "sort": 98,
-    "iconPath": "/flags/je.png",
+    "iconPath": "/uigaint/module/country/flags/je.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1285,7 +1285,7 @@
     "englishName": "Hashemite Kingdom of Jordan",
     "shortEnglishName": "Jordan",
     "sort": 99,
-    "iconPath": "/flags/jo.png",
+    "iconPath": "/uigaint/module/country/flags/jo.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1300,7 +1300,7 @@
     "englishName": "Japan",
     "shortEnglishName": "Japan",
     "sort": 97,
-    "iconPath": "/flags/jp.png",
+    "iconPath": "/uigaint/module/country/flags/jp.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1315,7 +1315,7 @@
     "englishName": "Republic of Kazakhstan",
     "shortEnglishName": "Kazakhstan",
     "sort": 100,
-    "iconPath": "/flags/kz.png",
+    "iconPath": "/uigaint/module/country/flags/kz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1330,7 +1330,7 @@
     "englishName": "Kenya",
     "shortEnglishName": "Kenya",
     "sort": 101,
-    "iconPath": "/flags/ke.png",
+    "iconPath": "/uigaint/module/country/flags/ke.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1345,7 +1345,7 @@
     "englishName": "Kyrgyz Republic",
     "shortEnglishName": "Kyrgyzstan",
     "sort": 107,
-    "iconPath": "/flags/kg.png",
+    "iconPath": "/uigaint/module/country/flags/kg.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1360,7 +1360,7 @@
     "englishName": "Kingdom of Cambodia",
     "shortEnglishName": "Cambodia",
     "sort": 31,
-    "iconPath": "/flags/kh.png",
+    "iconPath": "/uigaint/module/country/flags/kh.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1375,7 +1375,7 @@
     "englishName": "Republic of Kiribati",
     "shortEnglishName": "Kiribati",
     "sort": 102,
-    "iconPath": "/flags/ki.png",
+    "iconPath": "/uigaint/module/country/flags/ki.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1390,7 +1390,7 @@
     "englishName": "Saint Christopher and Nevis",
     "shortEnglishName": "Saint Christopher an",
     "sort": 168,
-    "iconPath": "/flags/kn.png",
+    "iconPath": "/uigaint/module/country/flags/kn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1405,7 +1405,7 @@
     "englishName": "Republic of Korea",
     "shortEnglishName": "South Korea",
     "sort": 104,
-    "iconPath": "/flags/kr.png",
+    "iconPath": "/uigaint/module/country/flags/kr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1420,7 +1420,7 @@
     "englishName": "State of Kuwait",
     "shortEnglishName": "Kuwait",
     "sort": 106,
-    "iconPath": "/flags/kw.png",
+    "iconPath": "/uigaint/module/country/flags/kw.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1435,7 +1435,7 @@
     "englishName": "Lao People's Democratic Republic",
     "shortEnglishName": "Laos",
     "sort": 108,
-    "iconPath": "/flags/la.png",
+    "iconPath": "/uigaint/module/country/flags/la.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1450,7 +1450,7 @@
     "englishName": "Republic of Liberia",
     "shortEnglishName": "Liberia",
     "sort": 112,
-    "iconPath": "/flags/lr.png",
+    "iconPath": "/uigaint/module/country/flags/lr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1465,7 +1465,7 @@
     "englishName": "Saint Lucia",
     "shortEnglishName": "Saint Lucia",
     "sort": 169,
-    "iconPath": "/flags/lc.png",
+    "iconPath": "/uigaint/module/country/flags/lc.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1480,7 +1480,7 @@
     "englishName": "Principality of Liechtenstein",
     "shortEnglishName": "Liechtenstein",
     "sort": 114,
-    "iconPath": "/flags/li.png",
+    "iconPath": "/uigaint/module/country/flags/li.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1495,7 +1495,7 @@
     "englishName": "Democratic Socialist Republic of Sri Lanka",
     "shortEnglishName": "Sri Lanka",
     "sort": 187,
-    "iconPath": "/flags/lk.png",
+    "iconPath": "/uigaint/module/country/flags/lk.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1510,7 +1510,7 @@
     "englishName": "Kingdom of Lesotho",
     "shortEnglishName": "Lesotho",
     "sort": 111,
-    "iconPath": "/flags/ls.png",
+    "iconPath": "/uigaint/module/country/flags/ls.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1525,7 +1525,7 @@
     "englishName": "Republic of Lithuania",
     "shortEnglishName": "Lithuania",
     "sort": 115,
-    "iconPath": "/flags/lt.png",
+    "iconPath": "/uigaint/module/country/flags/lt.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1540,7 +1540,7 @@
     "englishName": "Grand Duchy of Luxembourg",
     "shortEnglishName": "Luxembourg",
     "sort": 116,
-    "iconPath": "/flags/lu.png",
+    "iconPath": "/uigaint/module/country/flags/lu.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1555,7 +1555,7 @@
     "englishName": "Republic of Latvia",
     "shortEnglishName": "Latvia",
     "sort": 109,
-    "iconPath": "/flags/lv.png",
+    "iconPath": "/uigaint/module/country/flags/lv.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1570,7 +1570,7 @@
     "englishName": "Macao Special Administrative Region of the People's Republic of China",
     "shortEnglishName": "macao",
     "sort": 117,
-    "iconPath": "/flags/mo.png",
+    "iconPath": "/uigaint/module/country/flags/mo.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1585,7 +1585,7 @@
     "englishName": "Kingdom of Morocco",
     "shortEnglishName": "Morocco",
     "sort": 135,
-    "iconPath": "/flags/ma.png",
+    "iconPath": "/uigaint/module/country/flags/ma.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1600,7 +1600,7 @@
     "englishName": "Principality of Monaco",
     "shortEnglishName": "Monaco",
     "sort": 132,
-    "iconPath": "/flags/mc.png",
+    "iconPath": "/uigaint/module/country/flags/mc.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1615,7 +1615,7 @@
     "englishName": "Republic of Moldova",
     "shortEnglishName": "Moldova",
     "sort": 131,
-    "iconPath": "/flags/md.png",
+    "iconPath": "/uigaint/module/country/flags/md.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1630,7 +1630,7 @@
     "englishName": "Republic of Madagascar",
     "shortEnglishName": "Madagascar",
     "sort": 120,
-    "iconPath": "/flags/mg.png",
+    "iconPath": "/uigaint/module/country/flags/mg.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1645,7 +1645,7 @@
     "englishName": "Republic of Maldives",
     "shortEnglishName": "Maldives",
     "sort": 123,
-    "iconPath": "/flags/mv.png",
+    "iconPath": "/uigaint/module/country/flags/mv.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1660,7 +1660,7 @@
     "englishName": "United Mexican States",
     "shortEnglishName": "Mexico",
     "sort": 129,
-    "iconPath": "/flags/mx.png",
+    "iconPath": "/uigaint/module/country/flags/mx.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1675,7 +1675,7 @@
     "englishName": "Republic of the Marshall Islands",
     "shortEnglishName": "Marshall Islands",
     "sort": 126,
-    "iconPath": "/flags/mh.png",
+    "iconPath": "/uigaint/module/country/flags/mh.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1690,7 +1690,7 @@
     "englishName": "Republic of North Macedonia",
     "shortEnglishName": "North Macedonia",
     "sort": 118,
-    "iconPath": "/flags/mk.png",
+    "iconPath": "/uigaint/module/country/flags/mk.png",
     "showEnterpriseEnName": 0,
     "support": 1
   },
@@ -1705,7 +1705,7 @@
     "englishName": "Republic of Mali",
     "shortEnglishName": "Mali",
     "sort": 124,
-    "iconPath": "/flags/ml.png",
+    "iconPath": "/uigaint/module/country/flags/ml.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1720,7 +1720,7 @@
     "englishName": "Republic of Malta",
     "shortEnglishName": "Malta",
     "sort": 125,
-    "iconPath": "/flags/mt.png",
+    "iconPath": "/uigaint/module/country/flags/mt.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1735,7 +1735,7 @@
     "englishName": "Republic of the Union of Myanmar",
     "shortEnglishName": "Myanmar",
     "sort": 137,
-    "iconPath": "/flags/mm.png",
+    "iconPath": "/uigaint/module/country/flags/mm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1750,7 +1750,7 @@
     "englishName": "Montenegro",
     "shortEnglishName": "Montenegro",
     "sort": 134,
-    "iconPath": "/flags/me.png",
+    "iconPath": "/uigaint/module/country/flags/me.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1765,7 +1765,7 @@
     "englishName": "Mongolia",
     "shortEnglishName": "Mongolia",
     "sort": 133,
-    "iconPath": "/flags/mn.png",
+    "iconPath": "/uigaint/module/country/flags/mn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1780,7 +1780,7 @@
     "englishName": "Republic of Mozambique",
     "shortEnglishName": "Mozambique",
     "sort": 136,
-    "iconPath": "/flags/mz.png",
+    "iconPath": "/uigaint/module/country/flags/mz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1795,7 +1795,7 @@
     "englishName": "Islamic Republic of Mauritania",
     "shortEnglishName": "Mauritania",
     "sort": 127,
-    "iconPath": "/flags/mr.png",
+    "iconPath": "/uigaint/module/country/flags/mr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1810,7 +1810,7 @@
     "englishName": "Republic of Mauritius",
     "shortEnglishName": "Mauritius",
     "sort": 128,
-    "iconPath": "/flags/mu.png",
+    "iconPath": "/uigaint/module/country/flags/mu.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1825,7 +1825,7 @@
     "englishName": "Republic of Malawi",
     "shortEnglishName": "Malawi",
     "sort": 121,
-    "iconPath": "/flags/mw.png",
+    "iconPath": "/uigaint/module/country/flags/mw.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1840,7 +1840,7 @@
     "englishName": "Malaysia",
     "shortEnglishName": "Malaysia",
     "sort": 122,
-    "iconPath": "/flags/my.png",
+    "iconPath": "/uigaint/module/country/flags/my.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1855,7 +1855,7 @@
     "englishName": "Republic of Namibia",
     "shortEnglishName": "Namibia",
     "sort": 139,
-    "iconPath": "/flags/na.png",
+    "iconPath": "/uigaint/module/country/flags/na.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1870,7 +1870,7 @@
     "englishName": "Republic of Niger",
     "shortEnglishName": "Niger",
     "sort": 145,
-    "iconPath": "/flags/ne.png",
+    "iconPath": "/uigaint/module/country/flags/ne.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1885,7 +1885,7 @@
     "englishName": "Federal Republic of Nigeria",
     "shortEnglishName": "Nigeria",
     "sort": 146,
-    "iconPath": "/flags/ng.png",
+    "iconPath": "/uigaint/module/country/flags/ng.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1900,7 +1900,7 @@
     "englishName": "Republic of Nicaragua",
     "shortEnglishName": "Nicaragua",
     "sort": 144,
-    "iconPath": "/flags/ni.png",
+    "iconPath": "/uigaint/module/country/flags/ni.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1915,7 +1915,7 @@
     "englishName": "Niue",
     "shortEnglishName": "Niue",
     "sort": 147,
-    "iconPath": "/flags/nu.png",
+    "iconPath": "/uigaint/module/country/flags/nu.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1930,7 +1930,7 @@
     "englishName": "Kingdom of Norway",
     "shortEnglishName": "Norway",
     "sort": 149,
-    "iconPath": "/flags/no.png",
+    "iconPath": "/uigaint/module/country/flags/no.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1945,7 +1945,7 @@
     "englishName": "Federal Democratic Republic of Nepal",
     "shortEnglishName": "Nepal",
     "sort": 141,
-    "iconPath": "/flags/np.png",
+    "iconPath": "/uigaint/module/country/flags/np.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1960,7 +1960,7 @@
     "englishName": "Republic of Nauru",
     "shortEnglishName": "Nauru",
     "sort": 140,
-    "iconPath": "/flags/nr.png",
+    "iconPath": "/uigaint/module/country/flags/nr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1975,7 +1975,7 @@
     "englishName": "New Zealand",
     "shortEnglishName": "New Zealand",
     "sort": 143,
-    "iconPath": "/flags/nz.png",
+    "iconPath": "/uigaint/module/country/flags/nz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -1990,7 +1990,7 @@
     "englishName": "Sultanate of Oman",
     "shortEnglishName": "Oman",
     "sort": 150,
-    "iconPath": "/flags/om.png",
+    "iconPath": "/uigaint/module/country/flags/om.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2005,7 +2005,7 @@
     "englishName": "Islamic Republic of Pakistan",
     "shortEnglishName": "Pakistan",
     "sort": 152,
-    "iconPath": "/flags/pk.png",
+    "iconPath": "/uigaint/module/country/flags/pk.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2020,7 +2020,7 @@
     "englishName": "Republic of Panama",
     "shortEnglishName": "Panama",
     "sort": 155,
-    "iconPath": "/flags/pa.png",
+    "iconPath": "/uigaint/module/country/flags/pa.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2035,7 +2035,7 @@
     "englishName": "Republic of Peru",
     "shortEnglishName": "Peru",
     "sort": 158,
-    "iconPath": "/flags/pe.png",
+    "iconPath": "/uigaint/module/country/flags/pe.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2050,7 +2050,7 @@
     "englishName": "Republic of the Philippines",
     "shortEnglishName": "Philippines",
     "sort": 159,
-    "iconPath": "/flags/ph.png",
+    "iconPath": "/uigaint/module/country/flags/ph.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2065,7 +2065,7 @@
     "englishName": "Republic of Palau",
     "shortEnglishName": "Palau",
     "sort": 153,
-    "iconPath": "/flags/pw.png",
+    "iconPath": "/uigaint/module/country/flags/pw.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2080,7 +2080,7 @@
     "englishName": "Independent State of Papua New Guinea",
     "shortEnglishName": "Papua New Guinea",
     "sort": 156,
-    "iconPath": "/flags/pg.png",
+    "iconPath": "/uigaint/module/country/flags/pg.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2095,7 +2095,7 @@
     "englishName": "Republic of Poland",
     "shortEnglishName": "Poland",
     "sort": 160,
-    "iconPath": "/flags/pl.png",
+    "iconPath": "/uigaint/module/country/flags/pl.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2110,7 +2110,7 @@
     "englishName": "Portuguese Republic",
     "shortEnglishName": "Portugal",
     "sort": 161,
-    "iconPath": "/flags/pt.png",
+    "iconPath": "/uigaint/module/country/flags/pt.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2125,7 +2125,7 @@
     "englishName": "Republic of Paraguay",
     "shortEnglishName": "Paraguay",
     "sort": 157,
-    "iconPath": "/flags/py.png",
+    "iconPath": "/uigaint/module/country/flags/py.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2140,7 +2140,7 @@
     "englishName": "State of Palestine",
     "shortEnglishName": "Palestine",
     "sort": 154,
-    "iconPath": "/flags/bl.png",
+    "iconPath": "/uigaint/module/country/flags/bl.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2155,7 +2155,7 @@
     "englishName": "State of Qatar",
     "shortEnglishName": "Qatar",
     "sort": 164,
-    "iconPath": "/flags/qa.png",
+    "iconPath": "/uigaint/module/country/flags/qa.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2170,7 +2170,7 @@
     "englishName": "Republic of Kosovo",
     "shortEnglishName": "Kosovo",
     "sort": 0,
-    "iconPath": "/flags/rk.png",
+    "iconPath": "/uigaint/module/country/flags/rk.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2185,7 +2185,7 @@
     "englishName": "Romania",
     "shortEnglishName": "Romania",
     "sort": 165,
-    "iconPath": "/flags/ro.png",
+    "iconPath": "/uigaint/module/country/flags/ro.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2200,7 +2200,7 @@
     "englishName": "Russian Federation",
     "shortEnglishName": "Russia",
     "sort": 166,
-    "iconPath": "/flags/ru.png",
+    "iconPath": "/uigaint/module/country/flags/ru.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2215,7 +2215,7 @@
     "englishName": "Republic of Rwanda",
     "shortEnglishName": "Rwanda",
     "sort": 167,
-    "iconPath": "/flags/rw.png",
+    "iconPath": "/uigaint/module/country/flags/rw.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2230,7 +2230,7 @@
     "englishName": "Kingdom of Saudi Arabia",
     "shortEnglishName": "Saudi Arabia",
     "sort": 173,
-    "iconPath": "/flags/sa.png",
+    "iconPath": "/uigaint/module/country/flags/sa.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2245,7 +2245,7 @@
     "englishName": "Republic of Senegal",
     "shortEnglishName": "Senegal",
     "sort": 174,
-    "iconPath": "/flags/sn.png",
+    "iconPath": "/uigaint/module/country/flags/sn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2260,7 +2260,7 @@
     "englishName": "Solomon Islands",
     "shortEnglishName": "Solomon Islands",
     "sort": 181,
-    "iconPath": "/flags/sb.png",
+    "iconPath": "/uigaint/module/country/flags/sb.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2275,7 +2275,7 @@
     "englishName": "Republic of Sierra Leone",
     "shortEnglishName": "Sierra Leone",
     "sort": 177,
-    "iconPath": "/flags/sl.png",
+    "iconPath": "/uigaint/module/country/flags/sl.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2290,7 +2290,7 @@
     "englishName": "Republic of El Salvador",
     "shortEnglishName": "El Salvador",
     "sort": 61,
-    "iconPath": "/flags/sv.png",
+    "iconPath": "/uigaint/module/country/flags/sv.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2305,7 +2305,7 @@
     "englishName": "Republic of San Marino",
     "shortEnglishName": "San Marino",
     "sort": 172,
-    "iconPath": "/flags/sm.png",
+    "iconPath": "/uigaint/module/country/flags/sm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2320,7 +2320,7 @@
     "englishName": "Republic of Serbia",
     "shortEnglishName": "Serbia",
     "sort": 175,
-    "iconPath": "/flags/rs.png",
+    "iconPath": "/uigaint/module/country/flags/rs.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2335,7 +2335,7 @@
     "englishName": "Democratic Republic of São Tomé and Príncipe",
     "shortEnglishName": "São Tomé and Príncip",
     "sort": 194,
-    "iconPath": "/flags/st.png",
+    "iconPath": "/uigaint/module/country/flags/st.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2350,7 +2350,7 @@
     "englishName": "Republic of Suriname",
     "shortEnglishName": "Suriname",
     "sort": 189,
-    "iconPath": "/flags/sr.png",
+    "iconPath": "/uigaint/module/country/flags/sr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2365,7 +2365,7 @@
     "englishName": "Slovak Republic",
     "shortEnglishName": "Slovakia",
     "sort": 179,
-    "iconPath": "/flags/sk.png",
+    "iconPath": "/uigaint/module/country/flags/sk.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2380,7 +2380,7 @@
     "englishName": "Republic of Slovenia",
     "shortEnglishName": "Slovenia",
     "sort": 180,
-    "iconPath": "/flags/si.png",
+    "iconPath": "/uigaint/module/country/flags/si.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2395,7 +2395,7 @@
     "englishName": "Kingdom of Sweden",
     "shortEnglishName": "Sweden",
     "sort": 191,
-    "iconPath": "/flags/se.png",
+    "iconPath": "/uigaint/module/country/flags/se.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2410,7 +2410,7 @@
     "englishName": "Kingdom of Eswatini",
     "shortEnglishName": "Eswatini",
     "sort": 190,
-    "iconPath": "/flags/sz.png",
+    "iconPath": "/uigaint/module/country/flags/sz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2425,7 +2425,7 @@
     "englishName": "Republic of Seychelles",
     "shortEnglishName": "Seychelles",
     "sort": 176,
-    "iconPath": "/flags/sc.png",
+    "iconPath": "/uigaint/module/country/flags/sc.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2440,7 +2440,7 @@
     "englishName": "Turks and Caicos Islands",
     "shortEnglishName": "Turks and Caicos",
     "sort": 207,
-    "iconPath": "/flags/tc.png",
+    "iconPath": "/uigaint/module/country/flags/tc.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2455,7 +2455,7 @@
     "englishName": "Republic of Chad",
     "shortEnglishName": "Chad",
     "sort": 38,
-    "iconPath": "/flags/td.png",
+    "iconPath": "/uigaint/module/country/flags/td.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2470,7 +2470,7 @@
     "englishName": "Togolese Republic",
     "shortEnglishName": "Togo",
     "sort": 201,
-    "iconPath": "/flags/tg.png",
+    "iconPath": "/uigaint/module/country/flags/tg.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2485,7 +2485,7 @@
     "englishName": "Kingdom of Thailand",
     "shortEnglishName": "Thailand",
     "sort": 198,
-    "iconPath": "/flags/th.png",
+    "iconPath": "/uigaint/module/country/flags/th.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2500,7 +2500,7 @@
     "englishName": "Republic of Tajikistan",
     "shortEnglishName": "Tajikistan",
     "sort": 196,
-    "iconPath": "/flags/tj.png",
+    "iconPath": "/uigaint/module/country/flags/tj.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2515,7 +2515,7 @@
     "englishName": "Turkmenistan",
     "shortEnglishName": "Turkmenistan",
     "sort": 206,
-    "iconPath": "/flags/tm.png",
+    "iconPath": "/uigaint/module/country/flags/tm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2530,7 +2530,7 @@
     "englishName": "Democratic Republic of Timor-Leste",
     "shortEnglishName": "Timor-Leste",
     "sort": 200,
-    "iconPath": "/flags/tl.png",
+    "iconPath": "/uigaint/module/country/flags/tl.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2545,7 +2545,7 @@
     "englishName": "Kingdom of Tonga",
     "shortEnglishName": "Tonga",
     "sort": 202,
-    "iconPath": "/flags/to.png",
+    "iconPath": "/uigaint/module/country/flags/to.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2560,7 +2560,7 @@
     "englishName": "Republic of Trinidad and Tobago",
     "shortEnglishName": "Trinidad and Tobago",
     "sort": 203,
-    "iconPath": "/flags/tt.png",
+    "iconPath": "/uigaint/module/country/flags/tt.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2575,7 +2575,7 @@
     "englishName": "Republic of Tunisia",
     "shortEnglishName": "Tunisia",
     "sort": 204,
-    "iconPath": "/flags/tn.png",
+    "iconPath": "/uigaint/module/country/flags/tn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2590,7 +2590,7 @@
     "englishName": "Republic of Turkey",
     "shortEnglishName": "Turkey",
     "sort": 205,
-    "iconPath": "/flags/tr.png",
+    "iconPath": "/uigaint/module/country/flags/tr.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2605,7 +2605,7 @@
     "englishName": "Tuvalu",
     "shortEnglishName": "Tuvalu",
     "sort": 208,
-    "iconPath": "/flags/tv.png",
+    "iconPath": "/uigaint/module/country/flags/tv.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2620,7 +2620,7 @@
     "englishName": "Taiwan (Republic of China)",
     "shortEnglishName": "Taiwan",
     "sort": 195,
-    "iconPath": "/flags/tw.png",
+    "iconPath": "/uigaint/module/country/flags/tw.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2635,7 +2635,7 @@
     "englishName": "United Republic of Tanzania",
     "shortEnglishName": "Tanzania",
     "sort": 197,
-    "iconPath": "/flags/tz.png",
+    "iconPath": "/uigaint/module/country/flags/tz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2650,7 +2650,7 @@
     "englishName": "Republic of Uganda",
     "shortEnglishName": "Uganda",
     "sort": 209,
-    "iconPath": "/flags/ug.png",
+    "iconPath": "/uigaint/module/country/flags/ug.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2665,7 +2665,7 @@
     "englishName": "Ukraine",
     "shortEnglishName": "Ukraine",
     "sort": 210,
-    "iconPath": "/flags/ua.png",
+    "iconPath": "/uigaint/module/country/flags/ua.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2680,7 +2680,7 @@
     "englishName": "Oriental Republic of Uruguay",
     "shortEnglishName": "Uruguay",
     "sort": 214,
-    "iconPath": "/flags/uy.png",
+    "iconPath": "/uigaint/module/country/flags/uy.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2695,7 +2695,7 @@
     "englishName": "Republic of Uzbekistan",
     "shortEnglishName": "Uzbekistan",
     "sort": 215,
-    "iconPath": "/flags/uz.png",
+    "iconPath": "/uigaint/module/country/flags/uz.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2710,7 +2710,7 @@
     "englishName": "Vatican City State",
     "shortEnglishName": "Vatican City",
     "sort": 217,
-    "iconPath": "/flags/va.png",
+    "iconPath": "/uigaint/module/country/flags/va.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2725,7 +2725,7 @@
     "englishName": "Saint Vincent and the Grenadines",
     "shortEnglishName": "Saint Vincent",
     "sort": 170,
-    "iconPath": "/flags/vc.png",
+    "iconPath": "/uigaint/module/country/flags/vc.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2740,7 +2740,7 @@
     "englishName": "Bolivarian Republic of Venezuela",
     "shortEnglishName": "Venezuela",
     "sort": 218,
-    "iconPath": "/flags/ve.png",
+    "iconPath": "/uigaint/module/country/flags/ve.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2755,7 +2755,7 @@
     "englishName": "British Virgin Islands",
     "shortEnglishName": "British Virgin Islan",
     "sort": 26,
-    "iconPath": "/flags/vg.png",
+    "iconPath": "/uigaint/module/country/flags/vg.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2770,7 +2770,7 @@
     "englishName": "Socialist Republic of Vietnam",
     "shortEnglishName": "Vietnam",
     "sort": 219,
-    "iconPath": "/flags/vn.png",
+    "iconPath": "/uigaint/module/country/flags/vn.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2785,7 +2785,7 @@
     "englishName": "Republic of Vanuatu",
     "shortEnglishName": "Vanuatu",
     "sort": 216,
-    "iconPath": "/flags/vu.png",
+    "iconPath": "/uigaint/module/country/flags/vu.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2800,7 +2800,7 @@
     "englishName": "Independent State of Samoa",
     "shortEnglishName": "Samoa",
     "sort": 171,
-    "iconPath": "/flags/ws.png",
+    "iconPath": "/uigaint/module/country/flags/ws.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2815,7 +2815,7 @@
     "englishName": "Republic of Kosovo",
     "shortEnglishName": "Kosovo",
     "sort": 105,
-    "iconPath": "/flags/xk.png",
+    "iconPath": "/uigaint/module/country/flags/xk.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2830,7 +2830,7 @@
     "englishName": "Republic of South Africa",
     "shortEnglishName": "South Africa",
     "sort": 184,
-    "iconPath": "/flags/za.png",
+    "iconPath": "/uigaint/module/country/flags/za.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2845,7 +2845,7 @@
     "englishName": "Republic of Zambia",
     "shortEnglishName": "Zambia",
     "sort": 222,
-    "iconPath": "/flags/zm.png",
+    "iconPath": "/uigaint/module/country/flags/zm.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2860,7 +2860,7 @@
     "englishName": "Republic of Zimbabwe",
     "shortEnglishName": "Zimbabwe",
     "sort": 223,
-    "iconPath": "/flags/zw.png",
+    "iconPath": "/uigaint/module/country/flags/zw.png",
     "showEnterpriseEnName": 1,
     "support": 1
   },
@@ -2875,7 +2875,7 @@
     "englishName": "Central African Republic",
     "shortEnglishName": "Central African",
     "sort": 37,
-    "iconPath": "/flags/cf.png",
+    "iconPath": "/uigaint/module/country/flags/cf.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -2890,7 +2890,7 @@
     "englishName": "Republic of Cuba",
     "shortEnglishName": "Cuba",
     "sort": 49,
-    "iconPath": "/flags/cu.png",
+    "iconPath": "/uigaint/module/country/flags/cu.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -2905,7 +2905,7 @@
     "englishName": "United Kingdom",
     "shortEnglishName": "United Kingdom",
     "sort": 212,
-    "iconPath": "/flags/gb.png",
+    "iconPath": "/uigaint/module/country/flags/gb.png",
     "showEnterpriseEnName": 1,
     "support": 0
   },
@@ -2920,7 +2920,7 @@
     "englishName": "Hong Kong",
     "shortEnglishName": "Hong Kong",
     "sort": 85,
-    "iconPath": "/flags/hk.png",
+    "iconPath": "/uigaint/module/country/flags/hk.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -2935,7 +2935,7 @@
     "englishName": "Islamic Republic of Iran",
     "shortEnglishName": "Iran",
     "sort": 90,
-    "iconPath": "/flags/ir.png",
+    "iconPath": "/uigaint/module/country/flags/ir.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -2950,7 +2950,7 @@
     "englishName": "The Kingdom of the Netherlands",
     "shortEnglishName": "Netherlands",
     "sort": 142,
-    "iconPath": "/flags/nl.png",
+    "iconPath": "/uigaint/module/country/flags/nl.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -2965,7 +2965,7 @@
     "englishName": "Democratic People's Republic of Korea",
     "shortEnglishName": "North Korea",
     "sort": 103,
-    "iconPath": "/flags/kp.png",
+    "iconPath": "/uigaint/module/country/flags/kp.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -2980,7 +2980,7 @@
     "englishName": "Republic of the Sudan",
     "shortEnglishName": "Sudan",
     "sort": 188,
-    "iconPath": "/flags/sd.png",
+    "iconPath": "/uigaint/module/country/flags/sd.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -2995,7 +2995,7 @@
     "englishName": "Singapore",
     "shortEnglishName": "Singapore",
     "sort": 178,
-    "iconPath": "/flags/sg.png",
+    "iconPath": "/uigaint/module/country/flags/sg.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -3010,7 +3010,7 @@
     "englishName": "Republic of South Sudan",
     "shortEnglishName": "South Sudan",
     "sort": 185,
-    "iconPath": "/flags/ss.png",
+    "iconPath": "/uigaint/module/country/flags/ss.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -3025,7 +3025,7 @@
     "englishName": "Syrian Arab Republic",
     "shortEnglishName": "Syria",
     "sort": 193,
-    "iconPath": "/flags/sy.png",
+    "iconPath": "/uigaint/module/country/flags/sy.png",
     "showEnterpriseEnName": 0,
     "support": 0
   },
@@ -3040,7 +3040,7 @@
     "englishName": "United States of America",
     "shortEnglishName": "United States",
     "sort": 213,
-    "iconPath": "/flags/us.png",
+    "iconPath": "/uigaint/module/country/flags/us.png",
     "showEnterpriseEnName": 0,
     "support": 0
   }
