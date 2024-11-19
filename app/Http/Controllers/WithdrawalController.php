@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Coin;
+use App\Models\MiningPoolCoin;
 use App\Models\Wallet;
 use App\Models\Withdraw;
 use App\Services\WalletService;
-
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -29,12 +28,16 @@ class WithdrawalController extends Controller
 
     public function create(Request $request)
     {
-        $data = $request->all();
+        $userId = session('user_id');
+        if (!$userId) {
+            return $this->error("Please log in first");
+        }
 
+        $data = $request->all();
         $validator = Validator::make($data, [
             'coin_id' => 'required|integer',
             'network_id' => 'required|integer',
-            'amount' => 'required|numeric|min:0.01',
+            'amount' => 'required|numeric|min:0|not_in:0',
             'address' => 'required'
         ]);
 
@@ -42,7 +45,6 @@ class WithdrawalController extends Controller
             return $this->error($validator->errors()->first());
         }
 
-        $userId = 1;
         $coinId = $data['coin_id'];
         $networkId = $data['network_id'];
         $amount = $data['amount'];
@@ -85,10 +87,16 @@ class WithdrawalController extends Controller
     public function getCoin(): ?array
     {
         $coins = Coin::query()
+            ->with('networks')
             ->select('id', 'name', 'icon')
             ->orderBy('name', 'ASC')
-            ->get();
-        return $coins ? $coins->toArray() : null;
+            ->get()->toArray();
+        foreach ($coins as $k => $v) {
+            if (empty($v['networks'])) {
+                unset($coins[$k]);
+            }
+        }
+        return $coins ? $coins : null;
     }
 
 }

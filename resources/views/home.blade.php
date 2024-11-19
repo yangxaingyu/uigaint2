@@ -1991,7 +1991,7 @@
                         </div>
                         <h2 class="title">Project POOLS</h2>
                     </div>
-                    <div class="gamfi-btn-area project_v2_tab_btns">
+                    <div v-if="false" class="gamfi-btn-area project_v2_tab_btns">
                         <ul>
                             <li class="project_v2_tab_links m-0 active" onclick="openProject(event, 'ProectV2_OnGoing')" id="OpenProject">
                                 <button class="readon white-btn black-shape m-0">
@@ -2031,16 +2031,16 @@
                              style="border: 2px #3e3f4e solid;border-top: 4px #722140 solid; margin-bottom: 30px;">
                             <div class="col-lg-4 col-md-6">
                                 <div class="project-item hover-shape-border" style="padding-bottom: 20px; margin-bottom: 0;">
-                                    <div class="project-header d-flex justify-content-between">
-                                        <div class="project-icon" style="top: 0;">
-                                            <img src="/storage/images/home/project-single-image.png" alt="Project-Image">
+                                    <div class="project-header">
+                                        <div v-if="false" class="project-icon" style="top: 0;">
+                                            <img :src="/uploads/ + item.reward_coin_icon" alt="">
                                         </div>
-                                        <div class="heading-title" style="margin-bottom: 0;">
+                                        <div class="heading-title" style="margin-bottom: 0;text-align: center;">
                                             <h3>@{{ item.pool_name }}</h3>
                                         </div>
                                     </div>
 
-                                    <div class="project-desc desc-line2" style="margin-bottom: 20px; height: 55px;">
+                                    <div class="project-desc desc-line2" style="margin-bottom: 20px; height: 52px;">
                                         @{{ item.pool_description }}
                                     </div>
 
@@ -2059,7 +2059,7 @@
                                                 </div>
                                             </div>
                                             <div class="project-icon">
-                                                <img src="/storage/images/home_v2/project-single-image2.png" alt="Project-Image">
+                                                <img width="35px" height="35px" :src="/uploads/ + item.reward_coin_icon" alt="">
                                             </div>
                                         </div>
 
@@ -2104,7 +2104,7 @@
                                         </div>
 
                                         <div class="project-icon text-center" style="padding-bottom: 15px;">
-                                            <img style="width: 50px; height: 50px;" src="/storage/images/home/project-single-image2.png" alt="Project-Image">
+                                            <img style="width: 50px; height: 50px;" :src="/uploads/ + support_coin.support_coin_icon" alt="">
                                         </div>
 
                                         <div class="project-desc" style="padding-bottom: 15px;text-align: center;">
@@ -2113,9 +2113,9 @@
 
                                         <div class="project-media" style="padding-bottom: 30px;">
                                             <ul class="project-listing">
-                                                <li>APR <span>5 %</span></li>
-                                                <li>Min pledge <span>0.89 BUSD</span></li>
-                                                <li>Max pledge <span>300.00 BUSD</span></li>
+                                                <li>APR <span>@{{ support_coin.annual_yield }} %</span></li>
+                                                <li>Min pledge <span>@{{ support_coin.min_stake_amount }} @{{ support_coin.support_coin_name }}</span></li>
+                                                <li>Max pledge <span>@{{ support_coin.max_stake_amount }} @{{ support_coin.support_coin_name }}</span></li>
                                             </ul>
                                         </div>
 
@@ -2135,12 +2135,6 @@
                                     <span class="border-shadow shadow-4"></span>
                                 </div>
                                 <div v-else class="project-item active-shape hover-shape-inner" style="padding-bottom: 20px; margin-bottom: 0;">
-                                    <div v-if="false" class="project-content">
-                                        <div class="project-desc" style="padding-bottom: 15px;text-align: center;">
-                                            质押USDT赚取OLA
-                                        </div>
-                                    </div>
-
                                     <div class="staking_flip_card_back_headings lp_flip_card_body_headings">
                                         <h2>Stake</h2>
                                             <button @click="support_coin.is_flip = false" class="staking_flip_card_close_btn" style="top: 11px;">
@@ -4086,19 +4080,7 @@
                 stake_pool_id: '',
                 stake_coin_id: '',
                 stake_amount: 0.00,
-                mining_pools: [],
-                countdowns: [
-                    {
-                        id: 1,
-                        endTime: 1735638114000,
-                        countdown_str: ''
-                    },
-                    {
-                        id: 2,
-                        endTime: 1735638114000,
-                        countdown_str: ''
-                    }
-                ]
+                mining_pools: []
             },
             mounted() {
                 this.mining_pools = mining_pools

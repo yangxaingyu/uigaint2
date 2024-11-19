@@ -11,18 +11,6 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function isLogin()
-    {
-        return $this->getUserId() ? true : false;
-    }
-
-    public function getUserId()
-    {
-        $user_id = session('user_id');
-        return $user_id ? $user_id : 0;
-    }
-
-
     /**
      * 返回数据
      * @param $msg string 提示信息

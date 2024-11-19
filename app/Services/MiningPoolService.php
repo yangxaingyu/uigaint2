@@ -32,15 +32,20 @@ class MiningPoolService
             if ($miningPool->supportedCoins) {
                 foreach ($miningPool->supportedCoins as $k2 => $supportedCoin) {
                     $temp_coin = Coin::find($supportedCoin->id);
-                    $wallet = Wallet::getUserWallet($userId, $supportedCoin->id);
+                    if ($userId) {
+                        $wallet = Wallet::getUserWallet($userId, $supportedCoin->id);
+                        $balance = $wallet->balance;
+                    } else {
+                        $balance = 0;
+                    }
                     $miningPoolsArray[$k]['supported_coins'][$k2]['support_coin_id'] = $temp_coin->id;
                     $miningPoolsArray[$k]['supported_coins'][$k2]['support_coin_name'] = $temp_coin->name;
                     $miningPoolsArray[$k]['supported_coins'][$k2]['support_coin_icon'] = $temp_coin->icon;
                     $miningPoolsArray[$k]['supported_coins'][$k2]['annual_yield'] = $supportedCoin->annual_yield;
-                    $miningPoolsArray[$k]['supported_coins'][$k2]['max_stake_amount'] = number_format($supportedCoin->min_stake_amount, 2);
                     $miningPoolsArray[$k]['supported_coins'][$k2]['min_stake_amount'] = number_format($supportedCoin->min_stake_amount, 2);
+                    $miningPoolsArray[$k]['supported_coins'][$k2]['max_stake_amount'] = number_format($supportedCoin->max_stake_amount, 2);
                     $miningPoolsArray[$k]['supported_coins'][$k2]['stake_amount'] = '';
-                    $miningPoolsArray[$k]['supported_coins'][$k2]['balance'] = $wallet->balance;
+                    $miningPoolsArray[$k]['supported_coins'][$k2]['balance'] = $balance;
                     $miningPoolsArray[$k]['supported_coins'][$k2]['is_flip'] = false;
                 }
             } else {

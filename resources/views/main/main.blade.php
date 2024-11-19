@@ -29,13 +29,13 @@
     <script src="{{\App\Server\Helper::assets('/js/axios.min.js')}}"></script>
     <script src="{{\App\Server\Helper::assets('/js/vue.min.js')}}"></script>
     <script src="{{\App\Server\Helper::assets('/js/dayjs.min.js')}}"></script>
+    <script src="{{\App\Server\Helper::assets('/js/jquery.min.js')}}"></script>
 
     <style>
         body .demo-class .layui-layer-title {background:#272642; color:#fff; border: none;}
         body .demo-class .layui-layer-content {background-color: #443d6c; color: #fff;}
         body .demo-class .layui-layer-btn {background-color: #443d6c;}
         body .demo-class .layui-layer-btn a {height: 33px;line-height: 33px; font-family: "Russo One", sans-serif; background:rgba(255, 255, 255, 0.2); color: #fff; border: 0;}
-
     </style>
 </head>
 
@@ -465,8 +465,6 @@
 @yield('transfer')
 @yield('withdrawal')
 
-@yield('transfer')
-@yield('withdrawal')
 @yield('user')
 @yield('page')
 
@@ -575,7 +573,7 @@
 <script src="{{\App\Server\Helper::assets('/js/modernizr-2.8.3.min.js')}}"></script>
 
 <!-- jquery latest version -->
-<script src="{{\App\Server\Helper::assets('/js/jquery.min.js')}}"></script>
+{{--<script src="{{\App\Server\Helper::assets('/js/jquery.min.js')}}"></script>--}}
 
 <!-- Bootstrap v4.4.1 js -->
 <script src="{{\App\Server\Helper::assets('/js/bootstrap.min.js')}}"></script>
@@ -603,7 +601,7 @@
 <script src="{{\App\Server\Helper::assets('/js/plugins.js')}}"></script>
 
 <!-- Time Counter js -->
-<script src="{{\App\Server\Helper::assets('/js/time-counter.js')}}"></script>
+{{--<script src="{{\App\Server\Helper::assets('/js/time-counter.js')}}"></script>--}}
 <script src="{{\App\Server\Helper::assets('/module/layer/layer.js')}}"></script>
 
 <!-- slickSlider js -->
@@ -611,7 +609,7 @@
 {{--<script src="{{\App\Server\Helper::assets('/js/metamaskhandler.js')}}"></script>--}}
 
 <!-- main js -->
-{{--<script src="{{\App\Server\Helper::assets('/js/main.js')}}"></script>--}}
+<script src="{{\App\Server\Helper::assets('/js/main.js')}}"></script>
 
 <!-- home2 js -->
 {{--<script src="{{\App\Server\Helper::assets('/js/home2.js')}}"></script>--}}
