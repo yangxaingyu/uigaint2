@@ -7,9 +7,6 @@
         }
     </style>
 
-    @if (session('error'))
-        <script>  alert('{{ session('error.message') }}')</script>
-    @endif
     <div class="loader_first" style="display: none;">
         <div class="circular-spinner"></div>
     </div>

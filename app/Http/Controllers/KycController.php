@@ -11,29 +11,35 @@ class KycController
 {
 
     public function kyc(){
+        $user_id=session('user_id');
+        if (empty($user_id)){
+            return redirect()->back()->with(['message' => 'Please log in first']);
+        }
         return view('kyc-process');
     }
 
     public function kyc2( Request  $request){
-
+        $user_id=session('user_id');
+        if (empty($user_id)){
+            return redirect()->back()->with(['message' => 'Please log in first']);
+        }
         $country=$request->post('country');
         $kyc_type=$request->post('kyc_type');
         if (empty($country) || empty($kyc_type)) {
-            return redirect()->back()->with('error', ['message' => 'Password error']);
+            return redirect()->back()->with(['message' => 'country kyc_type error']);
         }
-        $user_id=session('user_id');
         $data=[
             'country'=>$country,
             'kyc_type'=>$kyc_type,
         ];
-        $res=User::where('id',$user_id)->update($data);
+        User::where('id',$user_id)->update($data);
         return view('kyc-process-step2');
     }
     public function storeFile($file, $directory)
     {
-        $filename = $file->getClientOriginalName(); // Get the original file name
-        Storage::disk('public')->makeDirectory($directory); // Ensure the directory exists
-        $path = $file->storeAs($directory, $filename, 'public'); // Store the file using storeAs()
+        $filename = $file->getClientOriginalName();
+        Storage::disk('public')->makeDirectory($directory);
+        $path = $file->storeAs($directory, $filename, 'public');
         return "/storage/$directory/$filename";
     }
     public function kyc3(Request  $request){
@@ -62,6 +68,9 @@ class KycController
         return view('kyc-process-step3');
     }
     public function kyccert(Request  $request){
+        if (empty($user_id)){
+            return redirect()->back()->with('error', ['message' => 'Please log in first']);
+        }
         $data=$request->post();
         $user_id=session('user_id');
         $validator=Validator::make($request->all(),[
@@ -74,7 +83,7 @@ class KycController
             'city'=>'required',
         ]);
         if ($validator->fails()) {
-            return redirect()->back()->with('error', ['message' => 'required error']);
+            return redirect()->back()->with(['message' => 'required error']);
         }
         $data=[
             'first_name'=>$data['first_name'],
@@ -88,9 +97,9 @@ class KycController
         ];
         $res=User::where('id',$user_id)->update($data);
         if($res){
-            return redirect('/')->with('error', ['message' => 'Authentication success']);
+            return redirect()->back()->with(['message' => 'Authentication success']);
         }else{
-            return redirect()->back()->with('error', ['message' => 'Authentication failed']);
+            return redirect()->back()->with(['message' => 'Authentication failed']);
         }
     }
 

@@ -301,56 +301,49 @@
         </div>
     </div>
     <div class="container depo">
-<form action="/depsub" method="post">
+    <form action="/depsub" method="post">
     <input type="hidden" name="coid_id" id="selectedCurrency">
     <input type="hidden" name="network_id" id="selectedNetwork">
     @csrf
-    <div class="flexsunmer">
-        <div class="sunmmer">1</div>
-        <div class="texesum">Select a coin</div>
-    </div>
-    <div class="kyc_country_dropdown_sect2">
-        <!-- 货币选择下拉框 -->
+        <!-- 选择币种的下拉框 -->
         <div class="kyc_country_dropbox2" onclick="toggleDropdown('currencyDropdown')">
             <span><img src="{{$data[0]['icon']}}" alt="coin icon" class="img-fluid"></span>
             <h4 id="currencyHeader">{{$data[0]['name']}}</h4>
         </div>
+
         <div class="kyc_country_drop_list2" style="display: none;" id="currencyDropdown">
             <ul>
                 @foreach($data as $v)
-                    <li data-currency="{{ $v['name'] }}" data-image="{{ $v['icon'] }}" data-networks="{{ json_encode($v['networks']) }}" onclick="selectCurrency('{{ $v['name'] }}', '{{ $v['icon'] }}', {{ json_encode($v['addresses']) }})">
+                    <li data-currency="{{ $v['name'] }}" data-image="{{ $v['icon'] }}" data-networks="{{ json_encode($v['networks']) }}" data-addresses="{{ json_encode($v['addresses']) }}" onclick="selectCurrency('{{ $v['name'] }}', '{{ $v['icon'] }}', {{ json_encode($v['networks']) }}, {{ json_encode($v['addresses']) }})">
                         <img src="{{$v['icon']}}" alt="">{{ $v['name'] }}
                     </li>
                 @endforeach
             </ul>
         </div>
-    </div>
 
-    <div class="flexsunmer">
-        <div class="sunmmer">2</div>
-        <div class="texesum">Select a network</div>
-    </div>
-    <div class="kyc_country_dropdown_sect3">
-        <!-- 网络选择下拉框 -->
-        <div class="kyc_country_dropbox3" id="networkDropdown" onclick="toggleDropdown('networkList')">
-            <h4 id="networkHeader">{{$data[0]['networks'][0]}}</h4>
-        </div>
-        <div class="kyc_country_drop_list3" id="networkDropList" style="display: none;">
-            <ul id="networkList">
-                @foreach ($data[0]['networks'] as $network)
-                    <li onclick="selectNetwork('{{ $network }}')">{{ $network }}</li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
+        <!-- 选择网络的下拉框 -->
+        <div class="kyc_country_dropdown_sect3">
+            <div class="kyc_country_dropbox3" id="networkDropdown" onclick="toggleDropdown('networkList')">
+                <h4 id="networkHeader">{{$data[0]['networks'][0]}}</h4>
+            </div>
 
-{{--    <div class="flexsunmer">--}}
-{{--        <div class="sunmmer">3</div>--}}
-{{--        <div class="texesum">Purchase quantity</div>--}}
-{{--    </div>--}}
-{{--    <div class="address">--}}
-{{--        <input type="text" id="addressField" placeholder="Select a coin and network">--}}
-{{--    </div>--}}
+            <div class="kyc_country_drop_list3" id="networkDropList" style="display: none;">
+                <ul id="networkList">
+                    @foreach ($data[0]['networks'] as $network)
+                        <li onclick="selectNetwork('{{ $network }}')">{{ $network }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+
+        <!-- 地址输入框 -->
+        <div class="flexsunmer">
+            <div class="sunmmer">3</div>
+            <div class="texesum">Purchase Address</div>
+        </div>
+        <div class="address">
+            <input type="text" id="addressField" placeholder="Select a currency and network">
+        </div>
 
 
     <div class="flexsunmer"><div class="sunmmer">
@@ -371,57 +364,57 @@
     </div>
 
 
-{{--    <script>--}}
-{{--        // 货币和网络数据--}}
-{{--        var coinData = @json($data);--}}
+    <script>
+        let selectedCurrency = null;
+        let selectedNetwork = null;
+        let currencyAddresses = {};
 
-{{--        // 切换下拉框显示/隐藏--}}
-{{--        function toggleDropdown(dropdownId) {--}}
-{{--            var dropdown = document.getElementById(dropdownId);--}}
-{{--            dropdown.style.display = (dropdown.style.display === 'block' || dropdown.style.display === '') ? 'block' : 'none';--}}
-{{--        }--}}
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = (dropdown.style.display === 'block' || dropdown.style.display === '') ? 'block' : 'none';
+        }
 
-{{--        // 选择货币--}}
-{{--        function selectCurrency(coinName, coinIcon, addresses) {--}}
-{{--            // 更新货币名称和图标--}}
-{{--            document.getElementById('currencyHeader').innerText = coinName;--}}
-{{--            document.getElementById('currencyDropdown').style.display = 'none';--}}
+        function selectCurrency(currency, icon, networks, addresses) {
+            selectedCurrency = currency;
+            selectedNetwork = networks[0]; // 默认选择第一个网络
+            currencyAddresses = addresses;
 
-{{--            // 获取并更新网络选择--}}
-{{--            var networks = Object.keys(addresses);--}}
-{{--            var networkList = document.getElementById('networkList');--}}
-{{--            networkList.innerHTML = '';  // 清空现有的网络列表--}}
+            // 更新显示的币种图标和名称
+            document.querySelector('.kyc_country_dropbox2 img').src = icon;
+            document.querySelector('#currencyHeader').textContent = currency;
 
-{{--            networks.forEach(function(network) {--}}
-{{--                var listItem = document.createElement('li');--}}
-{{--                listItem.textContent = network;--}}
-{{--                listItem.setAttribute('onclick', `selectNetwork('${network}', '${addresses[network]}')`);--}}
-{{--                networkList.appendChild(listItem);--}}
-{{--            });--}}
+            // 更新网络选择
+            const networkDropdown = document.getElementById('networkDropdown');
+            networkDropdown.querySelector('h4').textContent = networks[0]; // 默认显示第一个网络
 
-{{--            // 默认选择第一个网络--}}
-{{--            selectNetwork(networks[0], addresses[networks[0]]);--}}
-{{--        }--}}
+            // 更新地址框的 placeholder
+            updatePlaceholder(networks[0]);
 
-{{--        // 选择网络--}}
-{{--        function selectNetwork(network, address) {--}}
-{{--            // 更新网络选择的显示--}}
-{{--            document.getElementById('networkHeader').innerText = network;--}}
-{{--            document.getElementById('networkDropList').style.display = 'none';--}}
+            // 显示网络选择下拉框
+            toggleDropdown('networkList');
+        }
 
-{{--            // 更新地址输入框--}}
-{{--            var addressField = document.getElementById('addressField');--}}
+        function selectNetwork(network) {
+            selectedNetwork = network;
 
-{{--            if (address) {--}}
-{{--                // 如果地址存在，填充输入框--}}
-{{--                addressField.value = address;--}}
-{{--            } else {--}}
-{{--                // 如果地址为空，显示 placeholder 提示--}}
-{{--                addressField.placeholder = `No address available for ${network} network`;--}}
-{{--                addressField.value = '';  // 清空之前的输入框值--}}
-{{--            }--}}
-{{--        }--}}
-{{--    </script>--}}
+            // 更新显示的网络名称
+            document.querySelector('#networkHeader').textContent = network;
+
+            // 更新地址框的 placeholder
+            updatePlaceholder(network);
+
+            // 关闭网络选择下拉框
+            toggleDropdown('networkList');
+        }
+
+        function updatePlaceholder(network) {
+            const addressField = document.getElementById('addressField');
+            // 获取对应网络的地址
+            const address = currencyAddresses[network];
+            addressField.placeholder = address ? `Address: ${address}` : `Select a valid address for ${selectedCurrency}`;
+        }
+
+    </script>
 
  <script>
         document.addEventListener("DOMContentLoaded", function() {

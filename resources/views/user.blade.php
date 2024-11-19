@@ -354,10 +354,9 @@
                                     class="avatar-change-wrap"><img src="{{$user['images']}}"
                                                                     alt=""></div></div></span></div>
                     <div class="profile-other-wrap">
-                        <div class="user-tag-wrap"><a class="profile-btn" href="/myaccount/settings"
+                        <div class="user-tag-wrap"><a class="profile-btn" href="/delogin"
                                                       data-click-event="account_center_user_info_click"
-                                                      data-collect-params="{&quot;button_name&quot;:&quot;Profile&quot;}">User
-                                Information</a>
+                                                      data-collect-params="{&quot;button_name&quot;:&quot;Profile&quot;}">Quit</a>
                         </div>
                         <div class="user-other-info d-flex flex-wrap">
                             <div class="profile-nickname-wrap mr56"><span class="greet-tip mb16 ">Hello，</span><span
@@ -399,7 +398,7 @@
                             <div class="identity-card-footer"><a
                                     class="individual-btn" href="#"
                                     data-click-event="account_center_identify_verification_click"
-                                    data-collect-params="{&quot;button_name&quot;:&quot;IndividualVerification&quot;}">已认证</a>
+                                    data-collect-params="{&quot;button_name&quot;:&quot;IndividualVerification&quot;}">Certified</a>
                             </div>
 
                         @else
@@ -410,7 +409,7 @@
                             <div class="identity-card-footer"><a
                                     class="individual-btn" href="/kyc-process"
                                     data-click-event="account_center_identify_verification_click"
-                                    data-collect-params="{&quot;button_name&quot;:&quot;IndividualVerification&quot;}">个人认证</a>
+                                    data-collect-params="{&quot;button_name&quot;:&quot;IndividualVerification&quot;}">Personal certification</a>
                             </div>
                         @endif
                     </div>
@@ -419,7 +418,7 @@
                             <div class="profile-card-head-wrapper tablab">
                                 <div class="profile-card-head-title blabla">Assets</div>
                                 {{--                        <span>Assets:</span>--}}
-                                @if(isset($val['coin_id']))
+                                @if(!empty($balance))
 
                                     <select id="currency-select" onchange="updateCurrencyInfo()">
                                         @foreach($balance as $val)
@@ -431,6 +430,8 @@
                                     </select>
 
                                 @else
+
+
                                 @endif
 
                             </div>
@@ -444,7 +445,7 @@
 
                                         <div class="valuation-total myfunds-valuation-total">
                                             <div class="valuation-text">
-                                                资产总估值
+                                                Total asset valuation
                                             </div>
                                             <div class="valuation-detail">
                                                 <div id="valuation-total-funds">
@@ -473,7 +474,7 @@
                                         </div>
 
                                         <div class="valuation-profit">
-                                            <div class="valuation-text">质押货币</div>
+                                            <div class="valuation-text">Pledged Currency</div>
                                             <div id="valuation-detail-funds" class="valuation-detail">
                                                 <div class="valuation-detail-value red">
                       @if(isset($balance[0]['staked_balance']))
@@ -567,29 +568,29 @@
                                 <div class="step-item-title">Wallet Balance</div>
                                 <div class="step-item-btn "><a href="/zh/myaccount/security-setting"
                                                                data-click-event="account_center_security_verification_click"
-                                                               data-collect-params="{&quot;button_name&quot;:&quot;Login2StepVerification&quot;}">修改</a>
+                                                               data-collect-params="{&quot;button_name&quot;:&quot;Login2StepVerification&quot;}">Revise</a>
                                 </div>
                                 <img class="step-item-complete-tag" src="/images/my_account/complete-tag.svg"
                                      alt=""></li>
                             <li class="security-setp-item ">
-                                <div class="step-item-title">身份认证</div>
-                                <div class="step-item-btn "><a href="/zh/myaccount/kyc_home"
+                                <div class="step-item-title">Identity Authentication</div>
+                                <div class="step-item-btn "><a href="/kyc-process"
                                                                data-click-event="account_center_security_verification_click"
-                                                               data-collect-params="{&quot;button_name&quot;:&quot;IdentifyVerification&quot;}">立即认证</a>
+                                                               data-collect-params="{&quot;button_name&quot;:&quot;IdentifyVerification&quot;}">Get certified now</a>
                                 </div>
                             </li>
                             <li class="security-setp-item ">
-                                <div class="step-item-title">个人信息</div>
+                                <div class="step-item-title">personal information</div>
                                 <div class="step-item-btn "><a href="/zh/myaccount/security-setting"
                                                                data-click-event="account_center_security_verification_click"
-                                                               data-collect-params="{&quot;button_name&quot;:&quot;GoogleAuthenticator&quot;}">去绑定</a>
+                                                               data-collect-params="{&quot;button_name&quot;:&quot;GoogleAuthenticator&quot;}">Unbind</a>
                                 </div>
                             </li>
                             <li class="security-setp-item ">
-                                <div class="step-item-title">个人信息</div>
+                                <div class="step-item-title">personal information</div>
                                 <div class="step-item-btn "><a href="/zh/myaccount/security-setting"
                                                                data-click-event="account_center_security_verification_click"
-                                                               data-collect-params="{&quot;button_name&quot;:&quot;AntiPhishingCode&quot;}">设置</a>
+                                                               data-collect-params="{&quot;button_name&quot;:&quot;AntiPhishingCode&quot;}">personal information</a>
                                 </div>
                             </li>
                         </ul>

@@ -44,7 +44,7 @@
                             @csrf
                     <h3>Issuing Country/Region</h3>
                         <div class="kyc_country_dropdown_sect">
-                            <div class="kyc_country_dropbox" onclick="toggleDropdown()">
+                            <div class="kyc_country_dropbox">
                                 <span><img src="/storage/images/flag.png" alt="flag" class="img-fluid"></span>
                                 <h4>United States</h4>
                             </div>
@@ -212,17 +212,43 @@
     </div>
 </div>
 <script>
+    // 处理下拉显示/隐藏的切换
     function toggleDropdown() {
         const dropdown = document.querySelector('.kyc_country_drop_list');
-        dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'none' : 'block';
+        // 判断当前的 display 属性来切换状态
+        dropdown.style.display = (dropdown.style.display === 'block' || dropdown.style.display === '') ? 'none' : 'block';
     }
+
+    // 处理国家选择
     function selectCountry(country) {
         const selectedCountryBox = document.querySelector('.kyc_country_dropbox h4');
-        selectedCountryBox.textContent = country;
+        selectedCountryBox.textContent = country;  // 更新显示的国家名称
         const selectedCountryInput = document.getElementById('selected_country');
-        selectedCountryInput.value = country;
-        toggleDropdown();
+        selectedCountryInput.value = country;  // 更新隐藏的输入框值
+        toggleDropdown();  // 隐藏下拉框
     }
+
+    // 为下拉框绑定点击事件
     document.querySelector('.kyc_country_dropbox').addEventListener('click', toggleDropdown);
+
 </script>
+
+    @if (session('message'))
+        <script>
+            window.onload = function() {
+                layer.open({
+                    type: 1,
+                    skin: 'demo-class',
+                    area: ['40%', 'auto'],
+                    title: 'Error',
+                    shade: 0.6,
+                    shadeClose: true,
+                    anim: 1,
+                    btn: ['Close'],
+                    btnAlign: 'c',
+                    content: '<div style="text-align: center;padding-top: 15px;">{{ session('message') }}</div>'
+                });
+            };
+        </script>
+    @endif
 @stop

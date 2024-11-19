@@ -19,6 +19,10 @@ class LoginController extends Controller
         $this->walletService = new WalletService();
     }
     public function login(){
+//        $user_id=session('user_id');
+//        if (empty($user_id)){
+//            return redirect()->back()->with(['message' => 'Already logged in']);
+//        }
         return view('signin');
     }
     public function dosignin(Request  $request){
@@ -48,7 +52,7 @@ class LoginController extends Controller
             'password'=>'required'
         ]);
         if ($validator->fails()) {
-           return redirect()->back()->with('error', ['message' => 'required error']);
+            return redirect()->back()->with(['message' => 'required error']);
         }
         $password=md5($password);
         $images='/storage/images/KLpE7R5835.png';
@@ -58,7 +62,6 @@ class LoginController extends Controller
             'kyc_status'=>0,
             'images'=>$images,
         ];
-//        dd($data);
         $res=User::create($data);
         session(['user_id' => $res->id,'images'=>$images]);
         return redirect('/');
@@ -70,12 +73,12 @@ class LoginController extends Controller
         $data=$request->post();
         $user=session('user_id');
         if (empty($user)) {
-            return redirect()->back()->with('error', ['message' => 'user does not exist']);
+            return redirect()->back()->with(['message' => 'user does not exist']);
         }
         $userinfo=User::where('id',$user)->first();
 
         if (md5($data['password'])!== $userinfo['password']){
-            return redirect()->back()->with('error', ['message' => 'password does not exist']);
+            return redirect()->back()->with(['message' => 'password does not exist']);
         }
         $newpassword=md5($data['re_password']);
         $password=[
@@ -92,6 +95,12 @@ class LoginController extends Controller
     public function transfer(){
 
         return view('transfer');
+    }
+
+
+    public function delogin(){
+        session()->flush();
+        return redirect('/');
     }
 
 

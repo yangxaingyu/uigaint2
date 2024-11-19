@@ -53,6 +53,20 @@
         padding: 11px 20px 9px;
         border: 2px solid #393941;
     }
+
+    .footer-mainmenu.text-center.mb-20 {
+        display: flex;
+    }
+    .footer-mainmenu ul li {
+        display: flex;
+        padding: 0 167px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-mainmenu.text-center.mb-20{
+            display: contents;
+        }
+    }
 </style>
 <body>
 <div id="preloader-active"></div>
@@ -220,16 +234,17 @@
                                                             <span><img src="/storage/images/home_v2/border-buttomShape.png" alt="" class="img-fluid"></span>
                                                         </div>
                                                         <ul>
-                                                            <li><a href="kyc-process">KYC Step 01</a> <span class="hot">HOT</span></li>
-                                                            <li><a href="kyc-process-step2">KYC Step 02</a></li>
-                                                            <li><a href="kyc-process-step3">KYC Step 03</a></li>
+                                                            <li><a href="/kyc-process">KYC Step 01</a> <span class="hot">HOT</span></li>
+                                                            <li><a href="/kyc-process-step2">KYC Step 02</a></li>
+                                                            <li><a href="/kyc-process-step3">KYC Step 03</a></li>
                                                             <li><a href="connect-wallet.html">Connect Wallet</a></li>
                                                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Wallet Module</a></li>
-                                                            <li><a href="signup">Register</a></li>
-                                                            <li><a href="signin">Login</a></li>
-                                                            <li><a href="forget-password">Forget Password</a></li>
+                                                            <li><a href="/signup">Register</a></li>
+                                                            <li><a href="/signin">Login</a></li>
+                                                            <li><a href="/forget-password">Forget Password</a></li>
                                                         </ul>
                                                     </div>
+
 
                                                 </div>
                                             </div>
@@ -453,6 +468,7 @@
 @yield('transfer')
 @yield('withdrawal')
 @yield('user')
+@yield('page')
 
 <!-- Footer Section Start -->
 <div class="gamfi-footer-section">
@@ -503,22 +519,44 @@
                 </ul>
             </div>
             <div class="footer-logo text-center mb-45">
-                <img src="/storage/images/home_v2/logo.png" alt="Footer-logo">
+
             </div>
             <div class="footer-mainmenu text-center mb-20">
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Token info</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Social media</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
+                <div>
+                    <h4>FIND US</h4>
+                   <p> <img src="/storage/images/home_v2/logo.png" alt="Footer-logo"></p>
+                   <p>Email:{{$cate['value']}}</p>
+                </div>
+{{--                <div>--}}
+{{--                    <h4>Features</h4>--}}
+{{--                    <ul>--}}
+{{--                        <li><a href="#">Features</a></li>--}}
+{{--                        <li><a href="#">How it works</a></li>--}}
+{{--                        <li><a href="#">Token info</a></li>--}}
+{{--                        <li><a href="#">Social media</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+              <div>
+                  <h4>Privacy policy </h4>
+                  <ul>
+                      @foreach($page as $value)
+                          <li><a href="{{ route('page.pages', ['article' => $value['group']]) }}">{{ $value['title'] }}</a></li>
+                      @endforeach
+                  </ul>
+
+              </div>
+                <div>
+                    <h4>information</h4>
+                    <ul>
+                        <li><a href="/signin">Login</a></li>
+                        <li><a href="/signup">Signup</a></li>
+                        <li><a href="/kyc-process">Kyc Step</a></li>
+                        <li><a href="/forget-password">Reset Password</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="copyright-area text-center mb-0">
-                <div class="dsc mb-37 md-mb-25">Copyright © 2022. All Rights Reserved by
-                    <a target="_blank" class="gafi" href="#">GaFi</a>
+                <div class="dsc mb-37 md-mb-25">Copyright © 2024.{{str_replace('www.','',$_SERVER['HTTP_HOST'])}}. All Right Reserved.
                 </div>
             </div>
             <div class="scrollup text-center">
@@ -534,7 +572,7 @@
 <script src="{{\App\Server\Helper::assets('/js/metamask.js')}}"></script>
 
 <!-- modernizr js -->
-<script src="{{\App\Server\Helper::assets('/js/modernizr-2.8.3.min.js')}}"></script>a
+<script src="{{\App\Server\Helper::assets('/js/modernizr-2.8.3.min.js')}}"></script>
 
 <!-- jquery latest version -->
 <script src="{{\App\Server\Helper::assets('/js/jquery.min.js')}}"></script>
@@ -583,5 +621,24 @@
 {{--<script src="{{\App\Server\Helper::assets('/js/hook-exec.js')}}"></script>--}}
 {{--<script src="{{\App\Server\Helper::assets('/js/inspector.js')}}"></script>--}}
 
+
 </body>
+@if (session('message'))
+    <script>
+        window.onload = function() {
+            layer.open({
+                type: 1,
+                skin: 'demo-class',
+                area: ['40%', 'auto'],
+                title: 'Error',
+                shade: 0.6,
+                shadeClose: true,
+                anim: 1,
+                btn: ['Close'],
+                btnAlign: 'c',
+                content: '<div style="text-align: center;padding-top: 15px;">{{ session('message') }}</div>'
+            });
+        };
+    </script>
+@endif
 </html>

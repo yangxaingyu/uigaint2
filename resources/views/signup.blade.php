@@ -10,9 +10,7 @@
 <div class="loader_first" style="display: none;">
     <div class="circular-spinner"></div>
 </div>
-@if (session('error'))
-    <script>  alert('{{ session('error.message') }}')</script>
-@endif
+
 <!-- account section start -->
 <div class="account__area">
     <div class="account-bg"></div>

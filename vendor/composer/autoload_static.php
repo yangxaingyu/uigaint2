@@ -330,8 +330,8 @@ class ComposerStaticInit2556e2e3bea3ee1134f1385cde08d369
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -566,10 +566,14 @@ class ComposerStaticInit2556e2e3bea3ee1134f1385cde08d369
         'App\\Http\\Controllers\\AccountController' => __DIR__ . '/../..' . '/app/Http/Controllers/AccountController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DepositController' => __DIR__ . '/../..' . '/app/Http/Controllers/DepositController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\KycController' => __DIR__ . '/../..' . '/app/Http/Controllers/KycController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
+        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
+        'App\\Http\\Controllers\\WithdrawalController' => __DIR__ . '/../..' . '/app/Http/Controllers/WithdrawalController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
+        'App\\Http\\Middleware\\CheckKycProcess' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckKycProcess.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -600,6 +604,7 @@ class ComposerStaticInit2556e2e3bea3ee1134f1385cde08d369
         'App\\Services\\CoinService' => __DIR__ . '/../..' . '/app/Services/CoinService.php',
         'App\\Services\\DepositService' => __DIR__ . '/../..' . '/app/Services/DepositService.php',
         'App\\Services\\ExchangeRateService' => __DIR__ . '/../..' . '/app/Services/ExchangeRateService.php',
+        'App\\Services\\MiningPoolService' => __DIR__ . '/../..' . '/app/Services/MiningPoolService.php',
         'App\\Services\\RewardService' => __DIR__ . '/../..' . '/app/Services/RewardService.php',
         'App\\Services\\StakeService' => __DIR__ . '/../..' . '/app/Services/StakeService.php',
         'App\\Services\\WalletService' => __DIR__ . '/../..' . '/app/Services/WalletService.php',

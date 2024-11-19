@@ -1,6 +1,5 @@
-location /
-{
-	 try_files $uri $uri/ /index.php?$args;
+location / {
+    if (!-e $request_filename) {
+        rewrite ^/(.+)$ /index.php?cmd=$1 last;
+    }
 }
-
-rewrite /wp-admin$ $scheme://$host$uri/ permanent;

@@ -1,9 +1,6 @@
 @extends('main.main')
 
 @section('forget-password')
-    @if (session('error'))
-        <script>  alert('{{ session('error.message') }}')</script>
-    @endif
     <style>
         button.theme-btn.assbutton {
             width: 570px;

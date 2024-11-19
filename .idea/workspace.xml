@@ -5,10 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e27e1a2b-f2b6-48d1-9527-9d837df2726b" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KycController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KycController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Server/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Server/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/nginx.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/nginx.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/kyc/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/storage/kyc/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/deposit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/deposit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forget-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forget-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kyc-process-step2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kyc-process-step2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kyc-process.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kyc-process.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/signin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/signin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/signup.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/signup.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/kyc/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/public/kyc/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +231,7 @@
       <workItem from="1730362364178" duration="36905000" />
       <workItem from="1730703265542" duration="591000" />
       <workItem from="1730968068092" duration="9295000" />
-      <workItem from="1731295846742" duration="125167000" />
+      <workItem from="1731295846742" duration="156940000" />
     </task>
     <servers />
   </component>
@@ -233,7 +257,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/main/main.blade.php</url>
-          <line>59</line>
+          <line>73</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -243,8 +267,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php</url>
-          <line>67</line>
+          <line>70</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/main/main.blade.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

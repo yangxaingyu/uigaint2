@@ -2932,7 +2932,7 @@
                             <span class="border-shadow-green1"></span>
                             <span class="border-shadow-green2"></span>
                         </div>
-                        <div class="tier_system_items wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="0.9s" style="visibility: hidden; animation-duration: 0.9s; animation-delay: 0.7s; animation-name: none;">
+                        <div class="tier_system_items wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="0.9s"  animation-duration: 0.9s; animation-delay: 0.7s; animation-name: none;">
                             <ul>
                                 <li class="tiers_item">
                                     <span><img src="/storage/images/home_v2/iconPlatinum.svg" alt="icon" class="img-fluid"></span><strong>Platinum</strong>
@@ -4057,6 +4057,25 @@
         </div>
     </div>
     <!-- Modal Section End-->
+    @if (session('message'))
+        <script>
+            window.onload = function() {
+                layer.open({
+                    type: 1,
+                    skin: 'demo-class',
+                    area: ['40%', 'auto'],
+                    title: 'Error',
+                    shade: 0.6,
+                    shadeClose: true,
+                    anim: 1,
+                    btn: ['Close'],
+                    btnAlign: 'c',
+                    content: '<div style="text-align: center;padding-top: 15px;">{{ session('message') }}</div>'
+                });
+            };
+        </script>
+    @endif
+
 
     <script>
         var mining_pools = <?php echo json_encode($miningPools); ?>;
@@ -4143,4 +4162,6 @@
             }
         })
     </script>
+
+
 @stop
