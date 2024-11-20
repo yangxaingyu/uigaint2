@@ -62,7 +62,7 @@
                                 <span class="red">*</span>
                                 Withdrawal amount
                             </label>
-                            <input type="text" id="quantity" required v-model="amount" placeholder="Withdrawal amount" autocomplete="off">
+                            <input type="text" id="quantity" ref="amount_input" v-model="amount" placeholder="Withdrawal amount" autocomplete="off">
                         </div>
 
                         <div class="input__group mb-23">
@@ -70,7 +70,7 @@
                                 <span class="red">*</span>
                                 Withdrawal address
                             </label>
-                            <input type="text" id="address" required v-model="address" placeholder="Withdrawal address" autocomplete="off">
+                            <input type="text" id="address" ref="address_input" v-model="address" placeholder="Withdrawal address" autocomplete="off">
                         </div>
 
                         <div class="item-button">
@@ -211,6 +211,18 @@
             },
             methods: {
                 submitFn() {
+                    if (!app.amount) {
+                        app.alertMsg(500, "Please fill the withdrawal amount field", function () {
+                            app.$refs.amount_input.focus();
+                        })
+                        return
+                    }
+                    if (!app.address) {
+                        app.alertMsg(500, "Please fill the withdrawal address field", function () {
+                            app.$refs.address_input.focus();
+                        })
+                        return
+                    }
                     layer.confirm('Confirm withdrawal?', {
                         title: 'Message',
                         skin: 'demo-class',
@@ -225,25 +237,11 @@
                             }).then(function (response) {
                                 var msg = response.data.msg
                                 var code = response.data.code
-                                layer.open({
-                                    type: 1,
-                                    skin: 'demo-class',
-                                    area: ['40%', 'auto'],
-                                    title: 'Message',
-                                    shade: 0.6, // 遮罩透明度
-                                    shadeClose: true, // 点击遮罩区域，关闭弹层
-                                    anim: 1, // 0-6 的动画形式，-1 不开启
-                                    btn: ['Close'],
-                                    btnAlign: 'c',
-                                    content: '<div style="text-align: center;padding-top: 15px;">'+ msg +'</div>',
-                                    yes: function (index, layero) {
-                                        if (code === 200) {
-                                            app.amount = ''
-                                            app.address = ''
-                                        }
-                                        layer.close(index)
-                                    },
-                                });
+                                app.alertMsg(code, msg)
+                                if (code === 200) {
+                                    app.amount = ''
+                                    app.address = ''
+                                }
                             }).catch(function (error) {
                                 console.log(error);
                             });
@@ -274,6 +272,23 @@
                     this.netWorkId = this.netWorkData[0].networkId
                     this.netWorkName = this.netWorkData[0].networkName
                     $(".withdrawal_network_drop_list").hide();
+                },
+                alertMsg(code, message) {
+                    layer.open({
+                        type: 1,
+                        skin: 'demo-class',
+                        area: ['40%', 'auto'],
+                        title: 'Message',
+                        shade: 0.6, // 遮罩透明度
+                        shadeClose: true, // 点击遮罩区域，关闭弹层
+                        anim: 1, // 0-6 的动画形式，-1 不开启
+                        btn: ['Close'],
+                        btnAlign: 'c',
+                        content: '<div style="text-align: center;padding-top: 15px;">'+ message +'</div>',
+                        yes: function (index, layero) {
+                            layer.close(index)
+                        },
+                    });
                 }
             }
         })
