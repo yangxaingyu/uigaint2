@@ -43,12 +43,15 @@ class DepositController
                 'networks' => $networksArray,
                 'addresses' => $addressesArray
             ];
+//            dd($result);
         }
+//        dd($result);
        return view('deposit',['data'=>$result]);
     }
 
     public function depsub(Request  $request){
         $res=$request->except('_token');
+        dd($res);
         $user_id=session('user_id');
         if (empty($user_id)){
             return redirect()->back()->with('message', 'User is not logged in!');

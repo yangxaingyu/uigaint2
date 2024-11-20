@@ -300,53 +300,55 @@
             </div>
         </div>
     </div>
+
+
     <div class="container depo">
     <form action="/depsub" method="post">
     <input type="hidden" name="coid_id" id="selectedCurrency">
     <input type="hidden" name="network_id" id="selectedNetwork">
     @csrf
-        <!-- 选择币种的下拉框 -->
+        <div class="flexsunmer">
+            <div class="sunmmer">1</div>
+            <div class="texesum">Select a icon</div>
+        </div>
         <div class="kyc_country_dropbox2" onclick="toggleDropdown('currencyDropdown')">
-            <span><img src="{{$data[0]['icon']}}" alt="coin icon" class="img-fluid"></span>
+            <span><img src="/uploads/{{$data[0]['icon']}}" alt="coin icon" class="img-fluid"></span>
             <h4 id="currencyHeader">{{$data[0]['name']}}</h4>
         </div>
-
         <div class="kyc_country_drop_list2" style="display: none;" id="currencyDropdown">
             <ul>
                 @foreach($data as $v)
-                    <li data-currency="{{ $v['name'] }}" data-image="{{ $v['icon'] }}" data-networks="{{ json_encode($v['networks']) }}" data-addresses="{{ json_encode($v['addresses']) }}" onclick="selectCurrency('{{ $v['name'] }}', '{{ $v['icon'] }}', {{ json_encode($v['networks']) }}, {{ json_encode($v['addresses']) }})">
-                        <img src="{{$v['icon']}}" alt="">{{ $v['name'] }}
+                    <li data-currency="{{ $v['name'] }}"
+                        data-image="/uploads/{{ $v['icon'] }}"
+                        data-networks="{{ json_encode($v['networks']) }}"
+                        data-addresses="{{ json_encode($v['addresses']) }}"
+                        onclick="selectCurrency('{{ $v['name'] }}', '/uploads/{{ $v['icon'] }}', {{ json_encode($v['addresses']) }})">
+                        <img src="/uploads/{{$v['icon']}}" alt="">{{ $v['name'] }}
                     </li>
                 @endforeach
             </ul>
         </div>
 
-        <!-- 选择网络的下拉框 -->
+        <div class="flexsunmer">
+            <div class="sunmmer">2</div>
+            <div class="texesum">Select a network</div>
+        </div>
         <div class="kyc_country_dropdown_sect3">
-            <div class="kyc_country_dropbox3" id="networkDropdown" onclick="toggleDropdown('networkList')">
-                <h4 id="networkHeader">{{$data[0]['networks'][0]}}</h4>
+            <div class="kyc_country_dropbox3" id="networkDropdown" onclick="toggleDropdown('networkDropList')">
+                <h4 id="networkHeader">Select a network</h4>
             </div>
-
             <div class="kyc_country_drop_list3" id="networkDropList" style="display: none;">
                 <ul id="networkList">
-                    @foreach ($data[0]['networks'] as $network)
-                        <li onclick="selectNetwork('{{ $network }}')">{{ $network }}</li>
-                    @endforeach
                 </ul>
             </div>
         </div>
-
-        <!-- 地址输入框 -->
-        <div class="flexsunmer">
-            <div class="sunmmer">3</div>
-            <div class="texesum">Purchase Address</div>
-        </div>
         <div class="address">
-            <input type="text" id="addressField" placeholder="Select a currency and network">
+            <input type="text" id="addressField" placeholder="Select a coin and network" readonly>
         </div>
 
 
-    <div class="flexsunmer"><div class="sunmmer">
+
+        <div class="flexsunmer"><div class="sunmmer">
             3
         </div> <div class="texesum">
             Purchase quantity
@@ -354,116 +356,80 @@
     <div class="num">
         <input type="number" name="amount" placeholder="quantity">
     </div>
-
     <div class="project-btn-area text-center black-shape-big-custom">
         <div class="btn_custom"><button type="submit" style=" background-color: transparent;">top up</button></div>
-
     </div>
 </form>
-
     </div>
-
-
     <script>
-        let selectedCurrency = null;
-        let selectedNetwork = null;
-        let currencyAddresses = {};
+        let selectedCurrencyData = null;
+
+        // 在页面加载时默认选择第一个货币和网络
+        window.onload = function() {
+            // 自动选择第一个货币
+            const firstCurrency = document.querySelector('.kyc_country_drop_list2 li');
+            if (firstCurrency) {
+                const currencyName = firstCurrency.getAttribute('data-currency');
+                const currencyIcon = firstCurrency.getAttribute('data-image');
+                const addresses = JSON.parse(firstCurrency.getAttribute('data-addresses'));
+                selectCurrency(currencyName, currencyIcon, addresses);
+
+                // 自动选择第一个网络
+                const firstNetwork = Object.keys(addresses)[0];
+                if (firstNetwork) {
+                    selectNetwork(firstNetwork);
+                }
+            }
+        };
 
         function toggleDropdown(dropdownId) {
             const dropdown = document.getElementById(dropdownId);
-            dropdown.style.display = (dropdown.style.display === 'block' || dropdown.style.display === '') ? 'block' : 'none';
+            dropdown.style.display = dropdown.style.display === 'none' || dropdown.style.display === '' ? 'block' : 'none';
         }
 
-        function selectCurrency(currency, icon, networks, addresses) {
-            selectedCurrency = currency;
-            selectedNetwork = networks[0]; // 默认选择第一个网络
-            currencyAddresses = addresses;
-
-            // 更新显示的币种图标和名称
-            document.querySelector('.kyc_country_dropbox2 img').src = icon;
-            document.querySelector('#currencyHeader').textContent = currency;
-
-            // 更新网络选择
-            const networkDropdown = document.getElementById('networkDropdown');
-            networkDropdown.querySelector('h4').textContent = networks[0]; // 默认显示第一个网络
-
-            // 更新地址框的 placeholder
-            updatePlaceholder(networks[0]);
-
-            // 显示网络选择下拉框
-            toggleDropdown('networkList');
+        function selectCurrency(currencyName, currencyIcon, addresses) {
+            // 更新货币的header和图标
+            document.getElementById('currencyHeader').textContent = currencyName;
+            document.querySelector('.kyc_country_dropbox2 span img').src = currencyIcon;
+            selectedCurrencyData = addresses;
+            document.getElementById('currencyDropdown').style.display = 'none';
+            document.getElementById('networkDropList').style.display = 'none';
+            const networkList = document.getElementById('networkList');
+            networkList.innerHTML = '';
+            Object.keys(addresses).forEach(function(network) {
+                const li = document.createElement('li');
+                li.textContent = network;
+                li.setAttribute('data-network', network);
+                li.onclick = function() {
+                    selectNetwork(network);
+                };
+                networkList.appendChild(li);
+            });
+            document.getElementById('networkDropList').style.display = 'none';
+            document.getElementById('selectedCurrency').value = currencyName;
         }
 
         function selectNetwork(network) {
-            selectedNetwork = network;
+            const address = selectedCurrencyData[network] || 'No address available';
+            document.getElementById('networkHeader').textContent = network;
+            document.getElementById('addressField').value = address;
+            document.getElementById('networkDropList').style.display = 'none';
 
-            // 更新显示的网络名称
-            document.querySelector('#networkHeader').textContent = network;
-
-            // 更新地址框的 placeholder
-            updatePlaceholder(network);
-
-            // 关闭网络选择下拉框
-            toggleDropdown('networkList');
+            // 更新隐藏字段的值（设置选中的网络ID）
+            document.getElementById('selectedNetwork').value = network;
         }
 
-        function updatePlaceholder(network) {
-            const addressField = document.getElementById('addressField');
-            // 获取对应网络的地址
-            const address = currencyAddresses[network];
-            addressField.placeholder = address ? `Address: ${address}` : `Select a valid address for ${selectedCurrency}`;
-        }
-
-    </script>
-
- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const currencyDropdown = document.getElementById('currencyDropdown');
-            const networkList = document.getElementById('networkList');
-            const networkHeader = document.getElementById('networkHeader');
-            const currencyDropList = document.querySelector('.kyc_country_drop_list2');
-            const currencyDropbox = document.querySelector('.kyc_country_dropbox2');
-            const networkDropList = document.querySelector('.kyc_country_drop_list3');
-
-            currencyDropbox.addEventListener('click', function() {
-                const currentDisplay = currencyDropList.style.display;
-                currencyDropList.style.display = currentDisplay === 'none' || currentDisplay === '' ? 'block' : 'none';
-            });
-            currencyDropdown.addEventListener('click', function(e) {
-                if (e.target && e.target.tagName === 'LI') {
-                    const selectedCurrency = e.target.getAttribute('data-currency');
-                    const selectedNetworks = JSON.parse(e.target.getAttribute('data-networks'));
-                    const selectedImage = e.target.getAttribute('data-image');
-                    currencyDropbox.querySelector('h4').textContent = selectedCurrency;
-                    currencyDropbox.querySelector('span img').src = selectedImage;
-                    document.getElementById('selectedCurrency').value = selectedCurrency;
-                    networkHeader.textContent = selectedNetworks[0];
-                    networkList.innerHTML = '';
-                    selectedNetworks.forEach(function(network) {
-                        const li = document.createElement('li');
-                        li.textContent = network;
-                        networkList.appendChild(li);
-                    });
-                    currencyDropList.style.display = 'none';
-                    networkDropList.style.display = 'none';
-                }
-            });
-            networkDropdown.addEventListener('click', function() {
-                const currentDisplay = networkDropList.style.display;
-                networkDropList.style.display = currentDisplay === 'none' || currentDisplay === '' ? 'block' : 'none';
-            })
-            networkList.addEventListener('click', function(e) {
-                if (e.target && e.target.tagName === 'LI') {
-                    networkHeader.textContent = e.target.textContent;
-                    document.getElementById('selectedNetwork').value = e.target.textContent;
-                    networkDropList.style.display = 'none';
-                }
-            });
-            networkDropList.style.display = 'none';
-            document.getElementById('myForm').addEventListener('submit', function(event) {
-                console.log("Selected Currency: ", document.getElementById('selectedCurrency').value);
-                console.log("Selected Network: ", document.getElementById('selectedNetwork').value);
-            });
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            // 可以根据需要在这里进行调试
+            console.log("Selected Currency: ", document.getElementById('currencyHeader').textContent);
+            console.log("Selected Network: ", document.getElementById('networkHeader').textContent);
+            console.log("Selected Address: ", document.getElementById('addressField').value);
+            const currency = document.getElementById('currencyHeader').textContent;
+            const network = document.getElementById('networkHeader').textContent;
+            if (!currency || !network) {
+                alert('Please select a currency and network before submitting!');
+                event.preventDefault();
+            }
         });
     </script>
 

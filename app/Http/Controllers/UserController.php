@@ -36,6 +36,7 @@ class UserController extends Controller
             $s->coin_id = $coins[$s->coin_id] ?? $s->coin_id;
             return $s;
         });
+//        dd($stake);
         return view('user', ['data' => $data,'user'=>$user,'balance'=>$balance,'stake'=>$stake]);
     }
 

@@ -528,10 +528,8 @@
 
                             </a></div>
                     </div>
-                  @if(isset($value['mining_pool_id']))
-
+                  @if($stake->isNotEmpty())
                         @foreach($stake as $value)
-
                             <div class="history-card-content"><a class="history-list-item">
                                     <div class="list-item-left">
                                         <div class="type">{{$value['mining_pool_id']}}</div>
@@ -566,7 +564,7 @@
                         <ul class="security-step-wrap">
                             <li class="security-setp-item ">
                                 <div class="step-item-title">Wallet Balance</div>
-                                <div class="step-item-btn "><a href="/zh/myaccount/security-setting"
+                                <div class="step-item-btn "><a href="#"
                                                                data-click-event="account_center_security_verification_click"
                                                                data-collect-params="{&quot;button_name&quot;:&quot;Login2StepVerification&quot;}">Revise</a>
                                 </div>
@@ -579,20 +577,20 @@
                                                                data-collect-params="{&quot;button_name&quot;:&quot;IdentifyVerification&quot;}">Get certified now</a>
                                 </div>
                             </li>
-                            <li class="security-setp-item ">
-                                <div class="step-item-title">personal information</div>
-                                <div class="step-item-btn "><a href="/zh/myaccount/security-setting"
-                                                               data-click-event="account_center_security_verification_click"
-                                                               data-collect-params="{&quot;button_name&quot;:&quot;GoogleAuthenticator&quot;}">Unbind</a>
-                                </div>
-                            </li>
-                            <li class="security-setp-item ">
-                                <div class="step-item-title">personal information</div>
-                                <div class="step-item-btn "><a href="/zh/myaccount/security-setting"
-                                                               data-click-event="account_center_security_verification_click"
-                                                               data-collect-params="{&quot;button_name&quot;:&quot;AntiPhishingCode&quot;}">personal information</a>
-                                </div>
-                            </li>
+{{--                            <li class="security-setp-item ">--}}
+{{--                                <div class="step-item-title">personal information</div>--}}
+{{--                                <div class="step-item-btn "><a href="/zh/myaccount/security-setting"--}}
+{{--                                                               data-click-event="account_center_security_verification_click"--}}
+{{--                                                               data-collect-params="{&quot;button_name&quot;:&quot;GoogleAuthenticator&quot;}">Unbind</a>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
+{{--                            <li class="security-setp-item ">--}}
+{{--                                <div class="step-item-title">personal information</div>--}}
+{{--                                <div class="step-item-btn "><a href="/zh/myaccount/security-setting"--}}
+{{--                                                               data-click-event="account_center_security_verification_click"--}}
+{{--                                                               data-collect-params="{&quot;button_name&quot;:&quot;AntiPhishingCode&quot;}">personal information</a>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
                         </ul>
                     </div>
                 </div>

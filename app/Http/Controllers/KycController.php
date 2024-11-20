@@ -15,6 +15,10 @@ class KycController
         if (empty($user_id)){
             return redirect()->back()->with(['message' => 'Please log in first']);
         }
+        $user=User::where('id',$user_id)->first();
+        if ($user['kyc_status']==1){
+            return redirect()->back()->with(['message' => 'You are authenticated']);
+        }
         return view('kyc-process');
     }
 
